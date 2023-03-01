@@ -18,7 +18,7 @@ const AvatarWithIcon = ({
 }) => {
   return (
     <div className={`position-relative mui-avatar ${avatarSize}`}>
-      <Avatar src={avatarSrc} alt={avatarAlt} className={`mui-avatar ${avatarSize}`} variant={variant} />
+      <Avatar src={avatarSrc} alt={avatarAlt} className={avatarSize} variant={variant} />
       {iconSrc &&
         <div className={`bg-white rounded-circle ${iconClass}`}>
           <img src={iconSrc} width={iconWidth} height={iconHeight} alt={iconAlt} />
