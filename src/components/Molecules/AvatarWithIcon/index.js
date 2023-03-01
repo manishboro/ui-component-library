@@ -27,8 +27,17 @@ const AvatarWithIcon = ({
     </div>
   );
 };
+
 AvatarWithIcon.propTypes = {
   variant: PropTypes.string,
+  avatarSrc: PropTypes.string,
+  avatarAlt: PropTypes.string,
+  avatarSize: PropTypes.string,
+  iconSrc: PropTypes.string,
+  iconAlt: PropTypes.string,
+  iconWidth: PropTypes.number,
+  iconHeight: PropTypes.number,
+  iconClass: PropTypes.string
 };
 
 export default AvatarWithIcon;
