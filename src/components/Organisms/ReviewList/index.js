@@ -3,16 +3,17 @@ import PropTypes from 'prop-types'
 import { Typography } from '@material-ui/core'
 import StarRatingComponent from 'react-star-rating-component'
 import AvatarWithIcon from 'components/Molecules/AvatarWithIcon';
+import IconWithTitle from 'components/Molecules/IconWithTitle';
 
 const ReviewList = ({
     variant = "circular",
     avatarSrc,
     avatarAlt,
     avatarSize,
-    iconSrc,
-    iconAlt,
-    iconWidth = 20,
-    iconHeight = 20,
+    companyIconSrc,
+    companyIconAlt,
+    companyIconWidth = 20,
+    companyIconHeight = 20,
     starRatingName,
     starRatingValue,
     starRatingMaxValue,
@@ -20,6 +21,15 @@ const ReviewList = ({
     reviewedDate,
     reviewDescription,
     reviewedMsg,
+    iconSrc,
+    iconAlt,
+    iconWidth = 10,
+    iconHeight = 10,
+    iconClass = "",
+    title,
+    titleClass = "ml-2",
+    titleSize = "text-sm",
+    titleColor = ""
 }) => {
     return (
         <div className='bg-white p-4'>
@@ -30,10 +40,10 @@ const ReviewList = ({
                         avatarSize={avatarSize}
                         avatarSrc={avatarSrc}
                         avatarAlt={avatarAlt}
-                        iconSrc={iconSrc}
-                        iconAlt={iconAlt}
-                        iconWidth={iconWidth}
-                        iconHeight={iconHeight}
+                        companyIconSrc={companyIconSrc}
+                        companyIconAlt={companyIconAlt}
+                        companyIconWidth={companyIconWidth}
+                        companyIconHeight={companyIconHeight}
                     />
                 </div>
                 <div className='ml-3'>
@@ -41,6 +51,19 @@ const ReviewList = ({
                         <StarRatingComponent name={starRatingName} starCount={starRatingMaxValue} value={starRatingValue} />
                     </div>
                     <Typography ><span className='font-weight-bold'>{reviewerName}</span> {reviewedDate}</Typography>
+                </div>
+                <div className='ml-auto'>
+                    <IconWithTitle
+                        iconSrc={iconSrc}
+                        iconAlt={iconAlt}
+                        iconWidth={iconWidth}
+                        iconHeight={iconHeight}
+                        iconClass={iconClass}
+                        title={title}
+                        titleClass={titleClass}
+                        titleSize={titleSize}
+                        titleColor={titleColor}
+                    />
                 </div>
             </div>
 
@@ -58,10 +81,10 @@ ReviewList.propTypes = {
     avatarSrc: PropTypes.string,
     avatarAlt: PropTypes.string,
     avatarSize: PropTypes.string,
-    iconSrc: PropTypes.string,
-    iconAl: PropTypes.string,
-    iconWidth: PropTypes.number,
-    iconHeight: PropTypes.number,
+    companyIconSrc: PropTypes.string,
+    companyIconAl: PropTypes.string,
+    companyIconWidth: PropTypes.number,
+    companyIconHeight: PropTypes.number,
     starRatingName: PropTypes.string,
     starRatingValue: PropTypes.number,
     starRatingMaxValue: PropTypes.number,

@@ -9,19 +9,19 @@ const AvatarWithIcon = ({
   avatarSrc,
   avatarAlt,
   avatarSize,
-  iconSrc,
-  iconAlt,
-  iconWidth = 20,
-  iconHeight = 20,
-  iconClass = "position-absolute bottom right"
+  companyIconSrc,
+  companyIconAlt,
+  companyIconWidth = 20,
+  companyIconHeight = 20,
+  companyIconClass = "position-absolute bottom right"
 
 }) => {
   return (
     <div className={`position-relative mui-avatar ${avatarSize}`}>
       <Avatar src={avatarSrc} alt={avatarAlt} className={avatarSize} variant={variant} />
-      {iconSrc &&
-        <div className={`bg-white rounded-circle ${iconClass}`}>
-          <img src={iconSrc} width={iconWidth} height={iconHeight} alt={iconAlt} />
+      {companyIconSrc &&
+        <div className={`bg-white rounded-circle ${companyIconClass}`}>
+          <img src={companyIconSrc} width={companyIconWidth} height={companyIconHeight} alt={companyIconAlt} />
         </div>
       }
     </div>
@@ -33,11 +33,11 @@ AvatarWithIcon.propTypes = {
   avatarSrc: PropTypes.string,
   avatarAlt: PropTypes.string,
   avatarSize: PropTypes.string,
-  iconSrc: PropTypes.string,
-  iconAlt: PropTypes.string,
-  iconWidth: PropTypes.number,
-  iconHeight: PropTypes.number,
-  iconClass: PropTypes.string
+  companyIconSrc: PropTypes.string,
+  companyIconAlt: PropTypes.string,
+  companyIconWidth: PropTypes.number,
+  companyIconHeight: PropTypes.number,
+  companyIconClass: PropTypes.string
 };
 
 export default AvatarWithIcon;
