@@ -18,7 +18,8 @@ ReviewHeaders.args = {
         "path": "/app/Review",
         "url": "/app/review",
     },
-    starRatingName: "reviewRating",
-    starRatingMaxValue: 5,
-    starRatingValue: 4.5,
+    ratingName: "reviewRating",
+    ratingValue: 4.5,
+    maxRating: 5,
+    ratingIconSize: "large"
 };

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Typography } from '@material-ui/core'
-import StarRatingComponent from 'react-star-rating-component'
+import Rating from '@material-ui/lab/Rating';
 import AvatarWithIcon from 'components/Molecules/AvatarWithIcon';
 import IconWithTitle from 'components/Molecules/IconWithTitle';
 
@@ -14,9 +14,10 @@ const ReviewList = ({
     companyIconAlt,
     companyIconWidth = 20,
     companyIconHeight = 20,
-    starRatingName,
-    starRatingValue,
-    starRatingMaxValue,
+    ratingName,
+    maxRating,
+    ratingValue,
+    ratingIconSize = "small",
     reviewerName,
     reviewedDate,
     reviewDescription,
@@ -48,7 +49,7 @@ const ReviewList = ({
                 </div>
                 <div className='ml-3'>
                     <div className="text-xl">
-                        <StarRatingComponent name={starRatingName} starCount={starRatingMaxValue} value={starRatingValue} />
+                        <Rating name={ratingName} defaultValue={ratingValue} max={maxRating} precision={0.5} size={ratingIconSize} />
                     </div>
                     <Typography ><span className='font-weight-bold'>{reviewerName}</span> {reviewedDate}</Typography>
                 </div>
@@ -85,9 +86,9 @@ ReviewList.propTypes = {
     companyIconAl: PropTypes.string,
     companyIconWidth: PropTypes.number,
     companyIconHeight: PropTypes.number,
-    starRatingName: PropTypes.string,
-    starRatingValue: PropTypes.number,
-    starRatingMaxValue: PropTypes.number,
+    ratingName: PropTypes.string,
+    maxRating: PropTypes.number,
+    ratingValue: PropTypes.number,
     reviewerName: PropTypes.string,
     reviewedDate: PropTypes.string,
     reviewDescription: PropTypes.string,
