@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import "./index.scss"
-import { Typography } from '@material-ui/core';
+import { Box } from '@material-ui/core';
+import EmTypography from 'components/Atoms/EmTypography';
 
 
 const IconWithTitle = ({
@@ -11,17 +11,16 @@ const IconWithTitle = ({
   iconHeight = 20,
   iconClass = "",
   title,
-  titleClass = "ml-2",
-  titleSize = "text-sm",
-  titleColor = ""
+  titleVariant = "body1",
+  titleColor = "textPrimary"
 }) => {
   return (
-    <div>
-      <div className='d-flex align-items-center'>
+    <Box display="flex" alignItems="center">
+      <Box flexShrink={0} mr={1} display="flex" alignItems="center">
         <img className={iconClass} src={iconSrc} width={iconWidth} height={iconHeight} alt={iconAlt} />
-        <Typography className={`${titleSize} ${titleColor} ${titleClass}`} children={title} />
-      </div>
-    </div>
+      </Box>
+      <EmTypography variant={titleVariant} color={titleColor} children={title} />
+    </Box>
   );
 };
 
@@ -32,8 +31,7 @@ IconWithTitle.propTypes = {
   iconHeight: PropTypes.number,
   iconClass: PropTypes.string,
   title: PropTypes.string,
-  titleClass: PropTypes.string,
-  titleSize: PropTypes.string,
+  titleVariant: PropTypes.string,
   titleColor: PropTypes.string,
 };
 

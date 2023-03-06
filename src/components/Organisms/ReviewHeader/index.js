@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import ContainerHeader from 'components/ContainerHeader'
-import { Rating } from '@material-ui/lab'
+import RatingStarWithValue from 'components/Molecules/RatingStarWithValue'
 
 const ReviewHeader = ({
     title,
@@ -14,10 +14,12 @@ const ReviewHeader = ({
     return (
         <>
             <ContainerHeader title={`${title} Reviews`} match={match}>
-                <div className="text-xl d-flex mr-auto ml-5">
-                    <div className='mr-2'>{ratingValue}/{maxRating}</div>
-                    <Rating name={ratingName} defaultValue={ratingValue} max={maxRating} precision={0.5} size={ratingIconSize} />
-                </div>
+                <RatingStarWithValue
+                    ratingName={ratingName}
+                    ratingValue={ratingValue}
+                    maxRating={maxRating}
+                    ratingIconSize={ratingIconSize}
+                />
             </ContainerHeader>
         </>
     )
