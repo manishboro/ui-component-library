@@ -15,7 +15,13 @@ const ReviewerProfile = ({
 }) => {
   return (
     <Box display="flex" alignItems="center">
-      <Avatar src={reviewerImg} alt={reviewerName} className={avatarSize} variant={variant} children={children} />
+      <Avatar
+        src={reviewerImg}
+        alt={reviewerName}
+        className={avatarSize}
+        variant={variant}
+        children={children}
+      />
       <Box ml={1}>
         <EmTypography children={reviewerName} />
         <Box display="flex" alignItems="center">
@@ -23,7 +29,6 @@ const ReviewerProfile = ({
           <Box ml={0.5} fontWeight={300}>
             <EmTypography variant='caption' children={time} />
           </Box>
-
         </Box>
       </Box>
 

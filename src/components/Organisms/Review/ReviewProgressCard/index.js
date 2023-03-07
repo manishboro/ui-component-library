@@ -14,9 +14,9 @@ const ReviewProgressCard = ({
     reviewRatingList
 }) => {
     return (
-        <Box sx={reviewProgressCardStyle} p={2}>
+        <Box sx={reviewProgressCardStyle} py="5px" px={2}>
             {reviewRatingList.map((list, index) => (
-                <Box py={1}>
+                <Box py="6px">
                     <ReviewProgressBar
                         key={index}
                         numberOfStar={list.numberOfStar}
