@@ -14,6 +14,7 @@ ReviewerProfiles.args = {
   variant: "circular",
   avatarSize: "small",
   reviewerImg: "/images/profile-1.jpg",
+  children: "N",
   reviewerName: "Meverick Paul",
   time: "Today at 4:00 PM"
 };

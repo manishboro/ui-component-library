@@ -14,6 +14,10 @@ export default {
       control: "select",
       options: ["small", "large"],
     },
+    shape: {
+      control: "select",
+      options: ["normal", "rounded-full", "square"],
+    },
     color: {
       control: "select",
       options: ["primary", "secondary"],

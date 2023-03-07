@@ -1,0 +1,15 @@
+.em-rating {
+  border-radius: 4px;
+  color: #FFF;
+  display: flex;
+
+    &.high {
+      background: #29823B;
+    }
+    &.medium {
+      background: #E99400;
+    }
+    &.low {
+      background: #DC2020;
+    }
+}

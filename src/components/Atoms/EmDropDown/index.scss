@@ -1,38 +1,100 @@
 .em-dropdown {
-  min-width: 120px !important;
+  min-width: 100px !important;
 
-  .MuiSelect-outlined {   
-    border: 1px solid #E5E5EB;
-    border-radius: 8px,
+  .MuiOutlinedInput-notchedOutline {
+    border: none;
   }
-  
-  .MuiInputLabel-outlined {
-    transform: translate(8px, 10px) scale(1);
+  .MuiInputLabel-shrink { 
+    display: none;
+  }
+  .MuiSelect-selectMenu {
+    &:focus {
+      background: transparent;
+    } 
   }
 
-  .MuiInputLabel-outlined.MuiInputLabel-shrink {
-    transform: translate(12px, -6px) scale(0.75);
+  .MuiSelect-outlined {
+    border: 1px solid #e5e5eb;
+    border-radius: 8px;  
+    
+    .MuiOutlinedInput-notchedOutline {
+      border-color: #e5e5eb;
+      border-width: 1px !important;
+    }
   }
+
+  .em-dropdown-icon {
+    z-index: -1;
+    position: absolute; 
+  }
+
+ 
 
   &.small {
-    .MuiInputLabel-formControl {
+    .MuiInputLabel-formControl,.MuiInput-input, .MuiSelect-outlined {
       font-size: 12px;
-       padding: 8px 40px 8px 8px;
+      color: #14142B;
+    }
+
+    .MuiSelect-outlined, .MuiSelect-filled  {
+      padding:6px 40px 6px 8px;
+    }
+
+    .MuiInputLabel-outlined, .MuiInputLabel-filled {
+      transform: translate(8px, 10px) scale(1);
+    }
+
+    .MuiInputLabel-outlined.MuiInputLabel-shrink, .MuiInputLabel-filled.MuiInputLabel-shrink {
+      transform: translate(8px, -4px) scale(0.75);
+    }
+
+    .em-dropdown-icon {
+      right: 10px;
+    }
+
+    .MuiInput-underline {
+      .em-dropdown-icon {
+        right: 0;
+      }
     }
   }
-  
-  &.medium {
-    .MuiInputLabel-formControl {
-      font-size: 14px;
-       padding: 8px 40px 8px 16px;
-    }
-  }
-  
+
   &.large {
-    .MuiInputLabel-formControl {
-      font-size: 16px;
-       padding: 8px 40px 8px 8px;
+    min-width: 130px !important;
+
+    .MuiInputLabel-formControl, .MuiInput-input, .MuiSelect-outlined {
+      font-size: 14px;
+      color: #14142B;
+    }
+
+    .MuiSelect-outlined, .MuiSelect-filled {
+      padding: 10px 40px 10px 16px;
+      border-radius: 5px;    
+    }
+
+    .MuiInputLabel-outlined, .MuiInputLabel-filled {
+      transform: translate(16px, 14px) scale(1);
+    }
+
+    .MuiInputLabel-outlined.MuiInputLabel-shrink, .MuiInputLabel-filled.MuiInputLabel-shrink {
+      transform: translate(16px, -5px) scale(0.75);
+    }
+    .em-dropdown-icon {   
+      right: 16px;   
+      img {
+        width: 14px;
+        height: 10px;
+      }
+    }
+    .MuiInput-underline {
+      .em-dropdown-icon {
+        right: 0;
+      }
     }
   }
+  
 }
 
+.MuiMenuItem-root {
+  font-size: inherit;
+}

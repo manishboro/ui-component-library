@@ -8,21 +8,22 @@ const EmButton = ({
   variant = "contained",
   size = "small",
   color = "primary",
+  shape = "square",
   href,
   component,
   disabled = false,
   startIcon,
   endIcon,
   fullWidth = false,
-  className = "em_button"
-
+  fontWeight = "fw-500",
+  textClass = "",
 }) => {
 
   return (
     <Button
       variant={variant}
       children={children}
-      className={className}
+      className={`em-button ${fontWeight} ${shape} ${textClass}`}
       color={color}
       component={component}
       disabled={disabled}

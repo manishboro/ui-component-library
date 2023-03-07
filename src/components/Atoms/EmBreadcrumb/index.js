@@ -4,11 +4,10 @@ import { Breadcrumbs, Link } from '@material-ui/core';
 import "./index.scss";
 
 const EmBreadcrumb = ({
-  className = "em-breadcrumb",
   breadcrumbData
 }) => {
   return (
-    <Breadcrumbs aria-label="breadcrumb" className={className}>
+    <Breadcrumbs aria-label="breadcrumb" className="em-breadcrumb">
       {breadcrumbData.map(({ name, path }, key) =>
         key + 1 === breadcrumbData.length ? (
           <Link color="textPrimary" key={key}> {name} </Link>

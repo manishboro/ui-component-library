@@ -6,7 +6,7 @@ import { Box } from '@material-ui/core';
 
 const BorderLinearProgress = withStyles((theme) => ({
   root: {
-    height: 10,
+    height: 8,
     borderRadius: 5,
 
   },

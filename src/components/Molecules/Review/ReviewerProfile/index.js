@@ -9,13 +9,13 @@ const ReviewerProfile = ({
   variant = "circular",
   reviewerImg,
   avatarSize,
+  children,
   reviewerName,
   time
-
 }) => {
   return (
     <Box display="flex" alignItems="center">
-      <Avatar src={reviewerImg} alt={reviewerName} className={avatarSize} variant={variant} />
+      <Avatar src={reviewerImg} alt={reviewerName} className={avatarSize} variant={variant} children={children} />
       <Box ml={1}>
         <EmTypography children={reviewerName} />
         <Box display="flex" alignItems="center">
@@ -34,6 +34,7 @@ const ReviewerProfile = ({
 ReviewerProfile.propTypes = {
   variant: PropTypes.string,
   reviewerImg: PropTypes.string,
+  children: PropTypes.string,
   reviewerName: PropTypes.string,
   avatarSize: PropTypes.string,
   time: PropTypes.string,

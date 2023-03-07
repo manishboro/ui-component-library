@@ -7,24 +7,29 @@ import ReviewProgressCard from 'components/Organisms/Review/ReviewProgressCard'
 
 const ReviewTemplate = ({
     breadcrumbData,
-    reviewRatingList
+    reviewCardData
 }) => {
+
     return (
         <div>
             <EmBreadcrumb breadcrumbData={breadcrumbData} />
             <Grid container spacing={2}>
-                <Grid item md={3} sm={6}>
-                    <ReviewCard />
-                </Grid>
-                <Grid item md={3} sm={6}>
-                    <ReviewCard />
-                </Grid>
-                <Grid item md={3} sm={6}>
-                    <ReviewProgressCard reviewRatingList={reviewRatingList} />
-                </Grid>
-                <Grid item md={3} sm={6}>
-                    <ReviewCard />
-                </Grid>
+                {reviewCardData.map((list, index) => (
+                    <Grid item md={3} sm={6}>
+                        {
+                            list.type === "reviewCard" ? <ReviewCard
+                                key={index}
+                                iconSrc={list.iconSrc}
+                                iconAlt={list.iconAlt}
+                                iconWidth={28}
+                                iconHeight={28}
+                                heading={list.heading}
+                                value={list.value}
+                            /> : <ReviewProgressCard reviewRatingList={list.reviewRatingList} />
+                        }
+
+                    </Grid>
+                ))}
             </Grid>
         </div>
     )

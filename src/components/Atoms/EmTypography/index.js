@@ -10,7 +10,6 @@ const EmTypography = ({
   color = "textPrimary",
   display = "block",
   noWrap = false,
-  className = "em-typography"
 }) => {
 
   return (
@@ -18,7 +17,7 @@ const EmTypography = ({
       variant={variant}
       align={align}
       children={children}
-      className={className}
+      className="em-typography"
       color={color}
       display={display}
       noWrap={noWrap}

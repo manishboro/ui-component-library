@@ -17,26 +17,53 @@ ReviewTemplates.args = {
         { name: "Application", path: "/Application" },
         { name: "Reviews" },
     ],
-    reviewRatingList: [
+    reviewCardData: [
         {
-            numberOfStar: 5,
-            value: 70,
+            type: "reviewCard",
+            iconSrc: "/images/icons/edit.svg",
+            iconAlt: "Reviews",
+            heading: "Total Reviews",
+            value: 150,
         },
         {
-            numberOfStar: 4,
-            value: 12,
+            type: "reviewCard",
+            iconSrc: "/images/icons/favorite.svg",
+            iconAlt: "Reviews",
+            heading: "Average Rating",
+            value: 4,
         },
         {
-            numberOfStar: 3,
-            value: 10,
+            type: "reviewProgressCard",
+            reviewRatingList: [
+                {
+                    numberOfStar: 5,
+                    value: 70,
+                },
+                {
+                    numberOfStar: 4,
+                    value: 12,
+                },
+                {
+                    numberOfStar: 3,
+                    value: 10,
+                },
+                {
+                    numberOfStar: 2,
+                    value: 6,
+                },
+                {
+                    numberOfStar: 1,
+                    value: 2,
+                }
+            ]
         },
         {
-            numberOfStar: 2,
-            value: 6,
-        },
-        {
-            numberOfStar: 1,
-            value: 2,
+            type: "reviewCard",
+            iconSrc: "/images/icons/recommendations.svg",
+            iconAlt: "Facebook",
+            heading: "Facebook Recommendations",
+            value: 30,
         }
-    ]
+    ],
+
 };
