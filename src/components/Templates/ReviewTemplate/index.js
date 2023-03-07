@@ -1,37 +1,31 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Button, Typography } from '@material-ui/core'
-import ReviewRating from 'components/Organisms/ReviewRating'
+import EmBreadcrumb from 'components/Atoms/EmBreadcrumb'
+import { Grid } from '@material-ui/core'
+import ReviewCard from 'components/Organisms/Review/ReviewCard'
+import ReviewProgressCard from 'components/Organisms/Review/ReviewProgressCard'
 
 const ReviewTemplate = ({
-    ratingName,
-    maxRating,
-    ratingValue,
-    ratingIconSize = "small",
+    breadcrumbData,
+    reviewRatingList
 }) => {
-
-    const buttonStyle = {
-        borderRadius: 50,
-        fontSize: 20,
-        '&.MuiButton-outlined': {
-            backgroundColor: "#000000",
-            padding: 20
-        }
-    }
     return (
         <div>
-            <div className='d-flex justify-content-between'>
-                <Typography variant='h6'>Reviews</Typography>
-                <Button variant='' sx={buttonStyle} >March 2022 - February 2023</Button>
-            </div>
-            <div>
-                <ReviewRating
-                    ratingName={ratingName}
-                    ratingValue={ratingValue}
-                    maxRating={maxRating}
-                    ratingIconSize={ratingIconSize}
-                />
-            </div>
+            <EmBreadcrumb breadcrumbData={breadcrumbData} />
+            <Grid container spacing={2}>
+                <Grid item md={3} sm={6}>
+                    <ReviewCard />
+                </Grid>
+                <Grid item md={3} sm={6}>
+                    <ReviewCard />
+                </Grid>
+                <Grid item md={3} sm={6}>
+                    <ReviewProgressCard reviewRatingList={reviewRatingList} />
+                </Grid>
+                <Grid item md={3} sm={6}>
+                    <ReviewCard />
+                </Grid>
+            </Grid>
         </div>
     )
 }

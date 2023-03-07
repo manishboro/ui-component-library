@@ -1,7 +1,8 @@
 import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import PropTypes from "prop-types";
-import { Typography } from '@material-ui/core';
+import { Box } from '@material-ui/core';
+import EmTypography from 'components/Atoms/EmTypography';
 
 
 const ReviewerProfile = ({
@@ -13,30 +14,29 @@ const ReviewerProfile = ({
 
 }) => {
   return (
-    <div className='d-flex'>
+    <Box display="flex" alignItems="center">
       <Avatar src={reviewerImg} alt={reviewerName} className={avatarSize} variant={variant} />
-      <div>
-        <Typography children={reviewerName} />
-        <div className='d-flex'>
+      <Box ml={1}>
+        <EmTypography children={reviewerName} />
+        <Box display="flex" alignItems="center">
           <img src="/images/icons/clock.svg" width="12" height="12" alt="time" />
-          <Typography children={time} />
-        </div>
-      </div>
+          <Box ml={0.5} fontWeight={300}>
+            <EmTypography variant='caption' children={time} />
+          </Box>
 
-    </div>
+        </Box>
+      </Box>
+
+    </Box>
   );
 };
 
 ReviewerProfile.propTypes = {
   variant: PropTypes.string,
-  avatarSrc: PropTypes.string,
-  avatarAlt: PropTypes.string,
+  reviewerImg: PropTypes.string,
+  reviewerName: PropTypes.string,
   avatarSize: PropTypes.string,
-  companyIconSrc: PropTypes.string,
-  companyIconAlt: PropTypes.string,
-  companyIconWidth: PropTypes.number,
-  companyIconHeight: PropTypes.number,
-  companyIconClass: PropTypes.string
+  time: PropTypes.string,
 };
 
 export default ReviewerProfile;

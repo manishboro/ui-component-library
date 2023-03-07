@@ -3,7 +3,7 @@ import React from 'react';
 import ReviewerProfile from '.';
 
 export default {
-  title: 'Molecules/ReviewerProfiles',
+  title: 'Molecules/Review/ReviewerProfiles',
   component: ReviewerProfile,
 };
 
@@ -14,4 +14,6 @@ ReviewerProfiles.args = {
   variant: "circular",
   avatarSize: "small",
   reviewerImg: "/images/profile-1.jpg",
+  reviewerName: "Meverick Paul",
+  time: "Today at 4:00 PM"
 };

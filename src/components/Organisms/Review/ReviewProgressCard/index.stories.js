@@ -1,22 +1,18 @@
 
 
 import React from 'react';
-import ReviewTemplate from '.';
+import ReviewProgressCard from '.';
 
 export default {
-    title: 'Templates/ReviewTemplates',
-    component: ReviewTemplate,
+    title: 'Organisms/Review/ReviewProgressCards',
+    component: ReviewProgressCard,
 
 };
 
-const Template = (args) => <ReviewTemplate {...args} />;
+const Template = (args) => <ReviewProgressCard {...args} />;
 
-export const ReviewTemplates = Template.bind({});
-ReviewTemplates.args = {
-    breadcrumbData: [
-        { name: "Application", path: "/Application" },
-        { name: "Reviews" },
-    ],
+export const ReviewProgressCards = Template.bind({});
+ReviewProgressCards.args = {
     reviewRatingList: [
         {
             numberOfStar: 5,

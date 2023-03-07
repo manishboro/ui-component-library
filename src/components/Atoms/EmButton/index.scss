@@ -1,0 +1,61 @@
+.em_button {
+  &.MuiButtonBase-root{
+    text-transform: capitalize;
+    font-weight: 500;
+  }
+  &.MuiButton-text{
+    padding: 0
+  }
+  &.MuiButton-textPrimary{
+    color: #FFC107
+  }
+  
+  &.MuiButton-textSecondary{
+    color: #14142B
+  }
+  &.MuiButton-outlined{
+    border: 1px solid #D1D1DB;
+    border-radius: 0.25rem;
+
+    &:hover {
+      border: 1px solid #D1D1DB;
+    }  
+  }
+  
+  &.MuiButton-outlinedPrimary{
+    color: #14142B;
+    border: 1px solid #FFC107;
+  
+  }
+  &.MuiButton-outlinedSecondary{
+    color: #14142B
+  }
+  &.MuiButton-contained{
+    border-radius: 50px;
+    background-color: #FFC107
+  
+  }
+  &.MuiButton-containedPrimary{
+    color: #FFF
+  }
+  &.MuiButton-containedSecondary{
+    color: #14142B
+  }
+  &.MuiButton-textSizeSmall{
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+  &.MuiButton-textSizeLarge{
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+  &.MuiButton-sizeSmall{
+    padding: 0.5rem 1rem;
+  }
+  &.MuiButton-containedSizeLarge{
+    padding: 0.85rem 1.5rem;
+  }
+  &.Mui-disabled{
+    opacity: 0.65
+  }
+}
