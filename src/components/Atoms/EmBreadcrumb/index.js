@@ -4,7 +4,7 @@ import { Breadcrumbs, Link } from '@material-ui/core';
 import "./index.scss";
 
 const EmBreadcrumb = ({
-  className = "em_breadcrumb",
+  className = "em-breadcrumb",
   breadcrumbData
 }) => {
   return (

@@ -1,8 +1,7 @@
-.dropdown {
+.em-dropdown {
   min-width: 120px !important;
 
-  .MuiSelect-outlined {
-    padding: 8px 40px 8px 8px;
+  .MuiSelect-outlined {   
     border: 1px solid #E5E5EB;
     border-radius: 8px,
   }
@@ -18,18 +17,21 @@
   &.small {
     .MuiInputLabel-formControl {
       font-size: 12px;
+       padding: 8px 40px 8px 8px;
     }
   }
   
   &.medium {
     .MuiInputLabel-formControl {
       font-size: 14px;
+       padding: 8px 40px 8px 16px;
     }
   }
   
   &.large {
     .MuiInputLabel-formControl {
       font-size: 16px;
+       padding: 8px 40px 8px 8px;
     }
   }
 }

@@ -17,7 +17,7 @@ const EmBreadcrumb = ({
   size
 }) => {
   return (
-    <FormControl variant={variant} className={`dropdown ${size}`}>
+    <FormControl variant={variant} className={`em-dropdown ${size}`}>
       <InputLabel id={labelId} >{label}</InputLabel>
       <Select
         id={id}
