@@ -55,7 +55,7 @@ const ReviewFilter = ({
                     return (
                         <Box borderBottom="1px solid #E5E5EB;" p={{ xs: '16px 0', md: '24px 0' }}>
                             <Box display="flex" flexWrap="wrap">
-                                <Box pr={{ md: 1 }} width={{ xs: "100%", sm: "25%" }} >
+                                <Box pr={{ md: 1 }} width={{ md: "25%" }} >
                                     <ReviewerProfile
                                         reviewerImg={data.reviewerImg}
                                         reviewerName={data.reviewerName}
@@ -65,7 +65,7 @@ const ReviewFilter = ({
                                     />
                                 </Box>
 
-                                <Box width={{ sm: "50%" }} order={{ md: 3 }}>
+                                <Box width={{ md: "50%" }} order={{ md: 3 }}>
                                     <Box m={{ xs: '-36px 0 24px auto', md: '0' }} width={42}>
                                         <ReviewRating
                                             num={data.rating}
