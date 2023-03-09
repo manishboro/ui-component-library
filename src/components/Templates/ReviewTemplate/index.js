@@ -19,7 +19,7 @@ const ReviewTemplate = ({
     reviewData
 }) => {
     return (
-        <Box height="100vh" overflow="auto" >
+        <Box>
             <Box display="flex" alignItems={{ xs: "center", md: "flex-start" }} mb={{ xs: 1.5, md: 2.5 }}>
                 <Box width="55%">
                     <EmBreadcrumb breadcrumbData={breadcrumbData} />
