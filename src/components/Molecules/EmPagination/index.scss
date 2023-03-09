@@ -1,0 +1,22 @@
+.em-pagination {
+  .MuiPaginationItem-root {
+    margin: 0 4px;
+    border: 1px solid #9C9CAF;
+    background: #FCFCFC;
+    
+    &.MuiPaginationItem-page {
+      &:hover, &.Mui-selected {
+        border: 1px solid #FFC107;
+        background: #FCFCFC;
+        color: #FFC107;
+      }
+    }
+
+    &.MuiPaginationItem-ellipsis {
+      background: transparent;
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

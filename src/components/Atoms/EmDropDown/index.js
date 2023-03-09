@@ -6,7 +6,7 @@ import Select from '@material-ui/core/Select';
 import "./index.scss";
 
 const EmDropDown = ({
-  variant,
+  variant = "outlined",
   id,
   value,
   handleChange,

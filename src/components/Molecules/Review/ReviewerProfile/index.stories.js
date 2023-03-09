@@ -15,6 +15,9 @@ ReviewerProfiles.args = {
   avatarSize: "small",
   reviewerImg: "/images/profile-1.jpg",
   children: "N",
+  companyIcon: "/images/icons/google-icon.svg",
+  companyIconWidth: 18,
+  companyIconHeight: 18,
   reviewerName: "Meverick Paul",
-  time: "Today at 4:00 PM"
+  time: "Dec 22 , 2022"
 };

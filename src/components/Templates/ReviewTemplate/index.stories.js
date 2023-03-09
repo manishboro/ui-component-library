@@ -17,6 +17,13 @@ ReviewTemplates.args = {
         { name: "Application", path: "/Application" },
         { name: "Reviews" },
     ],
+    handleChange: () => { },
+    reviewDropdown: [
+        { value: 'value1', label: 'March 2020 - February 2021' },
+        { value: 'value2', label: 'March 2021 - February 2022' },
+        { value: 'value3', label: 'March 2022 - February 2023' }
+    ],
+
     reviewCardData: [
         {
             type: "reviewCard",
@@ -64,6 +71,21 @@ ReviewTemplates.args = {
             heading: "Facebook Recommendations",
             value: 30,
         }
+    ],
+    locationOptionList: [
+        { value: 'value1', label: 'label1' },
+        { value: 'value2', label: 'label2' },
+        { value: 'value3', label: 'label3' }
+    ],
+    platformOptionList: [
+        { value: 'value1', label: 'label1' },
+        { value: 'value2', label: 'label2' },
+        { value: 'value3', label: 'label3' }
+    ],
+    sortByOptionList: [
+        { value: 'value1', label: 'label1' },
+        { value: 'value2', label: 'label2' },
+        { value: 'value3', label: 'label3' }
     ],
 
 };

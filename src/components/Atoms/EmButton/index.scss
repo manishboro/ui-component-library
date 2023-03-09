@@ -31,9 +31,13 @@
   }
   
   &.MuiButton-outlinedPrimary{
-    color: #14142B;
+    color: #FFC107;
     border: 1px solid #FFC107;
   
+    &:hover {
+      background-color: #FFC107;
+      color: #FFF;
+    }
   }
   &.MuiButton-outlinedSecondary{
     color: #14142B
