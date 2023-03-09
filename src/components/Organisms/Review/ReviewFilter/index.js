@@ -54,7 +54,7 @@ const ReviewFilter = ({
                 reviewData.map((data) => {
                     return (
                         <Box borderBottom="1px solid #E5E5EB;" p={{ xs: '16px 0', md: '24px 0' }}>
-                            <Box display="flex" flexWrap="wrap">
+                            <Box display="flex" flexWrap="wrap" flexDirection={{ xs: "column", md: "row" }}>
                                 <Box pr={{ md: 1 }} width={{ md: "25%" }} >
                                     <ReviewerProfile
                                         reviewerImg={data.reviewerImg}
