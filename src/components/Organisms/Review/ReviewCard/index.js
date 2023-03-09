@@ -29,7 +29,7 @@ const ReviewCard = ({
                     alt={iconAlt}
                 />
             </Box>
-            <EmTypography variant='body2' children={heading} />
+            <EmTypography variant='subtitle2' color='textSecondary' children={heading} />
             <Box mt={0.5} fontWeight={600}>
                 <EmTypography variant='h3' children={value} />
             </Box>
@@ -38,7 +38,13 @@ const ReviewCard = ({
 }
 
 ReviewCard.propTypes = {
-    varian: PropTypes.string,
+    iconSrc: PropTypes.string,
+    iconAlt: PropTypes.string,
+    iconWidth: PropTypes.number,
+    iconHeight: PropTypes.number,
+    iconClass: PropTypes.string,
+    heading: PropTypes.string,
+    value: PropTypes.number,
 }
 
 export default ReviewCard;

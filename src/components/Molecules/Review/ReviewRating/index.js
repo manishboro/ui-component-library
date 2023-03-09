@@ -3,10 +3,7 @@ import PropTypes from "prop-types";
 import { Box } from '@material-ui/core';
 import "./index.scss";
 
-const ReviewRating = ({
-  num,
-  variant
-}) => {
+const ReviewRating = ({ num }) => {
   return (
     <Box
       display="flex"
@@ -14,7 +11,7 @@ const ReviewRating = ({
       justifyContent="center"
       width={42}
       height={28}
-      className={`em-rating ${variant}`}
+      className={`em-rating ${num >= 4 && "high"} ${(num < 4 && num >= 3) && "medium"} ${num < 3 && "low"}`}
     >
       <Box mr={0.5}>
         {num}
@@ -25,12 +22,7 @@ const ReviewRating = ({
 };
 
 ReviewRating.propTypes = {
-  variant: PropTypes.string,
-  reviewerImg: PropTypes.string,
-  children: PropTypes.string,
-  reviewerName: PropTypes.string,
-  avatarSize: PropTypes.string,
-  time: PropTypes.string,
+  num: PropTypes.number
 };
 
 export default ReviewRating;

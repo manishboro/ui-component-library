@@ -1,11 +1,11 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 import URLSearchParams from "url-search-params";
 import MomentUtils from "@date-io/moment";
-import { MuiPickersUtilsProvider} from '@material-ui/pickers';
+import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 import { Redirect, Route, Switch } from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { IntlProvider } from "react-intl";
 import "assets/vendors/style";
 import indigoTheme from "./themes/indigoTheme";
@@ -44,7 +44,7 @@ import asyncComponent from "util/asyncComponent";
 import { setDarkTheme, setThemeColor } from "../actions/Setting";
 import AppLayout from "./AppLayout";
 
-const RestrictedRoute = ({component: Component, authUser, ...rest}) =>
+const RestrictedRoute = ({ component: Component, authUser, ...rest }) =>
   <Route
     {...rest}
     render={props =>
@@ -53,17 +53,17 @@ const RestrictedRoute = ({component: Component, authUser, ...rest}) =>
         : <Redirect
           to={{
             pathname: '/signin',
-            state: {from: props.location}
+            state: { from: props.location }
           }}
         />}
   />;
 
 const App = (props) => {
   const dispatch = useDispatch();
-  const {themeColor, darkTheme, locale, isDirectionRTL} = useSelector(({settings}) => settings);
-  const {authUser, initURL} = useSelector(({auth}) => auth);
+  const { themeColor, darkTheme, locale, isDirectionRTL } = useSelector(({ settings }) => settings);
+  const { authUser, initURL } = useSelector(({ auth }) => auth);
   const isDarkTheme = darkTheme;
-  const {match, location} = props;
+  const { match, location } = props;
 
   useEffect(() => {
     window.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__ = true;
@@ -115,7 +115,7 @@ const App = (props) => {
         break;
       }
       case DARK_INDIGO: {
-        applyTheme = createMuiTheme({...indigoTheme, direction: 'rtl'});
+        applyTheme = createMuiTheme({ ...indigoTheme, direction: 'rtl' });
         break;
       }
       case DARK_CYAN: {
@@ -146,7 +146,7 @@ const App = (props) => {
         applyTheme = createMuiTheme(greenTheme);
         break;
       }
-      default : createMuiTheme(indigoTheme);
+      default: createMuiTheme(indigoTheme);
     }
     return applyTheme;
   };
@@ -160,11 +160,11 @@ const App = (props) => {
   }
   if (location.pathname === '/') {
     if (authUser === null) {
-      return ( <Redirect to={'/signin'}/> );
+      return (<Redirect to={'/signin'} />);
     } else if (initURL === '' || initURL === '/' || initURL === '/signin') {
-      return ( <Redirect to={'/app/dashboard/crypto'}/> );
+      return (<Redirect to={'/app/dashboard/crypto'} />);
     } else {
-      return ( <Redirect to={initURL}/> );
+      return (<Redirect to={initURL} />);
     }
   }
   if (isDirectionRTL) {
@@ -186,11 +186,11 @@ const App = (props) => {
             <div className="app-main">
               <Switch>
                 <RestrictedRoute path={`${match.url}app`} authUser={authUser}
-                                 component={AppLayout}/>
-                <Route path='/signin' component={SignIn}/>
-                <Route path='/signup' component={SignUp}/>
+                  component={AppLayout} />
+                <Route path='/signin' component={SignIn} />
+                <Route path='/signup' component={SignUp} />
                 <Route
-                  component={asyncComponent(() => import('app/routes/extraPages/routes/404'))}/>
+                  component={asyncComponent(() => import('app/routes/extraPages/routes/404'))} />
               </Switch>
             </div>
           </RTL>

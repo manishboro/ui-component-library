@@ -10,6 +10,7 @@ const EmTypography = ({
   color = "textPrimary",
   display = "block",
   noWrap = false,
+  sx
 }) => {
 
   return (
@@ -21,6 +22,7 @@ const EmTypography = ({
       color={color}
       display={display}
       noWrap={noWrap}
+      sx={sx}
     />
   );
 };

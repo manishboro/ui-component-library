@@ -14,11 +14,11 @@ const AvatarWithIcon = ({
   iconAlt,
   iconWidth = 20,
   iconHeight = 20,
-
+  firstLetter
 }) => {
   return (
     <div className={`em-avatar ${avatarSize}`}>
-      <Avatar src={avatarSrc} alt={avatarAlt} className={avatarSize} variant={variant} />
+      <Avatar src={avatarSrc} alt={avatarAlt} className={avatarSize} variant={variant} children={firstLetter} />
       {iconSrc &&
         <Box
           position="absolute"

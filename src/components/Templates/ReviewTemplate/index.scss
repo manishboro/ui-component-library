@@ -1,0 +1,29 @@
+
+@media screen and (max-width: 767px){ 
+    .reviewCard-0 {
+        order: 1;
+    }
+    .reviewCard-1 {
+        order: 3;
+    }
+    .reviewCard-2 {
+        order: 4;
+    }
+    .reviewCard-3 {
+        order: 2;
+    }
+
+    .locationColumn {
+        .em-typography.MuiTypography-body1 {
+            font-size: 14px;
+        }
+        
+    }
+}
+@media screen and (max-width: 432px){
+    .reviewCard-0 {
+        > .MuiBox-root {
+            padding: 24px 16px;
+        }
+    }
+}

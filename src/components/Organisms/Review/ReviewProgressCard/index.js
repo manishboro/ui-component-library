@@ -13,9 +13,9 @@ const ReviewProgressCard = ({
     reviewRatingList
 }) => {
     return (
-        <Box sx={reviewProgressCardStyle} py="5px" px={2}>
+        <Box sx={reviewProgressCardStyle} py={1} px={2}>
             {reviewRatingList.map((list, index) => (
-                <Box py="6px">
+                <Box py="5px">
                     <ReviewProgressBar
                         key={index}
                         numberOfStar={list.numberOfStar}
@@ -28,7 +28,7 @@ const ReviewProgressCard = ({
 }
 
 ReviewProgressCard.propTypes = {
-    varian: PropTypes.string,
+    reviewRatingList: PropTypes.array,
 }
 
 export default ReviewProgressCard;

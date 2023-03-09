@@ -9,9 +9,11 @@ import AvatarWithIcon from 'components/Molecules/AvatarWithIcon';
 const ReviewerProfile = ({
   reviewerImg,
   reviewerName,
+  firstLetter,
   companyIcon,
-  companyIconWidth,
-  companyIconHeight,
+  companyIconAlt,
+  companyIconWidth = 18,
+  companyIconHeight = 18,
   time
 }) => {
   return (
@@ -20,8 +22,11 @@ const ReviewerProfile = ({
         avatarSrc={reviewerImg}
         avatarAlt={reviewerName}
         iconSrc={companyIcon}
+        iconAlt={companyIconAlt}
         iconWidth={companyIconWidth}
-        iconHeight={companyIconHeight} />
+        iconHeight={companyIconHeight}
+        firstLetter={firstLetter}
+      />
       <Box ml={1.5}>
         <EmTypography children={reviewerName} />
         <Box fontWeight={300}>
@@ -41,6 +46,8 @@ ReviewerProfile.propTypes = {
   reviewerName: PropTypes.string,
   avatarSize: PropTypes.string,
   time: PropTypes.string,
+  companyIconWidth: PropTypes.number,
+  companyIconHeight: PropTypes.number
 };
 
 export default ReviewerProfile;

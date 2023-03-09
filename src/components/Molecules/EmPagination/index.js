@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import "./index.scss";
 import { Pagination } from '@material-ui/lab';
 import "./index.scss"
 
@@ -15,6 +14,7 @@ const EmPagination = ({
 };
 
 EmPagination.propTypes = {
+  className: PropTypes.string,
   count: PropTypes.number,
 };
 

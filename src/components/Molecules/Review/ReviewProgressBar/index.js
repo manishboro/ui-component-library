@@ -26,7 +26,7 @@ const ReviewProgressBar = ({
   return (
     <div>
       <Box display="flex" alignItems="center">
-        <Box display="flex" alignItems="center" fontSize={12} lineHeight={1} fontWeight={500}>
+        <Box display="flex" alignItems="center" fontSize={12} lineHeight={1} fontWeight={500} color="#14142B">
           {numberOfStar}
           <Box display="flex" alignItems="center" ml={0.5}>
             <img src='/images/icons/star.svg' width={10} height={10} alt="star" />
@@ -37,7 +37,7 @@ const ReviewProgressBar = ({
           <BorderLinearProgress variant="determinate" value={50} />
         </Box>
 
-        <Box ml="auto" fontSize={12} fontWeight={500}>
+        <Box ml="auto" fontSize={12} fontWeight={500} color="#14142B">
           {value}%
         </Box>
       </Box>

@@ -15,8 +15,9 @@ AvatarWithIcons.args = {
   avatarAlt: "avatar",
   avatarSize: "small",
   variant: "circular",
-  iconSrc: "/images/icons/google-icon.svg",
+  iconSrc: "/images/icons/google.svg",
   iconAlt: "google",
   iconWidth: 18,
   iconHeight: 18,
+  firstLetter: "H"
 };

@@ -1,6 +1,7 @@
 .em-dropdown {
   min-width: 100px !important;
   width: 100%;
+  overflow: hidden;
 
   .MuiOutlinedInput-notchedOutline {
     border: none;
@@ -8,6 +9,13 @@
   .MuiInputLabel-shrink { 
     display: none;
   }
+
+  .MuiInputLabel-formControl,.MuiInput-input, .MuiSelect-outlined { 
+    text-overflow: ellipsis;
+    padding-right: 40px;
+    white-space: nowrap;
+  }
+
   .MuiSelect-selectMenu {
     &:focus {
       background: transparent;

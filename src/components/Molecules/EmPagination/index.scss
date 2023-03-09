@@ -3,6 +3,13 @@
     margin: 0 4px;
     border: 1px solid #9C9CAF;
     background: #FCFCFC;
+
+    @media screen and (max-width: 767px) {
+      min-width: 28px;
+      height: 28px;
+      line-height: 28px;
+      margin: 0 3px;
+    }
     
     &.MuiPaginationItem-page {
       &:hover, &.Mui-selected {

@@ -34,6 +34,7 @@ IconWithTitle.propTypes = {
   title: PropTypes.string,
   titleVariant: PropTypes.string,
   titleColor: PropTypes.string,
+  spaceBetween: PropTypes.string,
 };
 
 export default IconWithTitle;
