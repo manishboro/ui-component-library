@@ -34,7 +34,7 @@ const ReviewProgressBar = ({
         </Box>
 
         <Box px={1} width={"100%"} >
-          <BorderLinearProgress variant="determinate" value={50} />
+          <BorderLinearProgress variant="determinate" value={value} />
         </Box>
 
         <Box ml="auto" fontSize={12} fontWeight={500} color="#14142B">
