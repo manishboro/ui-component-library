@@ -36,6 +36,7 @@ const ProfileDropDown = ({
         firstLetter={firstLetter}
       />
       <Box
+        display="flex"
         fontSize="14"
         color="#14142B"
         fontWeight="600"

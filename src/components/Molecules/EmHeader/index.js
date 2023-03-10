@@ -24,10 +24,10 @@ const EmHeader = ({
       py={{ xs: "14px", md: 2 }}
       px={2}
     >
-      <Box style={{ cursor: "pointer" }}>
+      <Box display={{ xs: "block", md: "none" }} style={{ cursor: "pointer" }}>
         <MenuIcon />
       </Box>
-      <Box display="flex">
+      <Box display="flex" ml="auto">
         <Box mr={1}>
           <Link
             component="button"
