@@ -12,10 +12,10 @@ const Template = (args) => <ReviewerProfile {...args} />;
 export const ReviewerProfiles = Template.bind({});
 ReviewerProfiles.args = {
   variant: "circular",
-  avatarSize: "small",
+  avatarSize: "medium",
   reviewerImg: "/images/profile-1.jpg",
   firstLetter: "N",
-  companyIcon: "/images/icons/google-icon.svg",
+  companyIcon: "/images/icons/google.svg",
   companyIconAlt: "google",
   companyIconWidth: 18,
   companyIconHeight: 18,

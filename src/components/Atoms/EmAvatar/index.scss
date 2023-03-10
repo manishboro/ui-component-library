@@ -1,0 +1,13 @@
+.em-avatar {
+    position: relative;
+    
+    &.small, .MuiAvatar-root.small {
+      width: 32px;
+      height: 32px;
+    }
+
+    &.medium, .MuiAvatar-root.medium {
+        width: 40px;
+        height: 40px;
+    }
+}

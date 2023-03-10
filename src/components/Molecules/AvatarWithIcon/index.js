@@ -1,9 +1,7 @@
 import React from 'react';
-import Avatar from '@material-ui/core/Avatar';
 import PropTypes from "prop-types";
-import "./index.scss"
 import { Box } from '@material-ui/core';
-
+import EmAvatar from 'components/Atoms/EmAvatar';
 
 const AvatarWithIcon = ({
   variant = "circular",
@@ -18,7 +16,13 @@ const AvatarWithIcon = ({
 }) => {
   return (
     <div className={`em-avatar ${avatarSize}`}>
-      <Avatar src={avatarSrc} alt={avatarAlt} className={avatarSize} variant={variant} children={firstLetter} />
+      <EmAvatar
+        variant={variant}
+        avatarSrc={avatarSrc}
+        avatarAlt={avatarAlt}
+        avatarSize={avatarSize}
+        firstLetter={firstLetter}
+      />
       {iconSrc &&
         <Box
           position="absolute"

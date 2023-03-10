@@ -13,7 +13,7 @@ export const AvatarWithIcons = Template.bind({});
 AvatarWithIcons.args = {
   avatarSrc: "/images/profile-1.jpg",
   avatarAlt: "avatar",
-  avatarSize: "small",
+  avatarSize: "medium",
   variant: "circular",
   iconSrc: "/images/icons/google.svg",
   iconAlt: "google",

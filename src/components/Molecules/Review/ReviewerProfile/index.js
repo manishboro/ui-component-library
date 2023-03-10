@@ -1,10 +1,8 @@
 import React from 'react';
-import Avatar from '@material-ui/core/Avatar';
-import PropTypes from "prop-types";
 import { Box } from '@material-ui/core';
 import EmTypography from 'components/Atoms/EmTypography';
 import AvatarWithIcon from 'components/Molecules/AvatarWithIcon';
-
+import PropTypes from "prop-types";
 
 const ReviewerProfile = ({
   reviewerImg,

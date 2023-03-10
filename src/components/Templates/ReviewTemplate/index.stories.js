@@ -92,7 +92,7 @@ ReviewTemplates.args = {
         {
             reviewerName: "Thomas Edison",
             reviewerImg: "/images/profile-1.jpg",
-            companyIcon: "/images/icons/google-icon.svg",
+            companyIcon: "/images/icons/google.svg",
             companyName: "google",
             postedAt: "Dec 22 , 2022",
             location: "Toronto ,Canada",
@@ -103,7 +103,7 @@ ReviewTemplates.args = {
         {
             reviewerName: "Ruben Baptista",
             reviewerImg: "/images/profile-1.jpg",
-            companyIcon: "/images/icons/google-icon.svg",
+            companyIcon: "/images/icons/google.svg",
             companyName: "google",
             postedAt: "Dec 22 , 2022",
             location: "Gulu, Uganda",
@@ -114,7 +114,7 @@ ReviewTemplates.args = {
         {
             reviewerName: "Carter Schleifer",
             reviewerImg: "/images/profile-1.jpg",
-            companyIcon: "/images/icons/google-icon.svg",
+            companyIcon: "/images/icons/google.svg",
             companyName: "google",
             postedAt: "Dec 22 , 2022",
             location: "Delhi ,India",
@@ -124,7 +124,7 @@ ReviewTemplates.args = {
         {
             reviewerName: "Ruben Baptista",
             reviewerImg: "/images/profile-1.jpg",
-            companyIcon: "/images/icons/google-icon.svg",
+            companyIcon: "/images/icons/google.svg",
             companyName: "google",
             postedAt: "Dec 22 , 2022",
             location: "Karachi ,Pakistan",
