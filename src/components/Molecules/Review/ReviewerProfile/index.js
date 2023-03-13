@@ -8,6 +8,7 @@ const ReviewerProfile = ({
   reviewerImg,
   reviewerName,
   firstLetter,
+  textLabel = "Posted on",
   companyIcon,
   companyIconAlt,
   companyIconWidth = 18,
@@ -25,10 +26,11 @@ const ReviewerProfile = ({
         iconHeight={companyIconHeight}
         firstLetter={firstLetter}
       />
-      <Box ml={1.5}>
+      <Box ml={1.5} lineHeight={1}>
         <EmTypography children={reviewerName} />
         <Box fontWeight={300}>
-          <EmTypography display="inline" variant='caption' color='textSecondary' children="Posted on " />
+          {textLabel && <EmTypography display="inline" variant='caption' color='textSecondary' children={textLabel} />}
+
           <EmTypography display="inline" variant='caption' color='textSecondary' children={time} />
         </Box>
       </Box>
