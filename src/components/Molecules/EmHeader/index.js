@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import ProfileDropDown from '../ProfileDropDown';
 import { Box, Link } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import "./index.scss";
+import ProfileDropDown from '../ProfileDropDown';
 
 const EmHeader = ({
   avatarSrc,

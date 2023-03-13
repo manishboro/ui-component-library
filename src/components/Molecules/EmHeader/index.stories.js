@@ -3,14 +3,14 @@ import React from 'react';
 import EmHeader from '../EmHeader';
 
 export default {
-  title: 'Molecules/EmHeaders',
+  title: 'Molecules/Header',
   component: EmHeader,
 };
 
 const Template = (args) => <EmHeader {...args} />;
 
-export const EmHeaders = Template.bind({});
-EmHeaders.args = {
+export const Header = Template.bind({});
+Header.args = {
   avatarSrc: "/images/profile-1.jpg",
   avatarAlt: "avatar",
   avatarSize: "small",

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from "prop-types";
 import { Box } from '@material-ui/core';
 import EmTypography from 'components/Atoms/EmTypography';
-import EmDropDown from 'components/Atoms/EmDropDown';
+import EmDropDown from 'components/Molecules/EmDropDown';
 
 const ReviewFilterBar = ({
   locationOptionList,

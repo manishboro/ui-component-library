@@ -3,7 +3,7 @@ import React from 'react';
 import EmDropDown from '.';
 
 export default {
-  title: 'Atoms/DropDown',
+  title: 'Molecules/Dropdown',
   component: EmDropDown,
   argTypes: {
     variant: {
@@ -19,8 +19,8 @@ export default {
 
 const Template = (args) => <EmDropDown {...args} />;
 
-export const DropDown = Template.bind({});
-DropDown.args = {
+export const Dropdown = Template.bind({});
+Dropdown.args = {
   variant: "outlined",
   size: "small",
   label: "Location",

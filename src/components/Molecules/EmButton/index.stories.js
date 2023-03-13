@@ -3,7 +3,7 @@ import React from 'react';
 import EmButton from '.';
 
 export default {
-  title: 'Atoms/Buttons',
+  title: 'Molecules/Button',
   component: EmButton,
   argTypes: {
     variant: {
@@ -27,7 +27,7 @@ export default {
 
 const Template = (args) => <EmButton {...args} />;
 
-export const Buttons = Template.bind({});
-Buttons.args = {
+export const Button = Template.bind({});
+Button.args = {
   children: "Button Text",
 };
