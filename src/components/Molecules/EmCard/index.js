@@ -2,7 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import EmButton from "../EmButton";
 import EmTypography from "components/Atoms/EmTypography";
-import { Card, CardActions, CardContent } from "@material-ui/core";
+import { Box, Card, CardActions, CardContent } from "@material-ui/core";
+import "./index.scss";
 const EmCard = ({
   HeadingText = "",
   SecondaryText = "",
@@ -10,22 +11,32 @@ const EmCard = ({
   imgAlt = "Image Description",
   buttonLabel = "",
   iconSrc = "",
+  iconWidth,
+  iconHeight,
   iconAlt = "",
 }) => {
   return (
 
-    <Card variant="outlined">
-      {imgSrc && <div className='pb-6'>
+    <Card className="em-card" variant="outlined">
+      {imgSrc && <Box pb="16px">
         <img className=""
           src={imgSrc}
-          alt={imgAlt} />
-      </div>}
-      <CardContent className={`${iconSrc && ''}`}>
-        {iconSrc && <img width={44} height={44} src={iconSrc} alt={iconAlt} />}
-        <div className=''>
-          <EmTypography type={6}> {HeadingText} </EmTypography>
-          <EmTypography variant="bodySmall"> {SecondaryText} </EmTypography>
-        </div>
+          alt={imgAlt}
+        />
+      </Box>}
+      <CardContent className={`${iconSrc && 'cardContent'}`}>
+        <Box flexShrink="initial" borderRadius="8px" overflow="hidden" mr="16px">
+          {iconSrc && <img width={iconWidth} height={iconHeight} src={iconSrc} alt={iconAlt} />}
+        </Box>
+        <Box width="100%">
+          <Box fontWeight={700} mb="4px">
+            <EmTypography type={"body2"}> {HeadingText} </EmTypography>
+          </Box>
+          <Box fontWeight={400} color="#999CA0">
+            {SecondaryText}
+          </Box>
+        </Box>
+
       </CardContent>
       {buttonLabel &&
         <CardActions>

@@ -1,0 +1,16 @@
+.em-accordion {
+    &.outline {
+        border: 1px solid #D1D1DB;
+        border-radius: 4px;
+    }
+    
+    .MuiAccordion-root {
+        background: #FCFCFC;
+        box-shadow: inset 0px -1px 0px #CED4DA;
+
+        &.Mui-expanded {
+            border-top: 1px solid #FFC107;
+            margin: 0;
+        }
+    }
+}

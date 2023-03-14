@@ -5,18 +5,19 @@ import "./index.scss";
 
 const EmCheckbox = ({
   name,
-  color = "primary",
   value,
   label,
   labelPlacement,
   disabled,
-  checked = false
+  checked = false,
+  className
 }) => {
 
   return (
     <FormControlLabel
+      className={`em-checkbox ${className}`}
       value={value}
-      control={<Checkbox checked={checked} name={name} color={color} />}
+      control={<Checkbox checked={checked} name={name} color="primary" />}
       label={label}
       labelPlacement={labelPlacement}
       disabled={disabled}
@@ -25,9 +26,10 @@ const EmCheckbox = ({
 };
 
 EmCheckbox.propTypes = {
+  name: PropTypes.string,
   value: PropTypes.string,
   label: PropTypes.string,
-  color: PropTypes.string,
+  className: PropTypes.string,
   labelPlacement: PropTypes.string,
   disabled: PropTypes.bool,
   checked: PropTypes.bool,

@@ -2,39 +2,40 @@ import React from 'react';
 import Switch from '@material-ui/core/Switch';
 import PropTypes from "prop-types";
 import "./index.scss"
+import { FormControlLabel } from '@material-ui/core';
 
 const EmSwitch = ({
   name,
   checked,
-  color,
   handleChange = () => { },
-  inputProps,
   disabled,
-  defaultChecked
+  label,
+  labelPlacement
 }) => {
 
   return (
-    <div>
-      <Switch
+    <FormControlLabel
+      value="bottom"
+      control={<Switch
+        className='em-switch'
         name={name}
         checked={checked}
-        color={color}
         onChange={handleChange}
-        inputProps={inputProps}
+        color="primary"
         disabled={disabled}
-        defaultChecked={defaultChecked}
-      />
-    </div>
+      />}
+      label={label}
+      labelPlacement={labelPlacement}
+    />
   );
 }
 EmSwitch.propTypes = {
   name: PropTypes.string,
   checked: PropTypes.string,
-  color: PropTypes.string,
-  handleChange: PropTypes.string,
-  inputProps: PropTypes.string,
-  disabled: PropTypes.string,
-  defaultChecked: PropTypes.string,
+  handleChange: PropTypes.func,
+  disabled: PropTypes.bool,
+  label: PropTypes.string,
+  labelPlacement: PropTypes.string,
 };
 
 export default EmSwitch;

@@ -10,10 +10,6 @@ export default {
       control: "select",
       options: ["top ", "start", "bottom", "end"],
     },
-    color: {
-      control: "select",
-      options: ["primary ", "secondary"],
-    },
   },
 };
 
@@ -21,12 +17,11 @@ const Template = (args) => <EmCheckbox {...args} />;
 
 export const Checkbox = Template.bind({});
 Checkbox.args = {
-  id: "name",
+  name: "name",
+  value: "name",
   className: "",
   label: "Name",
-  type: "text",
-  size: "normal",
-  placeholder: "Name",
   labelPlacement: "end",
-  color: "primary"
+  disabled: false,
+  checked: false,
 };

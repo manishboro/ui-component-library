@@ -5,6 +5,12 @@ import EmBreadcrumb from '.';
 export default {
   title: 'Molecules/Breadcrumb',
   component: EmBreadcrumb,
+  argTypes: {
+    separator: {
+      control: "select",
+      options: ["/", ">"],
+    },
+  }
 };
 
 const Template = (args) => <EmBreadcrumb {...args} />;
@@ -13,6 +19,15 @@ export const Breadcrumb = Template.bind({});
 Breadcrumb.args = {
   breadcrumbData: [
     { name: "Application", path: "/Application" },
+    { name: "Application", path: "/Application" },
+    { name: "Application", path: "/Application" },
+    { name: "Application", path: "/Application" },
+    { name: "Application", path: "/Application" },
+    { name: "Application", path: "/Application" },
+    { name: "Application", path: "/Application" },
+    { name: "Application", path: "/Application" },
     { name: "Reviews" },
   ],
+  maxItems: 2,
+  separator: ">"
 };

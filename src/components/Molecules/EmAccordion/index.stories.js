@@ -4,6 +4,13 @@ import EmAccordion from '.';
 export default {
   title: 'Molecules/Accordion',
   component: EmAccordion,
+  argTypes: {
+    variant: {
+      control: "select",
+      options: ["normal", "outline"],
+
+    },
+  }
 };
 
 const Template = (args) => <EmAccordion {...args} />;
