@@ -9,6 +9,7 @@ const EmButton = ({
   size = "small",
   color = "primary",
   shape = "square",
+  iconOnly = false,
   href,
   component,
   disabled = false,
@@ -23,7 +24,7 @@ const EmButton = ({
     <Button
       variant={variant}
       children={children}
-      className={`em-button ${fontWeight} ${shape} ${textClass}`}
+      className={`em-button ${fontWeight} ${shape} ${textClass} ${size} ${iconOnly && "iconOnly"}`}
       color={color}
       component={component}
       disabled={disabled}
@@ -31,7 +32,6 @@ const EmButton = ({
       endIcon={endIcon}
       fullWidth={fullWidth}
       href={href}
-      size={size}
     />
   );
 };
@@ -48,6 +48,7 @@ EmButton.propTypes = {
   fullWidth: PropTypes.bool,
   href: PropTypes.string,
   size: PropTypes.string,
+  iconOnly: PropTypes.bool
 };
 
 export default EmButton;

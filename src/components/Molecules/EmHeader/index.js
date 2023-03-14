@@ -12,7 +12,7 @@ const EmHeader = ({
   userName,
   firstLetter,
   onClick,
-  profileDropDownList
+  profileDropdownOptions
 }) => {
   return (
     <Box
@@ -50,7 +50,7 @@ const EmHeader = ({
           avatarSize={avatarSize}
           userName={userName}
           firstLetter={firstLetter}
-          profileDropDownList={profileDropDownList}
+          profileDropdownOptions={profileDropdownOptions}
         />
       </Box>
     </Box>

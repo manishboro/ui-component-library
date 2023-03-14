@@ -4,14 +4,14 @@ import { Breadcrumbs, Link } from '@material-ui/core';
 import "./index.scss";
 
 const EmBreadcrumb = ({
-  breadcrumbData,
+  breadcrumbs,
   maxItems = 2,
   separator = "/"
 }) => {
   return (
     <Breadcrumbs separator={separator} maxItems={maxItems} aria-label="breadcrumb" className="em-breadcrumb">
-      {breadcrumbData.map(({ name, path }, key) =>
-        key + 1 === breadcrumbData.length ? (
+      {breadcrumbs.map(({ name, path }, key) =>
+        key + 1 === breadcrumbs.length ? (
           <Link color="textPrimary" key={key}> {name} </Link>
         ) : (
           <Link color="textSecondary" key={key} href={path} aria-current="page">

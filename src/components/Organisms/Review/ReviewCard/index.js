@@ -14,7 +14,6 @@ const ReviewCard = ({
     iconAlt,
     iconWidth = 28,
     iconHeight = 28,
-    iconClass = "",
     heading,
     value
 }) => {
@@ -22,7 +21,6 @@ const ReviewCard = ({
         <Box sx={reviewCardStyle} p={2}>
             <Box mb={5}>
                 <img
-                    className={iconClass}
                     src={iconSrc}
                     width={iconWidth}
                     height={iconHeight}
@@ -42,7 +40,6 @@ ReviewCard.propTypes = {
     iconAlt: PropTypes.string,
     iconWidth: PropTypes.number,
     iconHeight: PropTypes.number,
-    iconClass: PropTypes.string,
     heading: PropTypes.string,
     value: PropTypes.number,
 }

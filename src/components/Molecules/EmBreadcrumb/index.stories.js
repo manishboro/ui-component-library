@@ -1,6 +1,7 @@
 
 import React from 'react';
 import EmBreadcrumb from '.';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
 export default {
   title: 'Molecules/Breadcrumb',
@@ -17,7 +18,7 @@ const Template = (args) => <EmBreadcrumb {...args} />;
 
 export const Breadcrumb = Template.bind({});
 Breadcrumb.args = {
-  breadcrumbData: [
+  breadcrumbs: [
     { name: "Application", path: "/Application" },
     { name: "Application", path: "/Application" },
     { name: "Application", path: "/Application" },
@@ -29,5 +30,5 @@ Breadcrumb.args = {
     { name: "Reviews" },
   ],
   maxItems: 2,
-  separator: ">"
+  separator: <NavigateNextIcon fontSize="small" />
 };

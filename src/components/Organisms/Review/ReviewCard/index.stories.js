@@ -13,9 +13,10 @@ const Template = (args) => <ReviewCard {...args} />;
 
 export const ReviewCards = Template.bind({});
 ReviewCards.args = {
-    reviewCardIconClass: "",
     iconSrc: "/images/icons/edit.svg",
     iconAlt: "Total Reviews",
     heading: "Total Reviews",
     value: 150,
+    iconWidth: 28,
+    iconHeight: 28,
 };

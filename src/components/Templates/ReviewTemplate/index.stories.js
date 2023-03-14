@@ -13,82 +13,77 @@ const Template = (args) => <ReviewTemplate {...args} />;
 
 export const ReviewTemplates = Template.bind({});
 ReviewTemplates.args = {
-    breadcrumbData: [
+    breadcrumbs: [
         { name: "Application", path: "/Application" },
         { name: "Reviews" },
     ],
-    handleChange: () => { },
-    reviewDropdown: [
+    yearDropdownOptions: [
         { value: 'value1', label: 'March 2020 - February 2021' },
         { value: 'value2', label: 'March 2021 - February 2022' },
         { value: 'value3', label: 'March 2022 - February 2023' }
     ],
 
-    reviewCardData: [
+    totalReview: {
+        iconSrc: "/images/icons/edit.svg",
+        iconAlt: "Reviews",
+        heading: "Total Reviews",
+        value: 150,
+    },
+
+    averageRating: {
+        iconSrc: "/images/icons/favorite.svg",
+        iconAlt: "Reviews",
+        heading: "Average Rating",
+        value: 4,
+    },
+
+    reviewRatings: [
         {
-            type: "reviewCard",
-            iconSrc: "/images/icons/edit.svg",
-            iconAlt: "Reviews",
-            heading: "Total Reviews",
-            value: 150,
+            numberOfStar: 5,
+            value: 70,
         },
         {
-            type: "reviewCard",
-            iconSrc: "/images/icons/favorite.svg",
-            iconAlt: "Reviews",
-            heading: "Average Rating",
-            value: 4,
+            numberOfStar: 4,
+            value: 12,
         },
         {
-            type: "reviewProgressCard",
-            reviewRatingList: [
-                {
-                    numberOfStar: 5,
-                    value: 70,
-                },
-                {
-                    numberOfStar: 4,
-                    value: 12,
-                },
-                {
-                    numberOfStar: 3,
-                    value: 10,
-                },
-                {
-                    numberOfStar: 2,
-                    value: 6,
-                },
-                {
-                    numberOfStar: 1,
-                    value: 2,
-                }
-            ]
+            numberOfStar: 3,
+            value: 10,
         },
         {
-            type: "reviewCard",
-            iconSrc: "/images/icons/recommendations.svg",
-            iconAlt: "Facebook",
-            heading: "Facebook Recommendations",
-            value: 30,
+            numberOfStar: 2,
+            value: 6,
+        },
+        {
+            numberOfStar: 1,
+            value: 2,
         }
     ],
-    locationOptionList: [
+
+    fbRecommendation: {
+        iconSrc: "/images/icons/recommendations.svg",
+        iconAlt: "Facebook",
+        heading: "Facebook Recommendations",
+        value: 30,
+    },
+
+    locationOptions: [
         { value: 'value1', label: 'label1' },
         { value: 'value2', label: 'label2' },
         { value: 'value3', label: 'label3' }
     ],
-    platformOptionList: [
+    platformOptions: [
         { value: 'value1', label: 'label1' },
         { value: 'value2', label: 'label2' },
         { value: 'value3', label: 'label3' }
     ],
-    sortByOptionList: [
+    sortByOptions: [
         { value: 'value1', label: 'label1' },
         { value: 'value2', label: 'label2' },
         { value: 'value3', label: 'label3' }
     ],
 
-    reviewData: [
+    reviews: [
         {
             reviewerName: "Thomas Edison",
             reviewerImg: "/images/profile-1.jpg",

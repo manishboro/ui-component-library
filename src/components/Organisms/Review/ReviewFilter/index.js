@@ -9,27 +9,28 @@ import ReviewRating from 'components/Molecules/Review/ReviewRating'
 import ReviewerProfile from 'components/Molecules/Review/ReviewerProfile'
 import ReviewFilterBar from 'components/Molecules/Review/ReviewFilterBar'
 import InsertChartOutlinedRoundedIcon from '@material-ui/icons/InsertChartOutlinedRounded';
+import "./index.scss"
 
 const ReviewFilter = ({
-    locationOptionList,
-    platformOptionList,
-    sortByOptionList,
-    reviewData
+    locationOptions,
+    platformOptions,
+    sortByOptions,
+    reviews
 }) => {
     return (
         <>
             <Box display="flex" alignContent="center" flexWrap="wrap" mt={{ xs: 2.5, md: 3 }}>
                 <Box width={{ xs: '100%', md: '70%' }} order={{ xs: 2, md: 1 }} m={{ xs: "24px 0 8px 0", md: "0" }}>
                     <ReviewFilterBar
-                        locationOptionList={locationOptionList}
-                        platformOptionList={platformOptionList}
-                        sortByOptionList={sortByOptionList}
+                        locationOptions={locationOptions}
+                        platformOptions={platformOptions}
+                        sortByOptions={sortByOptions}
                     />
                 </Box>
-                <Box ml={{ xs: '0', md: 'auto' }} maxWidth={{ xs: '100%', md: '220px' }} width={{ xs: '100%', md: '30%' }} order={{ xs: 1, md: 2 }}>
+                <Box className='chartBtn' ml={{ xs: '0', md: 'auto' }} maxWidth={{ xs: '100%', md: '220px' }} width={{ xs: '100%', md: '30%' }} order={{ xs: 1, md: 2 }}>
                     <EmButton
                         variant='outlined'
-                        size='large'
+                        size='medium'
                         children="View Detailed Metrics"
                         endIcon={<InsertChartOutlinedRoundedIcon style={{ fontSize: '18px' }} />}
                         fullWidth={{ xs: true, md: false }}
@@ -51,7 +52,7 @@ const ReviewFilter = ({
                 </Grid>
             </Box>
             {
-                reviewData.map((data) => {
+                reviews.map((data) => {
                     return (
                         <Box borderBottom="1px solid #E5E5EB;" p={{ xs: '16px 0', md: '24px 0' }}>
                             <Box display="flex" flexWrap="wrap" flexDirection={{ xs: "column", md: "row" }}>
@@ -76,8 +77,9 @@ const ReviewFilter = ({
                                         <Box display="inline" fontSize={14} color="#FFC107" style={{ cursor: 'pointer' }}> View More</Box>
 
                                     </Box>
-                                    <Box display="flex" alignItems="center" flexDirection={{ xs: 'row-reverse', md: 'row' }} width="50%" ml={{ xs: 'auto', md: '0' }} >
+                                    <Box className='replay-btn' display="flex" alignItems="center" flexDirection={{ xs: 'row-reverse', md: 'row' }} width="50%" ml={{ xs: 'auto', md: '0' }} >
                                         <EmButton
+                                            size='medium'
                                             variant='outlined'
                                             children="Reply"
                                             color='secondary'
@@ -130,10 +132,10 @@ const ReviewFilter = ({
 }
 
 ReviewFilter.propTypes = {
-    locationOptionList: PropTypes.array,
-    platformOptionList: PropTypes.array,
-    sortByOptionList: PropTypes.array,
-    reviewData: PropTypes.array,
+    locationOptions: PropTypes.array,
+    platformOptions: PropTypes.array,
+    sortByOptions: PropTypes.array,
+    reviews: PropTypes.array,
 }
 
 export default ReviewFilter;

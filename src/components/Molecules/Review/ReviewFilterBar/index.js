@@ -5,9 +5,9 @@ import EmTypography from 'components/Atoms/EmTypography';
 import EmDropDown from 'components/Molecules/EmDropDown';
 
 const ReviewFilterBar = ({
-  locationOptionList,
-  platformOptionList,
-  sortByOptionList
+  locationOptions,
+  platformOptions,
+  sortByOptions
 }) => {
 
   return (
@@ -26,7 +26,7 @@ const ReviewFilterBar = ({
           id="location"
           labelId="location"
           handleChange={() => { }}
-          optionList={locationOptionList}
+          optionList={locationOptions}
         />
       </Box>
       <Box mr={1}>
@@ -37,7 +37,7 @@ const ReviewFilterBar = ({
           id="platform"
           labelId="platform"
           handleChange={() => { }}
-          optionList={platformOptionList}
+          optionList={platformOptions}
         />
       </Box>
       <Box ml={{ xs: 'auto', md: 2 }}>
@@ -48,7 +48,7 @@ const ReviewFilterBar = ({
           id="sortBy"
           labelId="sortBy"
           handleChange={() => { }}
-          optionList={sortByOptionList}
+          optionList={sortByOptions}
         />
       </Box>
     </Box>
@@ -56,9 +56,9 @@ const ReviewFilterBar = ({
 };
 
 ReviewFilterBar.propTypes = {
-  locationOptionList: PropTypes.array,
-  platformOptionList: PropTypes.array,
-  sortByOptionList: PropTypes.array,
+  locationOptions: PropTypes.array,
+  platformOptions: PropTypes.array,
+  sortByOptions: PropTypes.array,
 };
 
 export default ReviewFilterBar;

@@ -13,23 +13,23 @@ const Template = (args) => <ReviewFilter {...args} />;
 
 export const ReviewFilters = Template.bind({});
 ReviewFilters.args = {
-    locationOptionList: [
+    locationOptions: [
         { value: 'value1', label: 'label1' },
         { value: 'value2', label: 'label2' },
         { value: 'value3', label: 'label3' }
     ],
-    platformOptionList: [
+    platformOptions: [
         { value: 'value1', label: 'label1' },
         { value: 'value2', label: 'label2' },
         { value: 'value3', label: 'label3' }
     ],
-    sortByOptionList: [
+    sortByOptions: [
         { value: 'value1', label: 'label1' },
         { value: 'value2', label: 'label2' },
         { value: 'value3', label: 'label3' }
     ],
 
-    reviewData: [
+    reviews: [
         {
             reviewerName: "Thomas Edison",
             reviewerImg: "/images/profile-1.jpg",

@@ -3,6 +3,13 @@
     color: #14142B !important;
     font-weight: 500;
   }
+  .MuiBreadcrumbs-separator {
+    margin: 0 8px;
+    
+    .MuiSvgIcon-root {
+      margin: 0 -6px;
+    }
+  }
   
   .MuiTypography-colorTextSecondary {
     color: #6B6B80

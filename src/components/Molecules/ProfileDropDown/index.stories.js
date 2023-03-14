@@ -17,7 +17,7 @@ ProfileDropDowns.args = {
   variant: "circular",
   firstLetter: "H",
   userName: "Vikram Singh",
-  profileDropDownList: [
+  profileDropdownOptions: [
     { label: 'Profile' },
     { label: 'My Account' },
     { label: 'Logout' }

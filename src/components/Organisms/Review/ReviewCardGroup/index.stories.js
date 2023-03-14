@@ -13,52 +13,47 @@ const Template = (args) => <ReviewCardGroup {...args} />;
 
 export const ReviewCardGroups = Template.bind({});
 ReviewCardGroups.args = {
-    reviewCardData: [
+    totalReview: {
+        iconSrc: "/images/icons/edit.svg",
+        iconAlt: "Reviews",
+        heading: "Total Reviews",
+        value: 150,
+    },
+
+    averageRating: {
+        iconSrc: "/images/icons/favorite.svg",
+        iconAlt: "Reviews",
+        heading: "Average Rating",
+        value: 4,
+    },
+
+    reviewRatings: [
         {
-            type: "reviewCard",
-            iconSrc: "/images/icons/edit.svg",
-            iconAlt: "Reviews",
-            heading: "Total Reviews",
-            value: 150,
+            numberOfStar: 5,
+            value: 70,
         },
         {
-            type: "reviewCard",
-            iconSrc: "/images/icons/favorite.svg",
-            iconAlt: "Reviews",
-            heading: "Average Rating",
-            value: 4,
+            numberOfStar: 4,
+            value: 12,
         },
         {
-            type: "reviewProgressCard",
-            reviewRatingList: [
-                {
-                    numberOfStar: 5,
-                    value: 70,
-                },
-                {
-                    numberOfStar: 4,
-                    value: 12,
-                },
-                {
-                    numberOfStar: 3,
-                    value: 10,
-                },
-                {
-                    numberOfStar: 2,
-                    value: 6,
-                },
-                {
-                    numberOfStar: 1,
-                    value: 2,
-                }
-            ]
+            numberOfStar: 3,
+            value: 10,
         },
         {
-            type: "reviewCard",
-            iconSrc: "/images/icons/recommendations.svg",
-            iconAlt: "Facebook",
-            heading: "Facebook Recommendations",
-            value: 30,
+            numberOfStar: 2,
+            value: 6,
+        },
+        {
+            numberOfStar: 1,
+            value: 2,
         }
     ],
+
+    fbRecommendation: {
+        iconSrc: "/images/icons/recommendations.svg",
+        iconAlt: "Facebook",
+        heading: "Facebook Recommendations",
+        value: 30,
+    }
 }

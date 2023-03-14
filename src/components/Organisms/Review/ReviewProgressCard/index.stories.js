@@ -13,7 +13,7 @@ const Template = (args) => <ReviewProgressCard {...args} />;
 
 export const ReviewProgressCards = Template.bind({});
 ReviewProgressCards.args = {
-    reviewRatingList: [
+    reviewRatings: [
         {
             numberOfStar: 5,
             value: 70,

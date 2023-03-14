@@ -7,22 +7,24 @@ import EmBreadcrumb from 'components/Molecules/EmBreadcrumb'
 import EmDropDown from 'components/Molecules/EmDropDown'
 import ReviewCardGroup from 'components/Organisms/Review/ReviewCardGroup'
 import ReviewFilter from 'components/Organisms/Review/ReviewFilter'
-import "./index.scss";
 
 const ReviewTemplate = ({
-    breadcrumbData,
-    reviewCardData,
-    reviewDropdown,
-    locationOptionList,
-    platformOptionList,
-    sortByOptionList,
-    reviewData
+    breadcrumbs,
+    totalReview,
+    averageRating,
+    reviewRatings,
+    fbRecommendation,
+    yearDropdownOptions,
+    locationOptions,
+    platformOptions,
+    sortByOptions,
+    reviews
 }) => {
     return (
         <Box>
             <Box display="flex" alignItems={{ xs: "center", md: "flex-start" }} mb={{ xs: 1.5, md: 2.5 }}>
                 <Box width="55%">
-                    <EmBreadcrumb breadcrumbData={breadcrumbData} />
+                    <EmBreadcrumb breadcrumbs={breadcrumbs} />
                 </Box>
                 <Box width="45%" ml="auto" maxWidth="245px" pt={{ xs: 0, md: "12px" }}>
                     <EmDropDown
@@ -30,31 +32,38 @@ const ReviewTemplate = ({
                         size='large'
                         id="reviewDropdown"
                         labelId="reviewDropdown"
-                        optionList={reviewDropdown}
+                        optionList={yearDropdownOptions}
                     />
                 </Box>
             </Box>
 
-            <ReviewCardGroup reviewCardData={reviewCardData} />
+            <ReviewCardGroup
+                totalReview={totalReview}
+                averageRating={averageRating}
+                reviewRatings={reviewRatings}
+                fbRecommendation={fbRecommendation} />
 
             <ReviewFilter
-                locationOptionList={locationOptionList}
-                platformOptionList={platformOptionList}
-                sortByOptionList={sortByOptionList}
-                reviewData={reviewData}
+                locationOptions={locationOptions}
+                platformOptions={platformOptions}
+                sortByOptions={sortByOptions}
+                reviews={reviews}
             />
         </Box>
     )
 }
 
 ReviewTemplate.propTypes = {
-    breadcrumbData: PropTypes.array,
-    reviewCardData: PropTypes.array,
-    reviewDropdown: PropTypes.array,
-    locationOptionList: PropTypes.array,
-    platformOptionList: PropTypes.array,
-    sortByOptionList: PropTypes.array,
-    reviewData: PropTypes.array,
+    breadcrumbs: PropTypes.array,
+    totalReview: PropTypes.array,
+    averageRating: PropTypes.array,
+    reviewRatings: PropTypes.array,
+    fbRecommendation: PropTypes.array,
+    yearDropdownOptions: PropTypes.array,
+    locationOptions: PropTypes.array,
+    platformOptions: PropTypes.array,
+    sortByOptions: PropTypes.array,
+    reviews: PropTypes.array,
 }
 
 export default ReviewTemplate;

@@ -10,11 +10,11 @@ const reviewProgressCardStyle = {
 }
 
 const ReviewProgressCard = ({
-    reviewRatingList
+    reviewRatings
 }) => {
     return (
         <Box sx={reviewProgressCardStyle} py={1} px={2}>
-            {reviewRatingList.map((list, index) => (
+            {reviewRatings.map((list, index) => (
                 <Box py="5px">
                     <ReviewProgressBar
                         key={index}
@@ -28,7 +28,7 @@ const ReviewProgressCard = ({
 }
 
 ReviewProgressCard.propTypes = {
-    reviewRatingList: PropTypes.array,
+    reviewRatings: PropTypes.array,
 }
 
 export default ReviewProgressCard;

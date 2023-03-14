@@ -66,16 +66,30 @@
     }  
   }
 
-  &.MuiButton-sizeSmall{
-    padding: 0.5rem 1rem;
+  &.extraSmall{
+    padding: 0.5rem 1.5rem;
     font-size: 0.75rem;
     line-height: 1rem;
   }
-  &.MuiButton-sizeLarge{
-    padding: 0.625rem 1.5rem;
-    font-size: 0.875rem;
+  
+  &.small{
+    padding: 0.75rem 1.5rem;
+    font-size: 0.75rem;
     line-height: 1.25rem;
   }
+
+  &.medium{
+    padding: 0.875rem 2rem;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+  }
+
+  &.large{
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
   &.Mui-disabled{
     opacity: 0.65
   }
@@ -87,5 +101,33 @@
   }  
   &.square {
     border-radius: 4px;
+  }
+  &.iconOnly {
+    min-width: auto;
+    padding: 0;
+
+    .MuiButton-startIcon, .MuiButton-endIcon {
+      margin: 0;
+    }
+
+    &.extraSmall{
+      width: 32px;
+      height: 32px;
+    }
+    
+    &.small{
+      width: 40px;
+      height: 40px;
+    }
+
+    &.medium{
+      width: 48px;
+      height: 48px;
+    }
+  
+    &.large{
+      width: 56px;
+      height: 56px;
+    }
   }
 }

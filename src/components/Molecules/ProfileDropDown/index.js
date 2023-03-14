@@ -12,7 +12,7 @@ const ProfileDropDown = ({
   avatarSize = "small",
   firstLetter,
   userName,
-  profileDropDownList
+  profileDropdownOptions
 }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -53,16 +53,11 @@ const ProfileDropDown = ({
         keepMounted
         open={Boolean(anchorEl)}
         onClose={handleClose}
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'center',
-        }}
-        transformOrigin={{
-          vertical: 'top',
-          horizontal: 'center',
-        }}
+        getContentAnchorEl={null}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+        transformOrigin={{ vertical: 'top', horizontal: 'center' }}
       >
-        {profileDropDownList.map((item) => {
+        {profileDropdownOptions.map((item) => {
           return (
             <MenuItem onClick={handleClose}>{item.label}</MenuItem>
           )
