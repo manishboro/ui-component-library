@@ -12,7 +12,7 @@ export default {
     },
     variant: {
       control: "select",
-      options: ['circle', 'rounded', 'square'],
+      options: ['circular', 'rounded', 'square'],
     },
   }
 };
@@ -24,6 +24,6 @@ Avatar.args = {
   avatarSrc: "/images/profile-1.jpg",
   avatarAlt: "avatar",
   avatarSize: "medium",
-  variant: "circle",
+  variant: "circular",
   firstLetter: "H"
 };

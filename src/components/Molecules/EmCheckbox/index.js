@@ -10,12 +10,13 @@ const EmCheckbox = ({
   labelPlacement,
   disabled,
   checked = false,
-  className
+  className,
+  isError = false,
 }) => {
 
   return (
     <FormControlLabel
-      className={`em-checkbox ${className}`}
+      className={`em-checkbox ${className} ${isError && "error"}`}
       value={value}
       control={<Checkbox checked={checked} name={name} color="primary" />}
       label={label}
@@ -33,6 +34,7 @@ EmCheckbox.propTypes = {
   labelPlacement: PropTypes.string,
   disabled: PropTypes.bool,
   checked: PropTypes.bool,
+  isError: PropTypes.bool,
 };
 
 export default EmCheckbox;

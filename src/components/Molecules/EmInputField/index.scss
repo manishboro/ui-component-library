@@ -1,69 +1,14 @@
-.em-typography {
-  font-weight: inherit !important;
-  
-  &.MuiTypography-body1 {
-    font-size: 1rem;
-    line-height: 1.5rem;
+.em-input {
+  &.small {
+    
   }
-  &.MuiTypography-body2 {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+  &.medium {
+    
   }
-  &.MuiTypography-caption	 {
-    font-size: 0.75rem;
-    line-height: 1rem;
+  &.defalt {
+    
   }
-  &.MuiTypography-h1 {
-    font-size: 3rem;
-  }
-  &.MuiTypography-h2 {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-  &.MuiTypography-h3 {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-  &.MuiTypography-h4 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-  &.MuiTypography-h5 {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-  &.MuiTypography-h6 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-  }
-  &.MuiTypography-subtitle1 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-  &.MuiTypography-subtitle2 {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-  &.MuiTypography-colorPrimary {
-    color: #FFC107;
-  }
-  &.MuiTypography-colorError	 {
-    color: #f44336;
-  }
-  &.MuiTypography-colorTextPrimary {
-    color: #14142B;
-  }
-  &.MuiTypography-colorTextSecondary {
-    color: #6B6B80;
-  }
-  
-  &.MuiTypography-body2.MuiTypography-colorTextSecondary {
-    color: #4B4B63;
-  }
-  &.MuiTypography-caption.MuiTypography-colorTextPrimary	 {
-    color: #9C9CAF;
-  }
-  &.MuiTypography-caption.MuiTypography-colorTextSecondary	 {
-    color: #868E96;
+  &.large {
+    
   }
 }

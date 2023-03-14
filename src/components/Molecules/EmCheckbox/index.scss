@@ -46,4 +46,10 @@
   .MuiFormControlLabel-label {
     margin: 0 10px;
   }
+
+  &.error {
+    .MuiCheckbox-root {
+      border: 1px solid #DC2020;
+    }
+  }
 }

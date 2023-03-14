@@ -1,0 +1,28 @@
+.em-badges {
+  .MuiBadge-badge {
+    right: 1px;
+    top: 3px;
+  }
+
+  &.filled {
+    .MuiBadge-colorPrimary {
+      background: #FFC107;
+     }
+    
+     .MuiBadge-colorSecondary {
+      background: #868E96;
+     }
+  }
+
+  &.outline {
+    .MuiBadge-colorPrimary {
+      background: #FFF;
+      color: #FFC107;
+    }
+
+    .MuiBadge-colorSecondary {
+      background: #FFF;
+      color: #868E96;
+    }
+  }
+}

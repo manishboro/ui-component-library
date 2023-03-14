@@ -10,9 +10,11 @@
       box-shadow: none;
     } 
   }
+  
   &.MuiButton-text{
     padding: 0
   }
+
   &.MuiButton-textPrimary{
     color: #FFC107
   }
@@ -32,28 +34,28 @@
   
   &.MuiButton-outlinedPrimary{
     color: #FFC107;
-    border: 1px solid #FFC107;
-  
-    &:hover {
-      background-color: #FFC107;
-      color: #FFF;
-    }
+    border: 1px solid #FFC107; 
+   
   }
+
   &.MuiButton-outlinedSecondary{
     color: #14142B
   }
 
   &.MuiButton-containedPrimary{
     background-color: #FFC107;
-    color: #FFF;
+    color: #FFF;    
 
     &:hover {
       background-color: #FFC720;
+      color: #FFF;
     }
     &:disabled {
       background-color: #FFDA6A;
-    }  
+      color: #FFD451;
+    } 
   }
+
   &.MuiButton-containedSecondary{
     background-color: #F3F3F6;
     color: #14142B;
@@ -61,9 +63,22 @@
     &:hover {
       background-color: #e3e3e9;
     }
+
     &:disabled {
       background-color: #F3F3F6;
     }  
+  }
+
+
+  &.MuiButton-text, &.MuiButton-outlined {
+    &:hover {
+      background-color: #FFC720;
+      color: #FFD451;
+    }
+    &:disabled {
+      background-color: #FFDA6A;
+      color: #FFD451;
+    } 
   }
 
   &.extraSmall{
@@ -93,15 +108,19 @@
   &.Mui-disabled{
     opacity: 0.65
   }
+  
   &.normal {
     border-radius: 0;
   }
+
   &.rounded-full {
     border-radius: 50px;
   }  
+
   &.square {
     border-radius: 4px;
   }
+
   &.iconOnly {
     min-width: auto;
     padding: 0;
