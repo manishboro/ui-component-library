@@ -74,7 +74,6 @@ const EmDropDown = ({
         id={id}
         value={value}
         onChange={handleChange}
-        disableUnderline
         IconComponent={ExpandMoreRoundedIcon}
         label={label}
         labelWidth={labelWidth}

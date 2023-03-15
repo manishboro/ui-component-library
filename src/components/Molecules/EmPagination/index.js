@@ -5,11 +5,13 @@ import "./index.scss"
 
 const EmPagination = ({
   className,
-  count
+  count,
+  page,
+  onChange
 }) => {
 
   return (
-    <Pagination className={`em-pagination ${className}`} count={count} variant="outlined" shape="rounded" />
+    <Pagination page={page} className={`em-pagination ${className}`} count={count} onChange={onChange} variant="outlined" shape="rounded" />
   );
 };
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from "react";
 import PropTypes from 'prop-types'
 import IconWithTitle from 'components/Molecules/IconWithTitle'
 import { Box, Grid } from '@material-ui/core'
@@ -10,6 +10,7 @@ import ReviewerProfile from 'components/Molecules/Review/ReviewerProfile'
 import ReviewFilterBar from 'components/Molecules/Review/ReviewFilterBar'
 import InsertChartOutlinedRoundedIcon from '@material-ui/icons/InsertChartOutlinedRounded';
 import "./index.scss"
+import usePagination from "../../../Molecules/EmPagination/pagination"
 
 const ReviewFilter = ({
     locationOptions,
@@ -17,6 +18,17 @@ const ReviewFilter = ({
     sortByOptions,
     reviews
 }) => {
+    const [page, setPage] = useState(1);
+    const PER_PAGE = 5;
+
+    const count = Math.ceil(reviews.length / PER_PAGE);
+    const _DATA = usePagination(reviews, PER_PAGE);
+
+    const handleChange = (e, p) => {
+        setPage(p);
+        _DATA.jump(p);
+    };
+
     return (
         <>
             <Box display="flex" alignContent="center" flexWrap="wrap" mt={{ xs: 2.5, md: 3 }}>
@@ -52,7 +64,7 @@ const ReviewFilter = ({
                 </Grid>
             </Box>
             {
-                reviews.map((data) => {
+                _DATA.currentData().map((data) => {
                     return (
                         <Box borderBottom="1px solid #E5E5EB;" p={{ xs: '16px 0', md: '24px 0' }}>
                             <Box display="flex" flexWrap="wrap" flexDirection={{ xs: "column", md: "row" }}>
@@ -84,20 +96,21 @@ const ReviewFilter = ({
                                             children="Reply"
                                             color='secondary'
                                         />
-                                        <Box m={{ xs: "0 16px 0 0", md: "0 0 0 8px" }}>
-                                            <EmTypography
-                                                display='inline'
-                                                variant='caption'
-                                                children={data.numOfReply}
-                                                color='textPrimary'
-                                            />
-                                            <EmTypography
-                                                display='inline'
-                                                variant='caption'
-                                                children=" Reply"
-                                                color='textPrimary'
-                                            />
-                                        </Box>
+                                        {data.numOfReply &&
+                                            <Box m={{ xs: "0 16px 0 0", md: "0 0 0 8px" }}>
+                                                <EmTypography
+                                                    display='inline'
+                                                    variant='caption'
+                                                    children={data.numOfReply}
+                                                    color='textPrimary'
+                                                />
+                                                <EmTypography
+                                                    display='inline'
+                                                    variant='caption'
+                                                    children=" Reply"
+                                                    color='textPrimary'
+                                                />
+                                            </Box>}
                                     </Box>
                                 </Box>
 
@@ -124,7 +137,9 @@ const ReviewFilter = ({
 
             <Box mt={3} display="flex" justifyContent="flex-end">
                 <EmPagination
-                    count={10}
+                    page={page}
+                    count={count}
+                    onChange={handleChange}
                 />
             </Box>
         </>
