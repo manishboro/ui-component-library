@@ -3,7 +3,7 @@ import React from 'react';
 import EmAlert from '.';
 import DeleteIcon from '@material-ui/icons/Delete';
 export default {
-  title: 'Molecules/Alert',
+  title: 'Atoms/Alert',
   component: EmAlert,
   argTypes: {
     variant: {

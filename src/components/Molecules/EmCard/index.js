@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import EmButton from "../EmButton";
+import EmButton from "../../Atoms/EmButton";
 import EmTypography from "components/Atoms/EmTypography";
 import { Box, Card, CardActions, CardContent } from "@material-ui/core";
 import "./index.scss";

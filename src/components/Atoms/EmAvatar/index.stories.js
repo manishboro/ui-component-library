@@ -3,7 +3,7 @@ import React from 'react';
 import EmAvatar from '.';
 
 export default {
-  title: 'Molecules/Avatar',
+  title: 'Atoms/Avatar',
   component: EmAvatar,
   argTypes: {
     avatarSize: {

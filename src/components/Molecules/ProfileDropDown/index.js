@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from "prop-types";
 import { Box, Menu, MenuItem } from '@material-ui/core';
 import ExpandMoreRoundedIcon from "@material-ui/icons/ExpandMoreRounded";
-import EmAvatar from '../EmAvatar';
+import EmAvatar from '../../Atoms/EmAvatar';
 
 
 const ProfileDropDown = ({

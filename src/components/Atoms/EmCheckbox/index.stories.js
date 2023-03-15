@@ -3,7 +3,7 @@ import React from 'react';
 import EmCheckbox from '.';
 
 export default {
-  title: 'Molecules/Checkbox',
+  title: 'Atoms/Checkbox',
   component: EmCheckbox,
   argTypes: {
     labelPlacement: {

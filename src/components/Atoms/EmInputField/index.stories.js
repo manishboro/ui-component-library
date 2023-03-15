@@ -3,7 +3,7 @@ import React from 'react';
 import EmInputField from '.';
 
 export default {
-  title: 'Molecules/InputField',
+  title: 'Atoms/InputField',
   component: EmInputField,
   argTypes: {
     variant: {

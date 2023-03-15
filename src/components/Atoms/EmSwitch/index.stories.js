@@ -2,7 +2,7 @@
 import React from 'react';
 import EmSwitch from '.';
 export default {
-  title: 'Molecules/Switch',
+  title: 'Atoms/Switch',
   component: EmSwitch,
   argTypes: {
     labelPlacement: {

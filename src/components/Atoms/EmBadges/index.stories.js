@@ -3,7 +3,7 @@ import React from 'react';
 import EmBadges from '.';
 
 export default {
-  title: 'Molecules/Badges',
+  title: 'Atoms/Badges',
   component: EmBadges,
   argTypes: {
     badgeStyle: {

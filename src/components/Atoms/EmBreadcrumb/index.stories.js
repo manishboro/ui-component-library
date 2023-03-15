@@ -4,7 +4,7 @@ import EmBreadcrumb from '.';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
 export default {
-  title: 'Molecules/Breadcrumb',
+  title: 'Atoms/Breadcrumb',
   component: EmBreadcrumb,
   argTypes: {
     separator: {

@@ -4,7 +4,7 @@ import EmButton from '.';
 import AddIcon from '@material-ui/icons/Add';
 
 export default {
-  title: 'Molecules/Button',
+  title: 'Atoms/Button',
   component: EmButton,
   argTypes: {
     variant: {
