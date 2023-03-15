@@ -5,6 +5,7 @@ import EmTypography from "components/Atoms/EmTypography";
 import { Box, Card, CardActions, CardContent } from "@material-ui/core";
 import "./index.scss";
 const EmCard = ({
+  variant,
   HeadingText = "",
   SecondaryText = "",
   imgSrc = "",
@@ -14,19 +15,21 @@ const EmCard = ({
   iconWidth,
   iconHeight,
   iconAlt = "",
+  rounded = true,
 }) => {
   return (
 
-    <Card className="em-card" variant="outlined">
-      {imgSrc && <Box pb="16px">
+    <Card className={`em-card ${variant}`} variant="outlined">
+      {imgSrc && <Box p="16px">
         <img className=""
           src={imgSrc}
           alt={imgAlt}
+          style={{ "width": "100%" }}
         />
       </Box>}
       <CardContent className={`${iconSrc && 'cardContent'}`}>
-        <Box flexShrink="initial" borderRadius="8px" overflow="hidden" mr="16px">
-          {iconSrc && <img width={iconWidth} height={iconHeight} src={iconSrc} alt={iconAlt} />}
+        <Box flexShrink="initial" borderRadius={rounded && "8px"} overflow="hidden" mr="16px">
+          {iconSrc && <img width={iconWidth} height={iconHeight} src={iconSrc} alt={iconAlt} style={{ "maxWidth": "100%" }} />}
         </Box>
         <Box width="100%">
           <Box fontWeight={700} mb="4px">
@@ -50,14 +53,15 @@ const EmCard = ({
 export default EmCard;
 
 EmCard.propTypes = {
-  className: PropTypes.string,
-  backgroundColor: PropTypes.string,
-  borderRadius: PropTypes.string,
-  cardPadding: PropTypes.string,
   variant: PropTypes.string,
   HeadingText: PropTypes.string,
   SecondaryText: PropTypes.string,
-  HeadingClass: PropTypes.string,
-  SecondaryTextClass: PropTypes.string,
   buttonLabel: PropTypes.string,
+  imgSrc: PropTypes.string,
+  imgAlt: PropTypes.string,
+  iconSrc: PropTypes.string,
+  iconWidth: PropTypes.string,
+  iconHeight: PropTypes.string,
+  iconAlt: PropTypes.string,
+  rounded: PropTypes.bool,
 };
