@@ -48,4 +48,5 @@ WithButton.args = {
   buttonLabel: 'Button Label',
   imgSrc: "/images/card.png",
   imgAlt: "Image Description",
+  cardBtnClick: () => { }
 };

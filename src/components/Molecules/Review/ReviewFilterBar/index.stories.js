@@ -28,5 +28,8 @@ ReviewFilterBars.args = {
     { value: 'value2', label: 'label2' },
     { value: 'value3', label: 'label3' }
   ],
+  locationHandleChange: () => { },
+  platformHandleChange: () => { },
+  sortByHandleChange: () => { }
 
 };

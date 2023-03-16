@@ -18,16 +18,25 @@ ReviewFilters.args = {
         { value: 'value2', label: 'label2' },
         { value: 'value3', label: 'label3' }
     ],
+
+    locationHandleChange: () => { },
+
     platformOptions: [
         { value: 'value1', label: 'label1' },
         { value: 'value2', label: 'label2' },
         { value: 'value3', label: 'label3' }
     ],
+
+    platformHandleChange: () => { },
+
     sortByOptions: [
         { value: 'value1', label: 'label1' },
         { value: 'value2', label: 'label2' },
         { value: 'value3', label: 'label3' }
     ],
+
+    sortByHandleChange: () => { },
+    metricsBtnClick: () => { },
 
     reviews: [
         {
@@ -115,5 +124,7 @@ ReviewFilters.args = {
             review: "When I generate one dummy text it returns only one line. I wish .",
         }
 
-    ]
+    ],
+
+    replyBtnClick: () => { }
 };

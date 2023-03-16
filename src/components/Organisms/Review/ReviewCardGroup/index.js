@@ -55,7 +55,7 @@ const ReviewCardGroup = ({
 ReviewCardGroup.propTypes = {
     totalReview: PropTypes.object,
     averageRating: PropTypes.object,
-    reviewRatings: PropTypes.object,
+    reviewRatings: PropTypes.array,
     fbRecommendation: PropTypes.object,
 }
 

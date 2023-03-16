@@ -19,7 +19,6 @@ const EmAvatar = ({
         className={avatarSize}
         variant={variant}
         children={firstLetter}
-        onC
       />
     </div>
   );

@@ -24,15 +24,21 @@ const theme = createTheme({
 
 const ReviewTemplate = ({
     breadcrumbs,
+    yearHandleChange,
     totalReview,
     averageRating,
     reviewRatings,
     fbRecommendation,
     yearDropdownOptions,
     locationOptions,
+    locationHandleChange,
     platformOptions,
+    platformHandleChange,
     sortByOptions,
-    reviews
+    sortByHandleChange,
+    metricsBtnClick,
+    reviews,
+    replyBtnClick
 }) => {
     return (
         <ThemeProvider theme={theme}>
@@ -48,6 +54,7 @@ const ReviewTemplate = ({
                             id="reviewDropdown"
                             labelId="reviewDropdown"
                             optionList={yearDropdownOptions}
+                            handleChange={yearHandleChange}
                         />
                     </Box>
                 </Box>
@@ -63,6 +70,11 @@ const ReviewTemplate = ({
                     platformOptions={platformOptions}
                     sortByOptions={sortByOptions}
                     reviews={reviews}
+                    metricsBtnClick={metricsBtnClick}
+                    replyBtnClick={replyBtnClick}
+                    locationHandleChange={locationHandleChange}
+                    platformHandleChange={platformHandleChange}
+                    sortByHandleChange={sortByHandleChange}
                 />
             </Box>
         </ThemeProvider>
@@ -71,15 +83,21 @@ const ReviewTemplate = ({
 
 ReviewTemplate.propTypes = {
     breadcrumbs: PropTypes.array,
-    totalReview: PropTypes.array,
-    averageRating: PropTypes.array,
+    totalReview: PropTypes.object,
+    averageRating: PropTypes.object,
     reviewRatings: PropTypes.array,
-    fbRecommendation: PropTypes.array,
+    fbRecommendation: PropTypes.object,
     yearDropdownOptions: PropTypes.array,
+    yearHandleChange: PropTypes.func,
     locationOptions: PropTypes.array,
+    locationHandleChange: PropTypes.func,
     platformOptions: PropTypes.array,
+    platformHandleChange: PropTypes.func,
     sortByOptions: PropTypes.array,
+    sortByHandleChange: PropTypes.func,
+    metricsBtnClick: PropTypes.func,
     reviews: PropTypes.array,
+    replyBtnClick: PropTypes.func,
 }
 
 export default ReviewTemplate;

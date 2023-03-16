@@ -14,9 +14,14 @@ import usePagination from "../../../Molecules/EmPagination/pagination"
 
 const ReviewFilter = ({
     locationOptions,
+    locationHandleChange,
     platformOptions,
+    platformHandleChange,
     sortByOptions,
-    reviews
+    sortByHandleChange,
+    metricsBtnClick,
+    reviews,
+    replyBtnClick,
 }) => {
     const [page, setPage] = useState(1);
     const PER_PAGE = 5;
@@ -37,6 +42,9 @@ const ReviewFilter = ({
                         locationOptions={locationOptions}
                         platformOptions={platformOptions}
                         sortByOptions={sortByOptions}
+                        locationHandleChange={locationHandleChange}
+                        platformHandleChange={platformHandleChange}
+                        sortByHandleChange={sortByHandleChange}
                     />
                 </Box>
                 <Box className='chartBtn' ml={{ xs: '0', md: 'auto' }} maxWidth={{ xs: '100%', md: '220px' }} width={{ xs: '100%', md: '30%' }} order={{ xs: 1, md: 2 }}>
@@ -46,6 +54,7 @@ const ReviewFilter = ({
                         children="View Detailed Metrics"
                         endIcon={<InsertChartOutlinedRoundedIcon style={{ fontSize: '18px' }} />}
                         fullWidth={{ xs: true, md: false }}
+                        onClick={metricsBtnClick}
                     />
                 </Box>
             </Box>
@@ -95,6 +104,7 @@ const ReviewFilter = ({
                                             variant='outlined'
                                             children="Reply"
                                             color='secondary'
+                                            onClick={replyBtnClick}
                                         />
                                         {data.numOfReply &&
                                             <Box m={{ xs: "0 16px 0 0", md: "0 0 0 8px" }}>
@@ -148,9 +158,14 @@ const ReviewFilter = ({
 
 ReviewFilter.propTypes = {
     locationOptions: PropTypes.array,
+    locationHandleChange: PropTypes.func,
     platformOptions: PropTypes.array,
+    platformHandleChange: PropTypes.func,
     sortByOptions: PropTypes.array,
+    sortByHandleChange: PropTypes.func,
+    metricsBtnClick: PropTypes.func,
     reviews: PropTypes.array,
+    replyBtnClick: PropTypes.func
 }
 
 export default ReviewFilter;

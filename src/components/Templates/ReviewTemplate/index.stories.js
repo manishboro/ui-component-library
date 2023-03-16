@@ -22,7 +22,7 @@ ReviewTemplates.args = {
         { value: 'value2', label: 'March 2021 - February 2022' },
         { value: 'value3', label: 'March 2022 - February 2023' }
     ],
-
+    yearHandleChange: () => { },
     totalReview: {
         iconSrc: "/images/icons/edit.svg",
         iconAlt: "Reviews",
@@ -72,17 +72,19 @@ ReviewTemplates.args = {
         { value: 'value2', label: 'label2' },
         { value: 'value3', label: 'label3' }
     ],
+    locationHandleChange: () => { },
     platformOptions: [
         { value: 'value1', label: 'label1' },
         { value: 'value2', label: 'label2' },
         { value: 'value3', label: 'label3' }
     ],
+    platformHandleChange: () => { },
     sortByOptions: [
         { value: 'value1', label: 'label1' },
         { value: 'value2', label: 'label2' },
         { value: 'value3', label: 'label3' }
     ],
-
+    sortByHandleChange: () => { },
     reviews: [
         {
             reviewerName: "Thomas Edison",

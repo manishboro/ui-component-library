@@ -26,7 +26,7 @@ Dropdown.args = {
   label: "Location",
   id: "location",
   labelId: "location",
-  handleChange: () => { },
+  onChange: () => { },
   multiple: false,
   optionList: [
     { value: 'value1', label: 'March 2020 - February 2021' },

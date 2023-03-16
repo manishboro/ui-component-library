@@ -16,6 +16,7 @@ const EmCard = ({
   iconHeight,
   iconAlt = "",
   rounded = true,
+  cardBtnClick
 }) => {
   return (
 
@@ -43,7 +44,7 @@ const EmCard = ({
       </CardContent>
       {buttonLabel &&
         <CardActions>
-          <EmButton children={buttonLabel} size="small" className="mt-6" />
+          <EmButton children={buttonLabel} size="small" className="mt-6" onClick={cardBtnClick} />
         </CardActions>
       }
     </Card>

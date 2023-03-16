@@ -7,7 +7,10 @@ import EmDropDown from 'components/Molecules/EmDropDown';
 const ReviewFilterBar = ({
   locationOptions,
   platformOptions,
-  sortByOptions
+  sortByOptions,
+  locationHandleChange,
+  platformHandleChange,
+  sortByHandleChange
 }) => {
 
   return (
@@ -25,7 +28,7 @@ const ReviewFilterBar = ({
           label="Location"
           id="location"
           labelId="location"
-          handleChange={() => { }}
+          handleChange={locationHandleChange}
           optionList={locationOptions}
         />
       </Box>
@@ -36,7 +39,7 @@ const ReviewFilterBar = ({
           label="Platform"
           id="platform"
           labelId="platform"
-          handleChange={() => { }}
+          handleChange={platformHandleChange}
           optionList={platformOptions}
         />
       </Box>
@@ -47,7 +50,7 @@ const ReviewFilterBar = ({
           label="Sort by"
           id="sortBy"
           labelId="sortBy"
-          handleChange={() => { }}
+          handleChange={sortByHandleChange}
           optionList={sortByOptions}
         />
       </Box>
