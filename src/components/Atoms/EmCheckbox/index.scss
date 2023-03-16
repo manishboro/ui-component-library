@@ -1,9 +1,6 @@
 .em-checkbox {
   color: #272B30;
 
-  &.MuiFormControlLabel-root {
-    margin: 0;
-  }
 
   .MuiCheckbox-root {
     border: 1px solid #9C9CAF;
@@ -43,13 +40,17 @@
     }   
   } 
 
-  .MuiFormControlLabel-label {
-    margin: 0 10px;
-  }
 
-  &.error {
+  &.error-checkbox {
     .MuiCheckbox-root {
       border: 1px solid #DC2020;
     }
+  }
+
+  .MuiFormHelperText-root.error {
+    &.error {
+      color: #DC2020;
+      margin-top: 5px;
+    } 
   }
 }

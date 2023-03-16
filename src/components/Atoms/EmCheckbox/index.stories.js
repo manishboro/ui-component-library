@@ -24,4 +24,5 @@ Checkbox.args = {
   labelPlacement: "end",
   disabled: false,
   checked: false,
+  errorText: "Error message",
 };
