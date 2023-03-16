@@ -34,5 +34,6 @@ const Template = (args) => <EmButton {...args} />;
 export const Button = Template.bind({});
 Button.args = {
   children: "Button",
-  endIcon: <AddIcon />
+  endIcon: <AddIcon />,
+  onClick: () => { }
 };

@@ -25,5 +25,6 @@ Avatar.args = {
   avatarAlt: "avatar",
   avatarSize: "medium",
   variant: "circular",
-  firstLetter: "H"
+  firstLetter: "H",
+  onClick: () => { }
 };

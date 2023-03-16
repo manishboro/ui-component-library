@@ -18,6 +18,7 @@ const EmButton = ({
   fullWidth = false,
   fontWeight = "fw-500",
   textClass = "",
+  onClick
 }) => {
 
   return (
@@ -32,6 +33,7 @@ const EmButton = ({
       endIcon={endIcon}
       fullWidth={fullWidth}
       href={href}
+      onClick={onClick}
     />
   );
 };

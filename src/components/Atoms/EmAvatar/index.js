@@ -8,16 +8,18 @@ const EmAvatar = ({
   avatarSrc,
   avatarAlt,
   avatarSize,
-  firstLetter
+  firstLetter,
+  onClick
 }) => {
   return (
-    <div className={`em-avatar ${avatarSize}`}>
+    <div className={`em-avatar ${avatarSize}`} onClick={onClick}>
       <Avatar
         src={avatarSrc}
         alt={avatarAlt}
         className={avatarSize}
         variant={variant}
         children={firstLetter}
+        onC
       />
     </div>
   );
