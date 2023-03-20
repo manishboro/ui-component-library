@@ -5,10 +5,9 @@ import { TabContext, TabPanel } from '@material-ui/lab';
 import "./index.scss";
 
 const EmTabs = ({
-  tabVariant,
-  orientation,
+  tabVariant = "justified",
+  orientation = "horizontal",
   tabLists,
-  centered
 }) => {
   const [value, setValue] = useState('1');
 
@@ -26,7 +25,6 @@ const EmTabs = ({
             value={value}
             indicatorColor="primary"
             textColor="primary"
-            centered={centered}
             orientation={orientation}>
             {tabLists.map((item) => {
               return (

@@ -2,7 +2,7 @@
     .MuiTabs-root {
         min-height: auto;
     }
-    .MuiTab-root {
+    .MuiButtonBase-root{
         text-transform: capitalize;
         min-height: auto;
         min-width: auto;
@@ -17,10 +17,9 @@
     }
 
     .default, .justified, .left, .right, .default {  
-        border-bottom: 1px solid #D1D1DB;
-
-        .MuiTab-root {
+        .MuiButtonBase-root{
             padding: 0 8px 15px;
+            border-bottom: 1px solid #D1D1DB;
         }
 
         .Mui-selected {
@@ -29,7 +28,7 @@
     }
 
     .justified {
-        .MuiTab-root {
+        .MuiButtonBase-root {
            min-width: 135px;
         }
         .MuiTab-textColorPrimary {
@@ -60,18 +59,17 @@
     .MuiTabs-vertical {
         flex-shrink: 0;
 
-        .MuiButtonBase-root {
-            padding: 8px 24px;
-        }
-
         &.default, &.justified, &.left, &.right, &.default {  
-            border-bottom: none;
+            .MuiButtonBase-root {
+                border-bottom: none;
+                padding: 8px 24px;
+            }
         }
 
         &.left {
-            border-right: 1px solid #D1D1DB;
             .MuiButtonBase-root {
                 padding-left: 0;
+                border-right: 1px solid #D1D1DB;
 
                 .MuiTab-wrapper {
                     align-items: flex-end;
@@ -80,10 +78,10 @@
         }
 
         &.right {
-            border-left: 1px solid #D1D1DB;
 
             .MuiButtonBase-root {
                 padding-right: 0;
+                border-left: 1px solid #D1D1DB;
 
                 .MuiTab-wrapper {
                     align-items: flex-start;
@@ -96,8 +94,9 @@
         }
 
        &.justified, &.default {
-            border-right: 1px solid #D1D1DB;
-            .MuiButtonBase-root {
+            .MuiButtonBase-root {                
+                border-right: 1px solid #D1D1DB;
+
                 .MuiTab-wrapper {
                     align-items: center
                 }
