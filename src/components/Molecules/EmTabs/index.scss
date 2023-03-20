@@ -1,0 +1,123 @@
+.em-tabs {
+    .MuiTabs-root {
+        min-height: auto;
+    }
+    .MuiTab-root {
+        text-transform: capitalize;
+        min-height: auto;
+        min-width: auto;
+    }
+
+    .MuiTab-textColorPrimary {
+        color: #6B6B80;
+    }
+
+    .MuiTabs-indicator {
+        background-color: #FFC107;
+    }
+
+    .default, .justified, .left, .right, .default {  
+        border-bottom: 1px solid #D1D1DB;
+
+        .MuiTab-root {
+            padding: 0 8px 15px;
+        }
+
+        .Mui-selected {
+            color: #1F1F37;
+        }
+    }
+
+    .justified {
+        .MuiTab-root {
+           min-width: 135px;
+        }
+        .MuiTab-textColorPrimary {
+            &.Mui-selected {
+                color: #FFC107;               
+            }
+        }
+    }
+
+    .filled {        
+        .Mui-selected {
+            background: #FFC107;
+            color: #FFF;
+        }
+
+        .MuiTabs-indicator { 
+            display: none;
+        }
+        
+        .MuiTab-root {
+            padding: 15px 24px;
+            min-width: 135px;
+        }
+    }
+
+
+
+    .MuiTabs-vertical {
+        flex-shrink: 0;
+
+        .MuiButtonBase-root {
+            padding: 8px 24px;
+        }
+
+        &.default, &.justified, &.left, &.right, &.default {  
+            border-bottom: none;
+        }
+
+        &.left {
+            border-right: 1px solid #D1D1DB;
+            .MuiButtonBase-root {
+                padding-left: 0;
+
+                .MuiTab-wrapper {
+                    align-items: flex-end;
+                }
+            }
+        }
+
+        &.right {
+            border-left: 1px solid #D1D1DB;
+
+            .MuiButtonBase-root {
+                padding-right: 0;
+
+                .MuiTab-wrapper {
+                    align-items: flex-start;
+                }
+            }
+
+            .MuiTabs-indicator {
+                left: 0;
+            }
+        }
+
+       &.justified, &.default {
+            border-right: 1px solid #D1D1DB;
+            .MuiButtonBase-root {
+                .MuiTab-wrapper {
+                    align-items: center
+                }
+            }
+            .MuiTab-textColorPrimary {
+                &.Mui-selected {
+                    color: #1F1F37;
+                   
+                }
+            }
+        }
+
+        &.filled {
+            .MuiButtonBase-root {
+                padding: 15px 24px;
+                
+                .MuiTab-wrapper {
+                    align-items: flex-start;
+                }
+            }
+        }
+    }
+}

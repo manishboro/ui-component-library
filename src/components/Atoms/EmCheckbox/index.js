@@ -11,7 +11,8 @@ const EmCheckbox = ({
   disabled,
   checked = false,
   isError = false,
-  errorText
+  errorText,
+  onChange
 }) => {
 
   return (
@@ -22,6 +23,7 @@ const EmCheckbox = ({
         label={label}
         labelPlacement={labelPlacement}
         disabled={disabled}
+        onChange={onChange}
       />
       {isError && <FormHelperText className='error'>{errorText}</FormHelperText>}
     </Box>

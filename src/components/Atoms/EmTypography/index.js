@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import { Typography } from '@material-ui/core';
+import { Box, Typography } from '@material-ui/core';
 import "./index.scss";
 
 const EmTypography = ({
@@ -10,20 +10,24 @@ const EmTypography = ({
   color = "textPrimary",
   display = "block",
   noWrap = false,
-  sx
+  sx,
+  fontWeight
 }) => {
 
   return (
-    <Typography
-      variant={variant}
-      align={align}
-      children={children}
-      className="em-typography"
-      color={color}
-      display={display}
-      noWrap={noWrap}
-      sx={sx}
-    />
+    <Box fontWeight={fontWeight}>
+      <Typography
+        variant={variant}
+        align={align}
+        children={children}
+        className="em-typography"
+        color={color}
+        display={display}
+        noWrap={noWrap}
+        sx={sx}
+      />
+    </Box>
+
   );
 };
 
