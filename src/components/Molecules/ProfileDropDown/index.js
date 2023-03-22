@@ -10,7 +10,6 @@ const ProfileDropDown = ({
   avatarSrc,
   avatarAlt,
   avatarSize = "small",
-  firstLetter,
   userName,
   profileDropdownOptions
 }) => {
@@ -32,7 +31,6 @@ const ProfileDropDown = ({
         avatarSrc={avatarSrc}
         avatarAlt={avatarAlt}
         avatarSize={avatarSize}
-        firstLetter={firstLetter}
       />
       <Box
         display="flex"

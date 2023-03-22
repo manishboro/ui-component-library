@@ -10,7 +10,6 @@ const EmHeader = ({
   avatarAlt,
   avatarSize,
   userName,
-  firstLetter,
   onClick,
   profileDropdownOptions
 }) => {
@@ -49,7 +48,6 @@ const EmHeader = ({
           avatarAlt={avatarAlt}
           avatarSize={avatarSize}
           userName={userName}
-          firstLetter={firstLetter}
           profileDropdownOptions={profileDropdownOptions}
         />
       </Box>

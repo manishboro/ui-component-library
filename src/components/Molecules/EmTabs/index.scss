@@ -10,6 +10,8 @@
 
     .MuiTab-textColorPrimary {
         color: #6B6B80;
+        font-size: 14px;
+        font-weight: 400;
     }
 
     .MuiTabs-indicator {
@@ -24,6 +26,7 @@
 
         .Mui-selected {
             color: #1F1F37;
+            font-weight: 500;
         }
     }
 
@@ -33,7 +36,8 @@
         }
         .MuiTab-textColorPrimary {
             &.Mui-selected {
-                color: #FFC107;               
+                color: #FFC107;   
+                font-weight: 500;            
             }
         }
     }

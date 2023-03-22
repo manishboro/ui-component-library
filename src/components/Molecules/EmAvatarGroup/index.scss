@@ -1,0 +1,18 @@
+.em-avatar-group {
+    .em-avatar {
+        &:not(:first-child) {
+            margin-left: -8px;
+        }        
+    }
+    .MuiAvatarGroup-avatar {
+        border: 1px solid #FCFCFC;
+    }
+
+    .MuiAvatar-colorDefault {
+        background-color: #FFD451;
+        color: #FFC720;
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 400;
+    }
+}

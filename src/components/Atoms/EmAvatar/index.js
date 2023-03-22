@@ -8,7 +8,6 @@ const EmAvatar = ({
   avatarSrc,
   avatarAlt,
   avatarSize,
-  firstLetter,
   onClick
 }) => {
   return (
@@ -18,7 +17,6 @@ const EmAvatar = ({
         alt={avatarAlt}
         className={avatarSize}
         variant={variant}
-        children={firstLetter}
       />
     </div>
   );
@@ -29,7 +27,7 @@ EmAvatar.propTypes = {
   avatarSrc: PropTypes.string,
   avatarAlt: PropTypes.string,
   avatarSize: PropTypes.string,
-  firstLetter: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default EmAvatar;
