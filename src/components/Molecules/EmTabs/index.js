@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import PropTypes from "prop-types";
-import { Box, Tab, Tabs, } from '@material-ui/core';
-import { TabContext } from '@material-ui/lab';
+import { Box, Tab, Tabs } from '@material-ui/core';
+import { TabContext, TabPanel } from '@material-ui/lab';
 import "./index.scss";
-import EmTab from './EmTab';
-import EmTabPanel from './EmTabPanel';
 
-const EmSwitch = ({
-  orientation,
-  tabListData
+const EmTabs = ({
+  tabVariant = "justified",
+  orientation = "horizontal",
+  tabLists,
 }) => {
   const [value, setValue] = useState('1');
 
@@ -19,38 +18,37 @@ const EmSwitch = ({
   return (
     <>
       <TabContext value={value}>
-        <Box display="flex" flexDirection={orientation}>
-          <Box>
-            <Tabs
-              onChange={handleChange}
-              value={value}
-              indicatorColor="primary"
-              textColor="primary"
-              centered={false}
-              orientation={orientation} >
-              {tabListData.map((item) => {
-                return (
-                  <EmTab tabTitle={item.title} tabValue={item.value} />
-                )
-              })}
-            </Tabs>
-          </Box>
-          <Box>
-            {tabListData.map((item) => {
+        <Box className="em-tabs" display="flex" flexDirection={orientation === 'horizontal' && 'column'} >
+          <Tabs
+            className={tabVariant}
+            onChange={handleChange}
+            value={value}
+            indicatorColor="primary"
+            textColor="primary"
+            orientation={orientation}>
+            {tabLists.map((item) => {
               return (
-                <EmTabPanel tabPanelValue={item.value} tabPanelContent={item.content} />
+                <Tab label={item.title} value={item.value} />
+              )
+            })}
+          </Tabs>
+          <Box>
+            {tabLists.map((item) => {
+              return (
+                <TabPanel value={item.value}>{item.content}</TabPanel>
               )
             })}
           </Box>
         </Box>
       </TabContext>
+
     </>
   );
 };
 
-EmSwitch.propTypes = {
-  EmSwitch: PropTypes.string,
+EmTabs.propTypes = {
+  EmTabs: PropTypes.string,
   centered: PropTypes.bool,
 };
 
-export default EmSwitch;
+export default EmTabs;

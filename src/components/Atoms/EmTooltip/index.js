@@ -8,28 +8,31 @@ import "./index.scss";
 const EmTooltip = ({
   tooltipContent,
   tooltipPosition,
-  tooltipTitle,
-  tooltipClasses,
   titleClassName,
-  arrow
+  arrow,
+  children
 }) => {
   return (
-    <>
+    <div className="em-tooltip">
       <Tooltip
         title={tooltipContent}
         placement={tooltipPosition}
-        classes={tooltipClasses}
         arrow
         TransitionComponent={Fade}
-        TransitionProps={{ timeout: 600 }}>
+        TransitionProps={{ timeout: 600 }}
+        classes={{
+          arrow: "tooltip-arrow",
+          tooltip: "em-tooltip-content"
+        }}
+      >
         <Box
           component="div"
           display="inline-block"
           className={titleClassName}>
-          {tooltipTitle}
+          {children}
         </Box>
       </Tooltip>
-    </>
+    </div>
   );
 };
 

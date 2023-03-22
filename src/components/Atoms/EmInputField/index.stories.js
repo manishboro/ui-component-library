@@ -8,27 +8,47 @@ export default {
   argTypes: {
     variant: {
       control: "select",
-      options: ["filled", "outlined", "standard"],
+      options: ["outlined", "standard"],
     },
     size: {
       control: "select",
-      options: ["small", "large"],
-    },
-    type: {
-      control: "select",
-      options: ["text", "number", "password"],
+      options: ["small", "medium", "large"],
     },
   },
 };
 
 const Template = (args) => <EmInputField {...args} />;
 
-export const InputField = Template.bind({});
-InputField.args = {
+export const InputFields = Template.bind({});
+InputFields.args = {
   id: "name",
   className: "",
   label: "Name",
   type: "text",
-  size: "normal",
+  size: "medium",
   placeholder: "Name",
+  errorText: "Error message",
+  isAnimated: true
+};
+
+export const AnimatedLabel = Template.bind({});
+AnimatedLabel.args = {
+  variant: 'standard',
+  id: "name",
+  className: "",
+  label: "Name",
+  type: "text",
+  size: "medium",
+  placeholder: "Name",
+  errorText: "Error message",
+};
+
+export const InputFieldsWithoutLabel = Template.bind({});
+InputFieldsWithoutLabel.args = {
+  id: "name",
+  className: "",
+  type: "text",
+  size: "medium",
+  placeholder: "Name",
+  errorText: "Error message",
 };

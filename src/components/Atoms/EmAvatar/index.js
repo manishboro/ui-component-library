@@ -8,18 +8,21 @@ const EmAvatar = ({
   avatarSrc,
   avatarAlt,
   avatarSize,
-  firstLetter,
-  onClick
+  onClick,
+  bgColor = "#FFD451",
+  textColor = "#FFC720"
+
 }) => {
   return (
-    <div className={`em-avatar ${avatarSize}`} onClick={onClick}>
+    <div className={`em-avatar ${avatarSize}`} onClick={onClick} >
       <Avatar
         src={avatarSrc}
         alt={avatarAlt}
         className={avatarSize}
         variant={variant}
-        children={firstLetter}
-      />
+        style={{ 'background': bgColor, 'color': textColor }}
+      >
+      </Avatar>
     </div>
   );
 };
@@ -29,7 +32,9 @@ EmAvatar.propTypes = {
   avatarSrc: PropTypes.string,
   avatarAlt: PropTypes.string,
   avatarSize: PropTypes.string,
-  firstLetter: PropTypes.string,
+  onClick: PropTypes.func,
+  bgColor: PropTypes.string,
+  textColor: PropTypes.string,
 };
 
 export default EmAvatar;

@@ -4,7 +4,15 @@ import { Box, Menu, MenuItem } from '@material-ui/core';
 import ExpandMoreRoundedIcon from '@material-ui/icons/ExpandMoreRounded';
 import EmAvatar from '../../Atoms/EmAvatar';
 
-const ProfileDropDown = ({ variant = 'circular', avatarSrc, avatarAlt, avatarSize = 'small', firstLetter, userName, profileDropdownOptions }) => {
+
+const ProfileDropDown = ({
+  variant = "circular",
+  avatarSrc,
+  avatarAlt,
+  avatarSize = "small",
+  userName,
+  profileDropdownOptions
+}) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = event => {
@@ -16,11 +24,25 @@ const ProfileDropDown = ({ variant = 'circular', avatarSrc, avatarAlt, avatarSiz
   };
 
   return (
-    <Box display="flex" alignItems="center">
-      <EmAvatar variant={variant} avatarSrc={avatarSrc} avatarAlt={avatarAlt} avatarSize={avatarSize} firstLetter={firstLetter} />
-      <Box display="flex" fontSize="14" color="#14142B" fontWeight="600" onClick={handleClick} ml={{ xs: 0, md: 1 }} style={{ cursor: 'pointer' }}>
-        <Box display={{ xs: 'none', md: 'block' }}>{userName}</Box>
-        <ExpandMoreRoundedIcon className="arrow" />
+    <Box display="flex" alignItems="center" >
+      <EmAvatar
+        variant={variant}
+        avatarSrc={avatarSrc}
+        avatarAlt={avatarAlt}
+        avatarSize={avatarSize}
+      />
+      <Box
+        display="flex"
+        fontSize="14"
+        color="#14142B"
+        fontWeight="600"
+        onClick={handleClick}
+        ml={{ xs: 0, md: 1 }}
+        style={{ "cursor": "pointer" }}
+      ><Box display={{ xs: "none", md: "block" }}>
+          {userName}
+        </Box>
+        <ExpandMoreRoundedIcon className='arrow' />
       </Box>
       <Menu
         id="menu"

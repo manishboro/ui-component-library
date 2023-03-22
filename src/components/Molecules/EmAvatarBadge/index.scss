@@ -1,0 +1,75 @@
+.em-avatar-badge {
+    .MuiBadge-badge {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        padding: 0 8px;
+
+        &.MuiBadge-dot {
+            padding: 0;
+            min-width: auto;
+            width: 6px;
+            height: 6px;
+            box-shadow: 0px 0px 0px 1px #FFFFFF;
+        }
+    }
+
+    &.circular {
+        animation: none;
+        position: static; 
+    }
+
+    &.extraSmall {
+        .MuiBadge-badge {
+            padding: 0 6px;
+            margin-top: 0px;
+            margin-right: -3px;
+            
+            &.MuiBadge-dot {
+                padding: 0;
+            }
+        }
+        &.circular {    
+            .MuiBadge-dot {
+                margin-right: 2px;
+                margin-top: 4px;
+            }
+        }
+    }
+
+    &.small {
+        .MuiBadge-badge {
+            padding: 0 6px;
+
+            &.MuiBadge-dot {
+                padding: 0;
+            }
+        }
+
+        &.circular {    
+            .MuiBadge-dot {
+                margin-right: 3px;
+                margin-top: 6px;
+            }
+        }
+    }
+
+    &.medium {
+        &.circular {    
+            .MuiBadge-dot {
+                margin-right: 4px;
+                margin-top: 8px;
+            }
+        }
+    }
+
+    &.large {
+        &.circular {    
+            .MuiBadge-dot {
+                margin-right: 7px;
+                margin-top: 8px;
+            }
+        }
+    }
+
+}

@@ -1,10 +1,10 @@
 
 import React from 'react';
-import EmAvatar from '.';
+import EmAvatarBadge from '.';
 
 export default {
-  title: 'Atoms/Avatar',
-  component: EmAvatar,
+  title: 'Molecules/Avatar/AvatarBadge',
+  component: EmAvatarBadge,
   argTypes: {
     avatarSize: {
       control: "select",
@@ -13,17 +13,23 @@ export default {
     variant: {
       control: "select",
       options: ['circular', 'rounded', 'square'],
+    },
+    badgeVariant: {
+      control: "select",
+      options: ['standard', 'dot']
     }
   }
 };
 
-const Template = (args) => <EmAvatar {...args} />;
+const Template = (args) => <EmAvatarBadge {...args} />;
 
-export const Avatar = Template.bind({});
-Avatar.args = {
+export const AvatarBadge = Template.bind({});
+AvatarBadge.args = {
   avatarSrc: "/images/profile-1.jpg",
   avatarAlt: "Rahul Sharma",
   avatarSize: "medium",
   variant: "circular",
   onClick: () => { },
+  badgeCount: 20,
+  badgeVariant: 'standard'
 };

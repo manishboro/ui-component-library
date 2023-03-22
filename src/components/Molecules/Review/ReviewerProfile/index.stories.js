@@ -14,7 +14,6 @@ ReviewerProfiles.args = {
   variant: "circular",
   avatarSize: "medium",
   reviewerImg: "/images/profile-1.jpg",
-  firstLetter: "N",
   companyIcon: "/images/icons/google.svg",
   companyIconAlt: "google",
   companyIconWidth: 18,

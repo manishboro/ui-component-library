@@ -1,0 +1,14 @@
+.em-tooltip-content {
+    &.MuiTooltip-tooltip {
+        background: #1F1F37;
+        border-radius: 4px;
+        padding: 6px 16px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .MuiTooltip-arrow {
+        color: #1F1F37;
+        font-size: 16px;
+    }
+}

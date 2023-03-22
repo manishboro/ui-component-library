@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import { TextField } from '@material-ui/core';
+import { Box, FormHelperText, TextField } from '@material-ui/core';
 import "./index.scss";
 
 const EmInputField = ({
@@ -9,7 +9,7 @@ const EmInputField = ({
   label,
   type,
   variant = "outlined",
-  size,
+  size = "medium",
   placeholder,
   defaultValue,
   disabled = false,
@@ -17,30 +17,33 @@ const EmInputField = ({
   multiline = false,
   maxRows,
   value,
-  handleChange = () => { },
-  InputProps,
-  InputLabelProps
+  onChange = () => { },
+  errorText,
+  isAnimated,
+  fullWidth = true
 }) => {
 
   return (
-    <TextField
-      id={id}
-      className={className}
-      label={label}
-      type={type}
-      variant={variant}
-      size={size}
-      placeholder={placeholder}
-      defaultValue={defaultValue}
-      disabled={disabled}
-      error={error}
-      multiline={multiline}
-      maxRows={maxRows}
-      value={value}
-      onChange={handleChange}
-      InputProps={InputProps}
-      InputLabelProps={InputLabelProps}
-    />
+    <Box className={`em-input ${isAnimated ? 'animated-input' : 'normal-input'} ${size}`}>
+      <TextField
+        id={id}
+        className={className}
+        label={label}
+        type={type}
+        variant={variant}
+        placeholder={placeholder}
+        fullWidth={fullWidth}
+        defaultValue={defaultValue}
+        disabled={disabled}
+        error={error}
+        multiline={multiline}
+        maxRows={maxRows}
+        value={value}
+        onChange={onChange}
+        InputLabelProps={{ shrink: isAnimated }}
+      />
+      {error && <FormHelperText className='error'>{errorText}</FormHelperText>}
+    </Box>
   );
 };
 
@@ -59,8 +62,9 @@ EmInputField.propTypes = {
   maxRows: PropTypes.number,
   value: PropTypes.string,
   handleChange: PropTypes.func,
-  InputProps: PropTypes.object,
   InputLabelProps: PropTypes.object,
+  isAnimated: PropTypes.bool,
+  fullWidth: PropTypes.bool,
 };
 
 export default EmInputField;

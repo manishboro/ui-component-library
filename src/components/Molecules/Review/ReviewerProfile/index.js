@@ -1,14 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Box } from '@material-ui/core';
 import EmTypography from '../../../Atoms/EmTypography';
-import AvatarWithIcon from '../../../Molecules/AvatarWithIcon';
-import PropTypes from 'prop-types';
+import EmAvatarBadgeIcon from '../../../Molecules/EmAvatarBadgeIcon';
 
 const ReviewerProfile = ({
   reviewerImg,
   reviewerName,
-  firstLetter,
-  textLabel = 'Posted on',
+  textLabel = "Posted on",
   companyIcon,
   companyIconAlt,
   companyIconWidth = 18,
@@ -17,14 +16,13 @@ const ReviewerProfile = ({
 }) => {
   return (
     <Box display="flex" alignItems="center">
-      <AvatarWithIcon
+      <EmAvatarBadgeIcon
         avatarSrc={reviewerImg}
         avatarAlt={reviewerName}
         iconSrc={companyIcon}
         iconAlt={companyIconAlt}
         iconWidth={companyIconWidth}
         iconHeight={companyIconHeight}
-        firstLetter={firstLetter}
       />
       <Box ml={1.5} lineHeight={1}>
         <EmTypography children={reviewerName} />

@@ -5,9 +5,9 @@ export default {
   title: 'Molecules/Tabs',
   component: EmTabs,
   argTypes: {
-    variant: {
+    tabVariant: {
       control: "select",
-      options: ["fullWidth", "scrollable", "standard"],
+      options: ["default", "filled", "left", "right", "justified"],
     },
     orientation: {
       control: "select",
@@ -20,19 +20,19 @@ const Template = (args) => <EmTabs {...args} />;
 
 export const Tabs = Template.bind({});
 Tabs.args = {
-  tabListData: [
+  tabLists: [
     {
-      title: "Item One",
+      title: "Active",
       content: "Item One - Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown",
       value: "1"
     },
     {
-      title: "Item Two",
+      title: "Inactive",
       content: "Item Two - Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown",
       value: "2"
     },
     {
-      title: "Item Three",
+      title: "raphic or web designs.",
       content: "Item Three - Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown",
       value: "3"
     },

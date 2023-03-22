@@ -11,5 +11,6 @@ const Template = (args) => <EmPagination {...args} />;
 
 export const Pagination = Template.bind({});
 Pagination.args = {
-  count: 10
+  count: 10,
+  paginationHeading: "1 to 4 of 65 records"
 };
