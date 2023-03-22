@@ -39,39 +39,37 @@ const ReviewTemplate = ({
   replyBtnClick,
 }) => {
   return (
-    <ThemeProvider theme={theme}>
-      <Box>
-        <Box display="flex" alignItems={{ xs: 'center', md: 'flex-start' }} mb={{ xs: 1.5, md: 2.5 }}>
-          <Box width="55%">
-            <EmBreadcrumb breadcrumbs={breadcrumbs} />
-          </Box>
-          <Box width="45%" ml="auto" maxWidth="245px" pt={{ xs: 0, md: '12px' }}>
-            <EmDropDown
-              label="Select Year"
-              size="large"
-              id="reviewDropdown"
-              labelId="reviewDropdown"
-              optionList={yearDropdownOptions}
-              handleChange={yearHandleChange}
-            />
-          </Box>
+    <Box>
+      <Box display="flex" alignItems={{ xs: 'center', md: 'flex-start' }} mb={{ xs: 1.5, md: 2.5 }}>
+        <Box width="55%">
+          <EmBreadcrumb breadcrumbs={breadcrumbs} />
         </Box>
-
-        <ReviewCardGroup totalReview={totalReview} averageRating={averageRating} reviewRatings={reviewRatings} fbRecommendation={fbRecommendation} />
-
-        <ReviewFilter
-          locationOptions={locationOptions}
-          platformOptions={platformOptions}
-          sortByOptions={sortByOptions}
-          reviews={reviews}
-          metricsBtnClick={metricsBtnClick}
-          replyBtnClick={replyBtnClick}
-          locationHandleChange={locationHandleChange}
-          platformHandleChange={platformHandleChange}
-          sortByHandleChange={sortByHandleChange}
-        />
+        <Box width="45%" ml="auto" maxWidth="245px" pt={{ xs: 0, md: '12px' }}>
+          <EmDropDown
+            label="Select Year"
+            size="large"
+            id="reviewDropdown"
+            labelId="reviewDropdown"
+            optionList={yearDropdownOptions}
+            handleChange={yearHandleChange}
+          />
+        </Box>
       </Box>
-    </ThemeProvider>
+
+      <ReviewCardGroup totalReview={totalReview} averageRating={averageRating} reviewRatings={reviewRatings} fbRecommendation={fbRecommendation} />
+
+      <ReviewFilter
+        locationOptions={locationOptions}
+        platformOptions={platformOptions}
+        sortByOptions={sortByOptions}
+        reviews={reviews}
+        metricsBtnClick={metricsBtnClick}
+        replyBtnClick={replyBtnClick}
+        locationHandleChange={locationHandleChange}
+        platformHandleChange={platformHandleChange}
+        sortByHandleChange={sortByHandleChange}
+      />
+    </Box>
   );
 };
 
