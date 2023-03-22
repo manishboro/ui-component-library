@@ -40,6 +40,8 @@ EmAvatarBadge.propTypes = {
   avatarSrc: PropTypes.string,
   avatarAlt: PropTypes.string,
   avatarSize: PropTypes.string,
+  avatarBgColor: PropTypes.string,
+  avatarTextColor: PropTypes.string,
   badgeCount: PropTypes.number,
   badgeVariant: PropTypes.string,
 };

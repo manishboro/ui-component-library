@@ -1,8 +1,7 @@
-import React, { Children } from 'react';
+import React from 'react';
 import PropTypes from "prop-types";
 import Avatar from '@material-ui/core/es/Avatar/Avatar';
 import "./index.scss";
-import { Box } from '@material-ui/core';
 
 const EmAvatar = ({
   variant = "circular",
@@ -16,7 +15,6 @@ const EmAvatar = ({
 }) => {
   return (
     <div className={`em-avatar ${avatarSize}`} onClick={onClick} >
-
       <Avatar
         src={avatarSrc}
         alt={avatarAlt}
