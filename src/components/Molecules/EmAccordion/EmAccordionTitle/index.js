@@ -1,28 +1,14 @@
 import React from 'react';
-import PropTypes from "prop-types";
-import "./index.scss";
+import PropTypes from 'prop-types';
+import './index.scss';
 import { AccordionSummary, Box } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import EmTypography from 'components/Atoms/EmTypography';
+import EmTypography from '../../../Atoms/EmTypography';
 
-const EmAccordionTitle = ({
-  accordionTitleId,
-  accordionTitleClass = "",
-  accordionTitle,
-  variant = "body1",
-  color = "textPrimary",
-}) => {
+const EmAccordionTitle = ({ accordionTitleId, accordionTitleClass = '', accordionTitle, variant = 'body1', color = 'textPrimary' }) => {
   return (
-    <AccordionSummary
-      id={accordionTitleId}
-      className="accordionTitle"
-      expandIcon={<ExpandMoreIcon />}
-    >
-      <EmTypography
-        variant={variant}
-        color={color}
-        className={accordionTitleClass}
-        children={accordionTitle} />
+    <AccordionSummary id={accordionTitleId} className="accordionTitle" expandIcon={<ExpandMoreIcon />}>
+      <EmTypography variant={variant} color={color} className={accordionTitleClass} children={accordionTitle} />
     </AccordionSummary>
   );
 };

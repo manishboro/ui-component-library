@@ -1,21 +1,11 @@
 import React from 'react';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 import { Box, Checkbox, FormControlLabel, FormHelperText } from '@material-ui/core';
-import "./index.scss";
+import './index.scss';
 
-const EmCheckbox = ({
-  name,
-  value,
-  label,
-  labelPlacement,
-  disabled,
-  checked = false,
-  isError = false,
-  errorText
-}) => {
-
+const EmCheckbox = ({ name, value, label, labelPlacement, disabled, errorText, checked = false, isError = false }) => {
   return (
-    <Box className={`em-checkbox ${isError && "error-checkbox"}`}>
+    <Box className={`em-checkbox ${isError && 'error-checkbox'}`}>
       <FormControlLabel
         value={value}
         control={<Checkbox checked={checked} name={name} color="primary" />}
@@ -23,7 +13,7 @@ const EmCheckbox = ({
         labelPlacement={labelPlacement}
         disabled={disabled}
       />
-      {isError && <FormHelperText className='error'>{errorText}</FormHelperText>}
+      {isError && <FormHelperText className="error">{errorText}</FormHelperText>}
     </Box>
   );
 };

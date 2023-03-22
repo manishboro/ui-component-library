@@ -1,40 +1,17 @@
 import React from 'react';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 import { Box } from '@material-ui/core';
-import EmAvatar from 'components/Atoms/EmAvatar';
+import EmAvatar from '../../Atoms/EmAvatar';
 
-const AvatarWithIcon = ({
-  variant = "circular",
-  avatarSrc,
-  avatarAlt,
-  avatarSize,
-  iconSrc,
-  iconAlt,
-  iconWidth = 20,
-  iconHeight = 20,
-  firstLetter
-}) => {
+const AvatarWithIcon = ({ variant = 'circular', avatarSrc, avatarAlt, avatarSize, iconSrc, iconAlt, iconWidth = 20, iconHeight = 20, firstLetter }) => {
   return (
     <div className={`em-avatar ${avatarSize}`}>
-      <EmAvatar
-        variant={variant}
-        avatarSrc={avatarSrc}
-        avatarAlt={avatarAlt}
-        avatarSize={avatarSize}
-        firstLetter={firstLetter}
-      />
-      {iconSrc &&
-        <Box
-          position="absolute"
-          bottom="-5px"
-          right="-5px"
-          borderRadius="100%"
-          bgcolor="#FFFFFF"
-          padding="2px"
-        >
+      <EmAvatar variant={variant} avatarSrc={avatarSrc} avatarAlt={avatarAlt} avatarSize={avatarSize} firstLetter={firstLetter} />
+      {iconSrc && (
+        <Box position="absolute" bottom="-5px" right="-5px" borderRadius="100%" bgcolor="#FFFFFF" padding="2px">
           <img src={iconSrc} width={iconWidth} height={iconHeight} alt={iconAlt} />
         </Box>
-      }
+      )}
     </div>
   );
 };
@@ -48,7 +25,7 @@ AvatarWithIcon.propTypes = {
   iconAlt: PropTypes.string,
   iconWidth: PropTypes.number,
   iconHeight: PropTypes.number,
-  iconClass: PropTypes.string
+  iconClass: PropTypes.string,
 };
 
 export default AvatarWithIcon;

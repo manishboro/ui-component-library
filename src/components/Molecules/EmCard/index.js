@@ -1,52 +1,48 @@
-import React from "react";
-import PropTypes from "prop-types";
-import EmButton from "../../Atoms/EmButton";
-import EmTypography from "components/Atoms/EmTypography";
-import { Box, Card, CardActions, CardContent } from "@material-ui/core";
-import "./index.scss";
+import React from 'react';
+import PropTypes from 'prop-types';
+import EmButton from '../../Atoms/EmButton';
+import EmTypography from '../../Atoms/EmTypography';
+import { Box, Card, CardActions, CardContent } from '@material-ui/core';
+import './index.scss';
 const EmCard = ({
   variant,
-  HeadingText = "",
-  SecondaryText = "",
-  imgSrc = "",
-  imgAlt = "Image Description",
-  buttonLabel = "",
-  iconSrc = "",
+  HeadingText = '',
+  SecondaryText = '',
+  imgSrc = '',
+  imgAlt = 'Image Description',
+  buttonLabel = '',
+  iconSrc = '',
   iconWidth,
   iconHeight,
-  iconAlt = "",
+  iconAlt = '',
   rounded = true,
-  cardBtnClick
+  cardBtnClick,
 }) => {
   return (
-
     <Card className={`em-card ${variant}`} variant="outlined">
-      {imgSrc && <Box p="16px">
-        <img className=""
-          src={imgSrc}
-          alt={imgAlt}
-          style={{ "width": "100%" }}
-        />
-      </Box>}
+      {imgSrc && (
+        <Box p="16px">
+          <img className="" src={imgSrc} alt={imgAlt} style={{ width: '100%' }} />
+        </Box>
+      )}
       <CardContent className={`${iconSrc && 'cardContent'}`}>
-        <Box flexShrink="initial" borderRadius={rounded && "8px"} overflow="hidden" mr="16px">
-          {iconSrc && <img width={iconWidth} height={iconHeight} src={iconSrc} alt={iconAlt} style={{ "maxWidth": "100%" }} />}
+        <Box flexShrink="initial" borderRadius={rounded && '8px'} overflow="hidden" mr="16px">
+          {iconSrc && <img width={iconWidth} height={iconHeight} src={iconSrc} alt={iconAlt} style={{ maxWidth: '100%' }} />}
         </Box>
         <Box width="100%">
           <Box fontWeight={700} mb="4px">
-            <EmTypography type={"body2"}> {HeadingText} </EmTypography>
+            <EmTypography type={'body2'}> {HeadingText} </EmTypography>
           </Box>
           <Box fontWeight={400} color="#999CA0">
             {SecondaryText}
           </Box>
         </Box>
-
       </CardContent>
-      {buttonLabel &&
+      {buttonLabel && (
         <CardActions>
           <EmButton children={buttonLabel} size="small" className="mt-6" onClick={cardBtnClick} />
         </CardActions>
-      }
+      )}
     </Card>
   );
 };
