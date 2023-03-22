@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 import { Box, Menu, MenuItem } from '@material-ui/core';
-import ExpandMoreRoundedIcon from "@material-ui/icons/ExpandMoreRounded";
+import ExpandMoreRoundedIcon from '@material-ui/icons/ExpandMoreRounded';
 import EmAvatar from '../../Atoms/EmAvatar';
 
 
@@ -15,14 +15,13 @@ const ProfileDropDown = ({
 }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
-  const handleClick = (event) => {
+  const handleClick = event => {
     setAnchorEl(event.currentTarget);
   };
 
   const handleClose = () => {
     setAnchorEl(null);
   };
-
 
   return (
     <Box display="flex" alignItems="center" >
@@ -55,10 +54,8 @@ const ProfileDropDown = ({
         anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
         transformOrigin={{ vertical: 'top', horizontal: 'center' }}
       >
-        {profileDropdownOptions.map((item) => {
-          return (
-            <MenuItem onClick={handleClose}>{item.label}</MenuItem>
-          )
+        {profileDropdownOptions.map(item => {
+          return <MenuItem onClick={handleClose}>{item.label}</MenuItem>;
         })}
       </Menu>
     </Box>

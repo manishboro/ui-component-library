@@ -1,8 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Box } from '@material-ui/core';
-import EmTypography from 'components/Atoms/EmTypography';
-import EmAvatarBadgeIcon from 'components/Molecules/EmAvatarBadgeIcon';
-import PropTypes from "prop-types";
+import EmTypography from '../../../Atoms/EmTypography';
+import EmAvatarBadgeIcon from '../../../Molecules/EmAvatarBadgeIcon';
 
 const ReviewerProfile = ({
   reviewerImg,
@@ -12,7 +12,7 @@ const ReviewerProfile = ({
   companyIconAlt,
   companyIconWidth = 18,
   companyIconHeight = 18,
-  time
+  time,
 }) => {
   return (
     <Box display="flex" alignItems="center">
@@ -27,12 +27,11 @@ const ReviewerProfile = ({
       <Box ml={1.5} lineHeight={1}>
         <EmTypography children={reviewerName} />
         <Box fontWeight={300}>
-          {textLabel && <EmTypography display="inline" variant='caption' color='textSecondary' children={textLabel} />}
+          {textLabel && <EmTypography display="inline" variant="caption" color="textSecondary" children={textLabel} />}
 
-          <EmTypography display="inline" variant='caption' color='textSecondary' children={time} />
+          <EmTypography display="inline" variant="caption" color="textSecondary" children={time} />
         </Box>
       </Box>
-
     </Box>
   );
 };
@@ -45,7 +44,7 @@ ReviewerProfile.propTypes = {
   avatarSize: PropTypes.string,
   time: PropTypes.string,
   companyIconWidth: PropTypes.number,
-  companyIconHeight: PropTypes.number
+  companyIconHeight: PropTypes.number,
 };
 
 export default ReviewerProfile;

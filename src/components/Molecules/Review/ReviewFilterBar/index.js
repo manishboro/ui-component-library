@@ -1,25 +1,14 @@
 import React from 'react';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 import { Box } from '@material-ui/core';
-import EmTypography from 'components/Atoms/EmTypography';
-import EmDropDown from 'components/Molecules/EmDropDown';
+import EmTypography from '../../../Atoms/EmTypography';
+import EmDropDown from '../../../Molecules/EmDropDown';
 
-const ReviewFilterBar = ({
-  locationOptions,
-  platformOptions,
-  sortByOptions,
-  locationHandleChange,
-  platformHandleChange,
-  sortByHandleChange
-}) => {
-
+const ReviewFilterBar = ({ locationOptions, platformOptions, sortByOptions, locationHandleChange, platformHandleChange, sortByHandleChange }) => {
   return (
-    <Box display="flex" alignItems="center" >
+    <Box display="flex" alignItems="center">
       <Box mr={1} fontWeight={500} display={{ xs: 'none', md: 'block' }}>
-        <EmTypography
-          variant='body2'
-          children="Filter by"
-        />
+        <EmTypography variant="body2" children="Filter by" />
       </Box>
       <Box mr={1}>
         <EmDropDown
@@ -44,15 +33,7 @@ const ReviewFilterBar = ({
         />
       </Box>
       <Box ml={{ xs: 'auto', md: 2 }}>
-        <EmDropDown
-          variant="outlined"
-          size="small"
-          label="Sort by"
-          id="sortBy"
-          labelId="sortBy"
-          handleChange={sortByHandleChange}
-          optionList={sortByOptions}
-        />
+        <EmDropDown variant="outlined" size="small" label="Sort by" id="sortBy" labelId="sortBy" handleChange={sortByHandleChange} optionList={sortByOptions} />
       </Box>
     </Box>
   );
