@@ -25,5 +25,5 @@ Avatar.args = {
   avatarAlt: "Rahul Sharma",
   avatarSize: "medium",
   variant: "circular",
-  onClick: () => { }
+  onClick: () => { },
 };

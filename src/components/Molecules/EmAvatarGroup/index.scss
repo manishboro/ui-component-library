@@ -2,8 +2,9 @@
     .em-avatar {
         &:not(:first-child) {
             margin-left: -8px;
-        }        
+        }          
     }
+    
     .MuiAvatarGroup-avatar {
         border: 1px solid #FCFCFC;
     }

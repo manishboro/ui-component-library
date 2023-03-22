@@ -8,6 +8,8 @@ const EmAvatarBadgeIcon = ({
   avatarSrc,
   avatarAlt,
   avatarSize,
+  avatarBgColor = "#FFD451",
+  avatarTextColor = "#FFC720",
   avatarClick,
   iconSrc,
   iconAlt,
@@ -36,6 +38,8 @@ const EmAvatarBadgeIcon = ({
           avatarSrc={avatarSrc}
           avatarAlt={avatarAlt}
           avatarSize={avatarSize}
+          bgColor={avatarBgColor}
+          textColor={avatarTextColor}
           onClick={avatarClick}
         />
       </Badge>

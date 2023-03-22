@@ -10,8 +10,10 @@ const EmAvatarBadge = ({
   avatarAlt,
   avatarSize,
   avatarClick,
+  avatarBgColor,
+  avatarTextColor,
   badgeCount,
-  badgeVariant
+  badgeVariant,
 }) => {
   return (
     <div className={`em-avatar-badge ${variant} ${avatarSize}`}>
@@ -25,6 +27,8 @@ const EmAvatarBadge = ({
           avatarAlt={avatarAlt}
           avatarSize={avatarSize}
           onClick={avatarClick}
+          bgColor={avatarBgColor}
+          textColor={avatarTextColor}
         />
       </Badge>
     </div>

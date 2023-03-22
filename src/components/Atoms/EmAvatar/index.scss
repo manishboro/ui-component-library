@@ -1,5 +1,6 @@
 .em-avatar {
     position: relative;
+    color: #FFF;
 
     &.extraSmall, .MuiAvatar-root.extraSmall {
       width: 24px;
@@ -43,8 +44,6 @@
   }
 
   .MuiAvatar-colorDefault {
-    background-color: #FFD451;
-    color: #FFC720;
     font-weight: 500;
   }
 }
