@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import EmAvatar from 'components/Atoms/EmAvatar';
 import { AvatarGroup } from '@material-ui/lab';
+import EmAvatar from '../../Atoms/EmAvatar';
 import "./index.scss"
 
 const EmAvatarGroup = ({

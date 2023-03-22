@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import { Pagination } from '@material-ui/lab';
-import "./index.scss"
 import { Box } from '@material-ui/core';
-import EmTypography from 'components/Atoms/EmTypography';
+import EmTypography from '../../Atoms/EmTypography';
+import "./index.scss"
 
 const EmPagination = ({
   className,

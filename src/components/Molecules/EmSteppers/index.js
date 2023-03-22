@@ -6,8 +6,8 @@ import StepButton from "@material-ui/core/StepButton";
 import "./index.scss"
 
 const EmTimeline = ({
-  orientation = "horizontal",
-  steps
+  steps,
+  orientation = "horizontal"
 }) => {
   const [activeStep, setActiveStep] = React.useState(0);
 

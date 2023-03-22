@@ -8,13 +8,13 @@ import TimelineContent from '@material-ui/lab/TimelineContent';
 import TimelineDot from '@material-ui/lab/TimelineDot';
 import CheckIcon from '@material-ui/icons/Check';
 import { Box } from '@material-ui/core';
-import EmTypography from 'components/Atoms/EmTypography';
+import EmTypography from '../../Atoms/EmTypography';
 import "./index.scss"
 
 const EmSteppers = ({
-  align = 'left',
   isIcon,
-  timeLineLists
+  timeLineLists,
+  align = 'left'
 }) => {
   return (
     <Timeline className='em-timeline' align={align}>

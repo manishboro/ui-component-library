@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import { Badge, Box } from '@material-ui/core';
-import EmAvatar from 'components/Atoms/EmAvatar';
+import EmAvatar from '../../Atoms/EmAvatar';
 
 const EmAvatarBadgeIcon = ({
   variant = "circular",
