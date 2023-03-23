@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from "prop-types";
-import { Box } from '@material-ui/core';
 import Popover from '@material-ui/core/Popover';
 import "./index.scss"
 
@@ -9,7 +8,7 @@ const EmPopover = ({
   popoverText,
   popoverContent,
   anchorOrigin,
-  anchorPosition
+  transformOrigin
 }) => {
   const [anchorEl, setAnchorEl] = useState(null);
 
@@ -24,29 +23,28 @@ const EmPopover = ({
   const open = Boolean(anchorEl);
 
   return (
-    <Box className='em-popover'>
-      <Box display='inline-block' style={{ 'cursor': 'pointer' }} aria-describedby={id} onClick={handleClick}>
+    <div>
+      <div aria-describedby={id} onClick={handleClick}>
         {popoverText}
-      </Box>
-
+      </div>
       <Popover
-        className='em-popover-content'
         id={id}
         open={open}
         anchorEl={anchorEl}
+        onClose={popoverClose}
         anchorOrigin={anchorOrigin}
-        anchorPosition={anchorPosition}
-        onClose={popoverClose}>
+        transformOrigin={transformOrigin}
+      >
         {popoverContent}
       </Popover>
-    </Box>
+    </div>
   );
 }
 
 EmPopover.propTypes = {
   id: PropTypes.string,
   anchorOrigin: PropTypes.object,
-  anchorPosition: PropTypes.object,
+  transformOrigin: PropTypes.object,
   popoverText: PropTypes.node,
   popoverContent: PropTypes.node,
 };

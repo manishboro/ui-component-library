@@ -23,14 +23,15 @@ Popover.args = {
   open: true,
   id: "test",
   popoverText: <EmTypography children="Card Title"></EmTypography>,
-  anchorOrigin: [{
+  anchorOrigin: {
     vertical: 'bottom',
-    horizontal: 'center',
-  }],
-  transformOrigin: [{
+    horizontal: 'left',
+  },
+  transformOrigin: {
     vertical: 'top',
-    horizontal: 'center',
-  }],
+    horizontal: 'left',
+  },
+
   popoverContent:
     <Box width='236px'>
       <Box padding="5px 16px" borderBottom="1px solid #F0F0F0">
