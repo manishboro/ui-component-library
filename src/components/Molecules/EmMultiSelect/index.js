@@ -103,7 +103,7 @@ const EmMultiSelect = ({
   };
 
   return (
-    <FormControl variant={variant} className={`em-multiSelect ${size}`} error={error}>
+    <FormControl variant={variant} className={`em-multiSelect em-m ${size}`} error={error}>
       <InputLabel id={labelId} >{label}</InputLabel>
       <Select
         id={id}
