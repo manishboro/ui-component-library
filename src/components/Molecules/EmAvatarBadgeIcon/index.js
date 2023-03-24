@@ -1,15 +1,15 @@
 import React from 'react';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 import { Badge, Box } from '@material-ui/core';
 import EmAvatar from '../../Atoms/EmAvatar';
 
 const EmAvatarBadgeIcon = ({
-  variant = "circular",
+  variant = 'circular',
   avatarSrc,
   avatarAlt,
   avatarSize,
-  avatarBgColor = "#FFD451",
-  avatarTextColor = "#FFC720",
+  avatarBgColor = '#FFD451',
+  avatarTextColor = '#FFC720',
   avatarClick,
   iconSrc,
   iconAlt,
@@ -19,20 +19,17 @@ const EmAvatarBadgeIcon = ({
   return (
     <>
       <Badge
-        overlap='circular'
+        overlap="circular"
         anchorOrigin={{
           vertical: 'bottom',
           horizontal: 'right',
         }}
         badgeContent={
-          <Box
-            borderRadius="100%"
-            bgcolor="#FFFFFF"
-            padding="2px"
-          >
+          <Box borderRadius="100%" bgcolor="#FFFFFF" padding="2px">
             <img src={iconSrc} width={iconWidth} height={iconHeight} alt={iconAlt} />
           </Box>
-        }>
+        }
+      >
         <EmAvatar
           variant={variant}
           avatarSrc={avatarSrc}
@@ -56,7 +53,7 @@ EmAvatarBadgeIcon.propTypes = {
   iconAlt: PropTypes.string,
   iconWidth: PropTypes.number,
   iconHeight: PropTypes.number,
-  iconClass: PropTypes.string
+  iconClass: PropTypes.string,
 };
 
 export default EmAvatarBadgeIcon;
