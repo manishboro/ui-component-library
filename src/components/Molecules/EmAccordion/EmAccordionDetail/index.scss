@@ -2,10 +2,11 @@
     .MuiAccordionSummary-root {
         min-height: auto;
     }
+
     .MuiAccordionSummary-content {
         margin: 0;
         padding: 6px 0 16px;
-        color: #373751;
+        color: var(--neutral-700);
         font-weight: 400;
         font-size: 14px;
         line-height: 20px;

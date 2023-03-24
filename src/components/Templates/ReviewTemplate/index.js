@@ -36,7 +36,7 @@ const ReviewTemplate = ({
             size="large"
             id="reviewDropdown"
             labelId="reviewDropdown"
-            optionList={yearDropdownOptions}
+            options={yearDropdownOptions}
             handleChange={yearHandleChange}
           />
         </Box>

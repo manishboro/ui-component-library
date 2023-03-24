@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './index.scss';
-import { AccordionSummary, Box } from '@material-ui/core';
+import { AccordionSummary } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import EmTypography from '../../../Atoms/EmTypography';
 

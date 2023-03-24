@@ -15,19 +15,19 @@
 
   .MuiInputBase-input {
     font-size: 14px;
-    line-height: 20px;    
+    line-height: 20px;
     font-weight: 400;
-    color: #14142B;
+    color: var(--neutral-900);
 
     &::-webkit-input-placeholder {
       font-size: 14px;
       line-height: 20px;
       font-weight: 400;
-      color: #9C9CAF;
+      color: var(--neutral-400);
     }
 
     &.Mui-disabled {
-      color: #6B6B80;
+      color: var(--neutral-500);
     }
   }
 
@@ -35,52 +35,53 @@
     position: static;
     transform: none;
     margin-bottom: 10px;
-    color: #14142B;
+    color: var(--neutral-900);
 
-    &.Mui-focused {   
-      color: #14142B;
+    &.Mui-focused {
+      color: var(--neutral-900);
     }
   }
 
-  .MuiOutlinedInput-root {    
+  .MuiOutlinedInput-root {
     .MuiOutlinedInput-notchedOutline {
-      border-color: #D1D1DB;
+      border-color: var(--neutral-300);
       border-radius: 2px;
     }
 
     &:hover {
       .MuiOutlinedInput-notchedOutline {
-        border-color: #6B6B80;
-      }      
+        border-color: var(--neutral-500);
+      }
     }
 
     &.Mui-focused {
       .MuiOutlinedInput-notchedOutline {
-        border-color: #FFC107;
+        border-color: var(--primary-900);
         border-width: 1px;
       }
     }
 
-    &.Mui-disabled {   
-      background: #F3F3F6;
+    &.Mui-disabled {
+      background: var(--neutral-100);
 
       .MuiOutlinedInput-notchedOutline {
-        border-color: #D1D1DB;
+        border-color: var(--neutral-300);
       }
     }
-  } 
+  }
 
 
-  .expandLess, .expandMore {
+  .expandLess,
+  .expandMore {
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #6B6B80;
+    color: var(--neutral-500);
   }
-  
+
   .expandLess {
-    border-bottom: 1px solid #F3F3F6;
+    border-bottom: 1px solid var(--neutral-100);
   }
 
   &.small {
@@ -88,49 +89,57 @@
       padding: 5px 8px;
     }
 
-    .expandLess, .expandMore {
+    .expandLess,
+    .expandMore {
       height: 12.5px;
     }
 
-    .expandLessIcon, .expandMoreIcon {
+    .expandLessIcon,
+    .expandMoreIcon {
       font-size: 12px;
     }
-  } 
+  }
 
   &.medium {
     .MuiOutlinedInput-input {
       padding: 7px 12px;
     }
 
-    .expandLess, .expandMore {
+    .expandLess,
+    .expandMore {
       height: 14px;
     }
 
-    .expandLessIcon, .expandMoreIcon {
+    .expandLessIcon,
+    .expandMoreIcon {
       font-size: 14px;
     }
   }
 
   &.large {
-    .MuiInputBase-input, .MuiInputLabel-outlined  {
+
+    .MuiInputBase-input,
+    .MuiInputLabel-outlined {
       font-size: 16px;
       line-height: 24px;
-      
+
       &::-webkit-input-placeholder {
         font-size: 16px;
         line-height: 24px;
-      }      
+      }
     }
 
     .MuiOutlinedInput-input {
       padding: 14.5px 12px;
     }
 
-    .expandLess, .expandMore {
+    .expandLess,
+    .expandMore {
       height: 23px;
     }
 
-    .expandLessIcon, .expandMoreIcon {
+    .expandLessIcon,
+    .expandMoreIcon {
       font-size: 20px;
     }
   }

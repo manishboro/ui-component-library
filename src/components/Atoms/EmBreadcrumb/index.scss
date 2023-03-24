@@ -1,18 +1,19 @@
 .em-breadcrumb {
   .MuiTypography-colorTextPrimary {
-    color: #14142B !important;
+    color: var(--neutral-900) !important;
     font-weight: 500;
   }
+
   .MuiBreadcrumbs-separator {
     margin: 0 8px;
-    
+
     .MuiSvgIcon-root {
       margin: 0 -6px;
     }
   }
-  
+
   .MuiTypography-colorTextSecondary {
-    color: #6B6B80
+    color: var(--neutral-500)
   }
 
   .MuiButtonBase-root {

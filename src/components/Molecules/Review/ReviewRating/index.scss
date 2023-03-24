@@ -1,15 +1,17 @@
 .em-rating {
   border-radius: 4px;
-  color: #FFF;
+  color: var(--white);
   display: flex;
 
-    &.high {
-      background: #29823B;
-    }
-    &.medium {
-      background: #E99400;
-    }
-    &.low {
-      background: #DC2020;
-    }
+  &.high {
+    background: var(--successBase-100);
+  }
+
+  &.medium {
+    background: var(--warningLBase-100);
+  }
+
+  &.low {
+    background: var(--errorLBase-100);
+  }
 }
