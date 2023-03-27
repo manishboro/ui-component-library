@@ -26,10 +26,11 @@ const ReviewerProfile = ({
       />
       <Box ml={1.5} lineHeight={1}>
         <EmTypography children={reviewerName} />
-        <Box fontWeight={300}>
+        <Box display='flex' fontWeight={300}>
           {textLabel && <EmTypography display="inline" variant="caption" color="textSecondary" children={textLabel} />}
-
-          <EmTypography display="inline" variant="caption" color="textSecondary" children={time} />
+          <Box ml='2px' lineHeight={1}>
+            <EmTypography display="inline" variant="caption" color="textSecondary" children={time} />
+          </Box>
         </Box>
       </Box>
     </Box>

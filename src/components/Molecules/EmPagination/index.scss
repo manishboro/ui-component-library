@@ -1,8 +1,8 @@
 .em-pagination {
   .MuiPaginationItem-root {
     margin: 0 4px;
-    border: 1px solid #9C9CAF;
-    background: #FCFCFC;
+    border: 1px solid var(--neutral-400);
+    background: var(--gray-50);
 
     @media screen and (max-width: 767px) {
       min-width: 28px;
@@ -10,12 +10,14 @@
       line-height: 28px;
       margin: 0 3px;
     }
-    
+
     &.MuiPaginationItem-page {
-      &:hover, &.Mui-selected {
-        border: 1px solid #FFC107;
-        background: #FCFCFC;
-        color: #FFC107;
+
+      &:hover,
+      &.Mui-selected {
+        border: 1px solid var(--primary-900);
+        background: var(--gray-50);
+        color: var(--primary-900);
       }
     }
 

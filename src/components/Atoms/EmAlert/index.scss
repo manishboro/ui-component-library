@@ -9,86 +9,86 @@
   }
 
   &.MuiAlert-filledInfo {
-    background-color: #017aad;
+    background-color: var(--infoBase-100);
   }
 
   &.MuiAlert-outlinedInfo {
-    border-color: #017aad;
+    border-color: var(--infoBase-100);
     padding: 13px 18px;
 
     .MuiAlert-icon {
-      color: #017aad;
+      color: var(--infoBase-100);
     }
   }
 
   &.MuiAlert-standardInfo {
-    background-color: #e5f5fc;
+    background-color: var(--infoLight-50);
 
     .MuiAlert-icon {
-      color: #017aad;
+      color: var(--infoBase-100);
     }
   }
 
   &.MuiAlert-filledError {
-    background-color: #dc2020;
+    background-color: var(--errorLBase-100);
   }
 
   &.MuiAlert-outlinedError {
-    border-color: #dc2020;
+    border-color: var(--errorLBase-100);
     padding: 13px 18px;
 
     .MuiAlert-icon {
-      color: #dc2020;
+      color: var(--errorLBase-100);
     }
   }
 
   &.MuiAlert-standardError {
-    background-color: #fceaea;
+    background-color: var(--errorLight-50);
 
     .MuiAlert-icon {
-      color: #dc2020;
+      color: var(--errorLBase-100);
     }
   }
 
   &.MuiAlert-filledWarning {
-    background-color: #e99400;
+    background-color: var(--warningLBase-100);
   }
 
   &.MuiAlert-outlinedWarning {
-    border-color: #e99400;
+    border-color: var(--warningLBase-100);
     padding: 13px 18px;
 
     .MuiAlert-icon {
-      color: #e99400;
+      color: var(--warningLBase-100);
     }
   }
 
   &.MuiAlert-standardWarning {
-    background-color: #fdf4e5;
+    background-color: var(--warningLight-50);
 
     .MuiAlert-icon {
-      color: #e99400;
+      color: var(--warningLBase-100);
     }
   }
 
   &.MuiAlert-filledSuccess {
-    background-color: #29823b;
+    background-color: var(--successBase-100);
   }
 
   &.MuiAlert-outlinedSuccess {
-    border-color: #29823b;
+    border-color: var(--successBase-100);
     padding: 13px 18px;
 
     .MuiAlert-icon {
-      color: #29823b;
+      color: var(--successBase-100);
     }
   }
 
   &.MuiAlert-standardSuccess {
-    background-color: #eaf3eb;
+    background-color: var(--successLight-50);
 
     .MuiAlert-icon {
-      color: #29823b;
+      color: var(--successBase-100);
     }
   }
 }

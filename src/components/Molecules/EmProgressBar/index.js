@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import LinearProgress from '@material-ui/core/LinearProgress';
-import "./index.scss";
 import { Box } from '@material-ui/core';
+import "./index.scss";
 
 const EmProgressBar = ({
   type = "rounded",

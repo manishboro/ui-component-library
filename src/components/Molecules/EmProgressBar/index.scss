@@ -1,15 +1,14 @@
 .em-progressBar {
-  .MuiLinearProgress-root {
-
-  }
+  .MuiLinearProgress-root {}
 
   &.MuiLinearProgress-colorPrimary {
-    background-color: #F3F3F6;
+    background-color: var(--neutral-100);
   }
 
   .MuiLinearProgress-barColorPrimary {
-    background-color: #FFC107;
+    background-color: var(--primary-900);
   }
+
   &.rounded {
     &.MuiLinearProgress-root {
       border-radius: 50%;
@@ -27,7 +26,7 @@
       height: 16px;
     }
   }
-  
+
   &.small {
     &.MuiLinearProgress-root {
       height: 8px;

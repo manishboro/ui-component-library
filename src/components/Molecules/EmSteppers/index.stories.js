@@ -9,11 +9,11 @@ export default {
       control: "select",
       options: ["horizontal", "vertical"],
     },
-    types: {
+    variant: {
       control: "select",
-      options: ["icon", "noIcon", "empty"],
+      options: ["icons", "noIcon", "empty"],
     },
-    position: {
+    labelPosition: {
       control: "select",
       options: ["top", "bottom"],
     },
@@ -32,9 +32,11 @@ const steps = [
   {
     label: `Next Step`,
   },
+
 ];
 
 export const Steppers = Template.bind({});
 Steppers.args = {
+  activeStep: 1,
   steps,
 };

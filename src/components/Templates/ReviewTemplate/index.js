@@ -5,20 +5,6 @@ import EmBreadcrumb from '../../Atoms/EmBreadcrumb/index';
 import EmDropDown from '../../Molecules/EmDropDown/index';
 import ReviewCardGroup from '../../../components/Organisms/Review/ReviewCardGroup';
 import ReviewFilter from '../../../components/Organisms/Review/ReviewFilter';
-import { createTheme } from '@material-ui/core/styles';
-import { ThemeProvider } from '@material-ui/styles';
-
-const theme = createTheme({
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 600,
-      md: 768,
-      lg: 1280,
-      xl: 1920,
-    },
-  },
-});
 
 const ReviewTemplate = ({
   breadcrumbs,
@@ -50,7 +36,7 @@ const ReviewTemplate = ({
             size="large"
             id="reviewDropdown"
             labelId="reviewDropdown"
-            optionList={yearDropdownOptions}
+            options={yearDropdownOptions}
             handleChange={yearHandleChange}
           />
         </Box>

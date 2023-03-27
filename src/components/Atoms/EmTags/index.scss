@@ -1,57 +1,65 @@
-.em-checkbox {
-  color: #272B30;
+.em-chip {
+  position: relative;
+  display: inline-flex;
 
-
-  .MuiCheckbox-root {
-    border: 1px solid #9C9CAF;
-    border-radius: 4px;
-    width: 24px;
-    height: 24px;
+  .MuiChip-deleteIcon {}
+  &.MuiChip-root {
+    height: auto;
+    width: auto;
+  }
+  .MuiChip-label {
+    font-weight: 500;
     padding: 0;
-    margin: 0 10px;
   }
 
-  .MuiSvgIcon-root {
-    display: none;
+  &.round {
+    border-radius: 100px;
   }
 
-  .Mui-checked {
-    width: 24px;
-    height: 24px;
+  &.soft {
+    border-radius: 4px;
+  }
+
+  &.sharp {
+    border-radius: 0;
   }
   
-  .MuiCheckbox-colorPrimary {
-    &.Mui-checked{
-      color: #FFC107;
-
-      .MuiSvgIcon-root {
-        display: block;
-        width: 32px;
-        height: 32px;
-      }
+  &.small {
+     .MuiChip-label {
+      font-size: 12px;
+      line-height: 16px;
+      padding: 4px 8px;
     }
-
-    &.Mui-disabled {
-      background: #F3F3F6;
-      border: 1px solid #D1D1DB;
-
-      &.Mui-checked{
-        color: #E5E5EB;
-      }
-    }   
-  } 
-
-
-  &.error-checkbox {
-    .MuiCheckbox-root {
-      border: 1px solid #DC2020;
+    .MuiChip-deleteIcon {
+      margin: 0 8px 0 -4px;
     }
   }
 
-  .MuiFormHelperText-root.error {
-    &.error {
-      color: #DC2020;
-      margin-top: 5px;
-    } 
+  &.medium {
+    .MuiChip-label {
+      font-size: 14px;
+      line-height: 20px;
+      padding: 6px 16px;
+    }
+    .MuiChip-deleteIcon {
+      margin: 0 16px 0 -8px;
+    }
+  }
+
+  &.large {
+    .MuiChip-label {
+      font-size: 16px;
+      line-height: 24px;
+      padding: 8px 24px;
+    }
+    .MuiChip-deleteIcon {
+      margin: 0 16px 0 -16px;
+    }
+  }
+  
+  &.hideDeleteIcon {
+    .MuiChip-deleteIcon {
+      display: none;
+    }
   }
 }

@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import "./index.scss"
 import { Box, Modal } from '@material-ui/core';
+import "./index.scss"
 
 const EmModal = ({
+  body,
   open = false,
   modalClose = () => { },
-  body
 }) => {
 
   return (

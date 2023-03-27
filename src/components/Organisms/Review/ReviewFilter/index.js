@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-// import IconWithTitle from '../../../Molecules/IconWithTitle';
 import IconWithTitle from '../../../Molecules/IconWithTitle';
 import { Box, Grid } from '@material-ui/core';
 import EmPagination from '../../../Molecules/EmPagination';
@@ -10,8 +9,8 @@ import ReviewRating from '../../../Molecules/Review/ReviewRating';
 import ReviewerProfile from '../../../Molecules/Review/ReviewerProfile';
 import ReviewFilterBar from '../../../Molecules/Review/ReviewFilterBar';
 import InsertChartOutlinedRoundedIcon from '@material-ui/icons/InsertChartOutlinedRounded';
-import './index.scss';
 import usePagination from '../../../Molecules/EmPagination/pagination';
+import './index.scss';
 
 const ReviewFilter = ({
   locationOptions,
@@ -114,8 +113,8 @@ const ReviewFilter = ({
                 >
                   <EmButton size="medium" variant="outlined" children="Reply" color="secondary" onClick={replyBtnClick} />
                   {data.numOfReply && (
-                    <Box m={{ xs: '0 16px 0 0', md: '0 0 0 8px' }}>
-                      <EmTypography display="inline" variant="caption" children={data.numOfReply} color="textPrimary" />
+                    <Box display='flex' m={{ xs: '0 16px 0 0', md: '0 0 0 8px' }}>
+                      <EmTypography display="inline" variant="caption" children={data.numOfReply} color="textPrimary" />&nbsp;
                       <EmTypography display="inline" variant="caption" children=" Reply" color="textPrimary" />
                     </Box>
                   )}

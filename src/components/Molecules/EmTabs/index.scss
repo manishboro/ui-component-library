@@ -2,56 +2,62 @@
     .MuiTabs-root {
         min-height: auto;
     }
-    .MuiButtonBase-root{
+
+    .MuiButtonBase-root {
         text-transform: capitalize;
         min-height: auto;
         min-width: auto;
     }
 
     .MuiTab-textColorPrimary {
-        color: #6B6B80;
+        color: var(--neutral-500);
         font-size: 14px;
         font-weight: 400;
     }
 
     .MuiTabs-indicator {
-        background-color: #FFC107;
+        background-color: var(--primary-900);
     }
 
-    .default, .justified, .left, .right, .default {  
-        .MuiButtonBase-root{
+    .default,
+    .justified,
+    .left,
+    .right,
+    .default {
+        .MuiButtonBase-root {
             padding: 0 8px 15px;
-            border-bottom: 1px solid #D1D1DB;
+            border-bottom: 1px solid var(--neutral-300);
         }
 
         .Mui-selected {
-            color: #1F1F37;
+            color: var(--neutral-800);
             font-weight: 500;
         }
     }
 
     .justified {
         .MuiButtonBase-root {
-           min-width: 135px;
+            min-width: 135px;
         }
+
         .MuiTab-textColorPrimary {
             &.Mui-selected {
-                color: #FFC107;   
-                font-weight: 500;            
+                color: var(--primary-900);
+                font-weight: 500;
             }
         }
     }
 
-    .filled {        
+    .filled {
         .Mui-selected {
-            background: #FFC107;
-            color: #FFF;
+            background: var(--primary-900);
+            color: var(--white);
         }
 
-        .MuiTabs-indicator { 
+        .MuiTabs-indicator {
             display: none;
         }
-        
+
         .MuiTab-root {
             padding: 15px 24px;
             min-width: 135px;
@@ -63,7 +69,11 @@
     .MuiTabs-vertical {
         flex-shrink: 0;
 
-        &.default, &.justified, &.left, &.right, &.default {  
+        &.default,
+        &.justified,
+        &.left,
+        &.right,
+        &.default {
             .MuiButtonBase-root {
                 border-bottom: none;
                 padding: 8px 24px;
@@ -73,7 +83,7 @@
         &.left {
             .MuiButtonBase-root {
                 padding-left: 0;
-                border-right: 1px solid #D1D1DB;
+                border-right: 1px solid var(--neutral-300);
 
                 .MuiTab-wrapper {
                     align-items: flex-end;
@@ -85,7 +95,7 @@
 
             .MuiButtonBase-root {
                 padding-right: 0;
-                border-left: 1px solid #D1D1DB;
+                border-left: 1px solid var(--neutral-300);
 
                 .MuiTab-wrapper {
                     align-items: flex-start;
@@ -97,18 +107,20 @@
             }
         }
 
-       &.justified, &.default {
-            .MuiButtonBase-root {                
-                border-right: 1px solid #D1D1DB;
+        &.justified,
+        &.default {
+            .MuiButtonBase-root {
+                border-right: 1px solid var(--neutral-300);
 
                 .MuiTab-wrapper {
                     align-items: center
                 }
             }
+
             .MuiTab-textColorPrimary {
                 &.Mui-selected {
-                    color: #1F1F37;
-                   
+                    color: var(--neutral-800);
+
                 }
             }
         }
@@ -116,7 +128,7 @@
         &.filled {
             .MuiButtonBase-root {
                 padding: 15px 24px;
-                
+
                 .MuiTab-wrapper {
                     align-items: flex-start;
                 }

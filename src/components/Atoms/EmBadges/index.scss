@@ -6,23 +6,23 @@
 
   &.filled {
     .MuiBadge-colorPrimary {
-      background: #FFC107;
-     }
-    
-     .MuiBadge-colorSecondary {
-      background: #868E96;
-     }
+      background: var(--primary-900);
+    }
+
+    .MuiBadge-colorSecondary {
+      background: var(--secondary-900);
+    }
   }
 
   &.outline {
     .MuiBadge-colorPrimary {
-      background: #FFF;
-      color: #FFC107;
+      background: var(--white);
+      color: var(--primary-900);
     }
 
     .MuiBadge-colorSecondary {
-      background: #FFF;
-      color: #868E96;
+      background: var(--white);
+      color: var(--secondary-900);
     }
   }
 }

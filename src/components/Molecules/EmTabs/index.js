@@ -5,9 +5,9 @@ import { TabContext, TabPanel } from '@material-ui/lab';
 import "./index.scss";
 
 const EmTabs = ({
-  tabVariant = "justified",
-  orientation = "horizontal",
   tabLists,
+  tabVariant = "justified",
+  orientation = "horizontal"
 }) => {
   const [value, setValue] = useState('1');
 

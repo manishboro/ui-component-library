@@ -1,43 +1,30 @@
-import React from 'react';
-import PropTypes from "prop-types";
-import Stepper from "@material-ui/core/Stepper";
-import Step from "@material-ui/core/Step";
-import StepButton from "@material-ui/core/StepButton";
+import React from "react";
+import { Stepper, Step, StepLabel } from "@material-ui/core";
 import "./index.scss"
 
-const EmTimeline = ({
+const EmSteppers = ({
+  activeStep,
+  steps,
   orientation = "horizontal",
-  steps
+  variant = "icons",
+  labelPosition = "bottom"
 }) => {
-  const [activeStep, setActiveStep] = React.useState(0);
-
-  const handleStep = (step) => () => {
-    setActiveStep(step);
-  };
-
   return (
-    <>
-      <Stepper alternativeLabel nonLinear activeStep={activeStep} orientation={orientation}>
-        {steps.map((list, index) => {
-          const stepProps = {};
-          const buttonProps = {};
+    <div className={`em-steppers ${variant} ${labelPosition}`}>
+      <Stepper orientation={orientation} activeStep={activeStep} alternativeLabel>
+        {steps.map((step, index) => {
           return (
-            <Step key={list.label} {...stepProps}>
-              <StepButton
-                onClick={handleStep(index)}
-                {...buttonProps}
-              >
-                {list.label}
-              </StepButton>
+            <Step key={index}>
+              <StepLabel className="stepLabel">
+                {variant === "icons" && <div className="text">{index + 1}</div>}
+                {step.label}
+              </StepLabel>
             </Step>
           );
         })}
       </Stepper>
-    </>
+    </div>
   );
-}
-
-EmTimeline.propTypes = {
-  orientation: PropTypes.string,
 };
-export default EmTimeline;
+
+export default EmSteppers;

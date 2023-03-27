@@ -11,4 +11,5 @@ const Template = (args) => <EmMenu {...args} />;
 
 export const Menu = Template.bind({});
 Menu.args = {
+  menuTitle: "open Menu"
 };

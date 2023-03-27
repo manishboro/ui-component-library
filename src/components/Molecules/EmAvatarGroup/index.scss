@@ -2,16 +2,16 @@
     .em-avatar {
         &:not(:first-child) {
             margin-left: -8px;
-        }          
+        }
     }
-    
+
     .MuiAvatarGroup-avatar {
-        border: 1px solid #FCFCFC;
+        border: 1px solid var(--gray-50);
     }
 
     .MuiAvatar-colorDefault {
-        background-color: #FFD451;
-        color: #FFC720;
+        background-color: var(--primary-300);
+        color: var(--primary-800);
         font-size: 14px;
         line-height: 22px;
         font-weight: 400;

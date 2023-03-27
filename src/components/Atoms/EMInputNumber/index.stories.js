@@ -16,5 +16,6 @@ const Template = (args) => <EMInputNumber {...args} />;
 
 export const InputNumber = Template.bind({});
 InputNumber.args = {
-  placeholder: "Number"
+  placeholder: "Number",
+  size: "medium"
 };

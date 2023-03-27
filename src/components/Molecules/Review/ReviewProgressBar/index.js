@@ -1,23 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import LinearProgress from '@material-ui/core/LinearProgress';
 import { Box } from '@material-ui/core';
 import EmProgressBar from '../../../Molecules/EmProgressBar';
-
-const BorderLinearProgress = withStyles(theme => ({
-  root: {
-    height: 8,
-    borderRadius: 5,
-  },
-  colorPrimary: {
-    backgroundColor: '#F3F3F6',
-  },
-  bar: {
-    borderRadius: 5,
-    backgroundColor: '#FFC107',
-  },
-}))(LinearProgress);
 
 const ReviewProgressBar = ({ numberOfStar, value }) => {
   return (

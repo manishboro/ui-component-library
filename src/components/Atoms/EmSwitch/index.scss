@@ -8,44 +8,45 @@
     }
 
     .MuiSwitch-track {
-        background-color: #D1D1DB;
+        background-color: var(--neutral-300);
         opacity: 1;
     }
+
     .MuiSwitch-thumb {
         width: 24px;
         height: 24px;
-        background-color: #FCFCFC;
+        background-color: var(--gray-50);
     }
 
     .MuiSwitch-switchBase {
         padding: 0;
         top: 4px;
         left: 4px;
-        background: #FCFCFC;
+        background: var(--gray-50);
     }
 
     .MuiSwitch-colorPrimary {
         &.Mui-checked {
-            + .MuiSwitch-track {
+            +.MuiSwitch-track {
                 opacity: 1;
-                background-color: #FFC107;
+                background-color: var(--primary-900);
             }
-           
+
         }
 
         &.Mui-disabled {
-            
-            + .MuiSwitch-track {
-                background-color: #F3F3F6;
-                border: 1px solid #D1D1DB;
+
+            +.MuiSwitch-track {
+                background-color: var(--neutral-100);
+                border: 1px solid var(--neutral-300);
                 opacity: 1;
                 border-radius: 45px;
             }
 
             .MuiSwitch-thumb {
-                background-color: #D1D1DB;
+                background-color: var(--neutral-300);
             }
-    
+
         }
     }
 }
