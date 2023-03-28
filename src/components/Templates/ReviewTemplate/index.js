@@ -32,7 +32,7 @@ const ReviewTemplate = ({
         </Box>
         <Box width="45%" ml="auto" maxWidth="245px" pt={{ xs: 0, md: '12px' }}>
           <EmDropDown
-            label="Select Year"
+            placeholder="Select Year"
             size="large"
             id="reviewDropdown"
             labelId="reviewDropdown"

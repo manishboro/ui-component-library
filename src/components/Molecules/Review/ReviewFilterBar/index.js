@@ -14,7 +14,7 @@ const ReviewFilterBar = ({ locationOptions, platformOptions, sortByOptions, loca
         <EmDropDown
           variant="outlined"
           size="small"
-          label="Location"
+          placeholder="Location"
           id="location"
           labelId="location"
           handleChange={locationHandleChange}
@@ -25,7 +25,7 @@ const ReviewFilterBar = ({ locationOptions, platformOptions, sortByOptions, loca
         <EmDropDown
           variant="outlined"
           size="small"
-          label="Platform"
+          placeholder="Platform"
           id="platform"
           labelId="platform"
           handleChange={platformHandleChange}
@@ -33,7 +33,7 @@ const ReviewFilterBar = ({ locationOptions, platformOptions, sortByOptions, loca
         />
       </Box>
       <Box ml={{ xs: 'auto', md: 2 }}>
-        <EmDropDown variant="outlined" size="small" label="Sort by" id="sortBy" labelId="sortBy" handleChange={sortByHandleChange} options={sortByOptions} />
+        <EmDropDown variant="outlined" size="small" placeholder="Sort by" id="sortBy" labelId="sortBy" handleChange={sortByHandleChange} options={sortByOptions} />
       </Box>
     </Box>
   );

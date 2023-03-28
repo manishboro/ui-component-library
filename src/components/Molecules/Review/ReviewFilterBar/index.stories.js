@@ -14,19 +14,19 @@ ReviewFilterBars.args = {
   numberOfStar: 5,
   value: 50,
   locationOptions: [
-    { value: 'value1', label: 'label1' },
-    { value: 'value2', label: 'label2' },
-    { value: 'value3', label: 'label3' }
+    'label1',
+    'label2',
+    'label3',
   ],
   platformOptions: [
-    { value: 'value1', label: 'label1' },
-    { value: 'value2', label: 'label2' },
-    { value: 'value3', label: 'label3' }
+    'label1',
+    'label2',
+    'label3',
   ],
   sortByOptions: [
-    { value: 'value1', label: 'label1' },
-    { value: 'value2', label: 'label2' },
-    { value: 'value3', label: 'label3' }
+    'label1',
+    'label2',
+    'label3',
   ],
   locationHandleChange: () => { },
   platformHandleChange: () => { },

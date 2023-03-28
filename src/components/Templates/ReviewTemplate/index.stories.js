@@ -12,9 +12,9 @@ export const ReviewTemplates = Template.bind({});
 ReviewTemplates.args = {
   breadcrumbs: [{ name: 'Application', path: '/Application' }, { name: 'Reviews' }],
   yearDropdownOptions: [
-    { value: 'value1', label: 'March 2020 - February 2021' },
-    { value: 'value2', label: 'March 2021 - February 2022' },
-    { value: 'value3', label: 'March 2022 - February 2023' },
+    'March 2020 - February 2021',
+    'March 2021 - February 2022',
+    'March 2022 - February 2023',
   ],
   yearHandleChange: () => { },
   totalReview: {
@@ -62,21 +62,21 @@ ReviewTemplates.args = {
   },
 
   locationOptions: [
-    { value: 'value1', label: 'label1' },
-    { value: 'value2', label: 'label2' },
-    { value: 'value3', label: 'label3' },
+    'label1',
+    'label2',
+    'label3',
   ],
   locationHandleChange: () => { },
   platformOptions: [
-    { value: 'value1', label: 'label1' },
-    { value: 'value2', label: 'label2' },
-    { value: 'value3', label: 'label3' },
+    'label1',
+    'label2',
+    'label3',
   ],
   platformHandleChange: () => { },
   sortByOptions: [
-    { value: 'value1', label: 'label1' },
-    { value: 'value2', label: 'label2' },
-    { value: 'value3', label: 'label3' },
+    'label1',
+    'label2',
+    'label3',
   ],
   sortByHandleChange: () => { },
   reviews: [
