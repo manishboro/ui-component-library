@@ -10,7 +10,7 @@ const EmTypography = ({
   color = "textPrimary",
   display = "block",
   noWrap = false,
-  sx,
+  style,
   fontWeight
 }) => {
 
@@ -24,7 +24,7 @@ const EmTypography = ({
         color={color}
         display={display}
         noWrap={noWrap}
-        sx={sx}
+        style={style}
       />
     </Box>
 
@@ -35,7 +35,6 @@ EmTypography.propTypes = {
   variant: PropTypes.string,
   align: PropTypes.string,
   children: PropTypes.node,
-  classes: PropTypes.object,
   color: PropTypes.string,
   display: PropTypes.string,
   noWrap: PropTypes.bool,

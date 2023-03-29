@@ -14,23 +14,26 @@ const ReviewTemplate = ({
   reviewRatings,
   fbRecommendation,
   yearDropdownOptions,
-  locationOptions,
-  locationHandleChange,
+  ratingOptions,
+  ratingHandleChange,
   platformOptions,
   platformHandleChange,
   sortByOptions,
   sortByHandleChange,
   metricsBtnClick,
   reviews,
-  replyBtnClick,
+  postedBy,
+  postedOn,
+  postComment,
+  onPost
 }) => {
   return (
     <Box>
-      <Box display="flex" alignItems={{ xs: 'center', md: 'flex-start' }} mb={{ xs: 1.5, md: 2.5 }}>
+      <Box display="flex" alignItems="center" mb={{ xs: 1.5, md: 2.5 }}>
         <Box width="55%">
           <EmBreadcrumb breadcrumbs={breadcrumbs} />
         </Box>
-        <Box width="45%" ml="auto" maxWidth="245px" pt={{ xs: 0, md: '12px' }}>
+        <Box width="45%" ml="auto" maxWidth="245px">
           <EmDropDown
             placeholder="Select Year"
             size="large"
@@ -45,15 +48,18 @@ const ReviewTemplate = ({
       <ReviewCardGroup totalReview={totalReview} averageRating={averageRating} reviewRatings={reviewRatings} fbRecommendation={fbRecommendation} />
 
       <ReviewFilter
-        locationOptions={locationOptions}
+        ratingOptions={ratingOptions}
         platformOptions={platformOptions}
         sortByOptions={sortByOptions}
         reviews={reviews}
         metricsBtnClick={metricsBtnClick}
-        replyBtnClick={replyBtnClick}
-        locationHandleChange={locationHandleChange}
+        ratingHandleChange={ratingHandleChange}
         platformHandleChange={platformHandleChange}
         sortByHandleChange={sortByHandleChange}
+        postedBy={postedBy}
+        postedOn={postedOn}
+        postComment={postComment}
+        onPost={onPost}
       />
     </Box>
   );
@@ -67,15 +73,18 @@ ReviewTemplate.propTypes = {
   fbRecommendation: PropTypes.object,
   yearDropdownOptions: PropTypes.array,
   yearHandleChange: PropTypes.func,
-  locationOptions: PropTypes.array,
-  locationHandleChange: PropTypes.func,
+  ratingOptions: PropTypes.array,
+  ratingHandleChange: PropTypes.func,
   platformOptions: PropTypes.array,
   platformHandleChange: PropTypes.func,
   sortByOptions: PropTypes.array,
   sortByHandleChange: PropTypes.func,
   metricsBtnClick: PropTypes.func,
   reviews: PropTypes.array,
-  replyBtnClick: PropTypes.func,
+  postedBy: PropTypes.string,
+  postedOn: PropTypes.string,
+  postComment: PropTypes.string,
+  onPost: PropTypes.func
 };
 
 export default ReviewTemplate;

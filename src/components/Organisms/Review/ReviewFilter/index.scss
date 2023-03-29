@@ -1,11 +1,44 @@
 .chartBtn {
     .em-button.medium {
         padding: 10px 24px;
-    }   
+    }
 }
+
 .replay-btn {
     .em-button.medium {
-        padding: 0.5rem 1rem;
+        padding: 5px 16px;
     }
-    
+
+    @media screen and (max-width: 767px) {
+
+        .em-button.medium,
+        .em-typography.MuiTypography-body2 {
+            font-size: 12px;
+        }
+    }
+
+}
+
+.reviewfilter {
+    @media screen and (max-width: 767px) {
+        .em-typography {
+            &.MuiTypography-body1 {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            &.MuiTypography-caption {
+                font-size: 12px;
+            }
+        }
+
+        .reviewer-profile {
+            .em-typography {
+                &.MuiTypography-body1 {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
 }

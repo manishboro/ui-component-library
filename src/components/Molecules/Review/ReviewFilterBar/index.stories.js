@@ -13,22 +13,25 @@ export const ReviewFilterBars = Template.bind({});
 ReviewFilterBars.args = {
   numberOfStar: 5,
   value: 50,
-  locationOptions: [
-    'label1',
-    'label2',
-    'label3',
+  ratingOptions: [
+    '5 Star',
+    '4 Star',
+    '3 Star',
+    '2 Star',
+    '1 Star',
   ],
   platformOptions: [
-    'label1',
-    'label2',
-    'label3',
+    "Google",
+    "Yahoo",
+    "Facebook",
+    "Glassdoor",
   ],
   sortByOptions: [
     'label1',
     'label2',
     'label3',
   ],
-  locationHandleChange: () => { },
+  ratingHandleChange: () => { },
   platformHandleChange: () => { },
   sortByHandleChange: () => { }
 

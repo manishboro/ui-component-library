@@ -102,7 +102,7 @@ EmDropDown.propTypes = {
   id: PropTypes.string,
   value: PropTypes.string,
   variant: PropTypes.string,
-  handleChange: PropTypes.string,
+  handleChange: PropTypes.func,
   labelId: PropTypes.string,
   isLabel: PropTypes.bool,
   label: PropTypes.string,

@@ -8,7 +8,7 @@
   }
 
   .MuiSelect-icon {
-    top: calc(50% - 15px);
+    top: calc(50% - 12px);
   }
 
   label+.MuiInput-formControl {
@@ -20,7 +20,6 @@
   .MuiSelect-outlined {
     position: static;
     transform: none;
-    margin-bottom: 8px;
     color: var(--neutral-700);
 
     &.MuiInputLabel-shrink {

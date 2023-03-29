@@ -30,5 +30,6 @@ const Template = (args) => <EmTypography {...args} />;
 
 export const Typography = Template.bind({});
 Typography.args = {
+  color: "textPrimary",
   children: "Paragraph",
 };

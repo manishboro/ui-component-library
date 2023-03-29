@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import { Box } from '@material-ui/core';
 import EmTypography from '../../../Atoms/EmTypography';
 import EmDropDown from '../../../Molecules/EmDropDown';
+import EmMultiSelect from 'components/Molecules/EmMultiSelect';
 
-const ReviewFilterBar = ({ locationOptions, platformOptions, sortByOptions, locationHandleChange, platformHandleChange, sortByHandleChange }) => {
+const ReviewFilterBar = ({ ratingOptions, platformOptions, sortByOptions, ratingHandleChange, platformHandleChange, sortByHandleChange }) => {
   return (
     <Box display="flex" alignItems="center">
       <Box mr={1} fontWeight={500} display={{ xs: 'none', md: 'block' }}>
@@ -14,18 +15,18 @@ const ReviewFilterBar = ({ locationOptions, platformOptions, sortByOptions, loca
         <EmDropDown
           variant="outlined"
           size="small"
-          placeholder="Location"
-          id="location"
-          labelId="location"
-          handleChange={locationHandleChange}
-          options={locationOptions}
+          placeholder="Rating"
+          id="rating"
+          labelId="rating"
+          handleChange={ratingHandleChange}
+          options={ratingOptions}
         />
       </Box>
-      <Box mr={1}>
-        <EmDropDown
+      <Box mr={1} maxWidth="100px">
+        <EmMultiSelect
           variant="outlined"
           size="small"
-          placeholder="Platform"
+          label="Platform"
           id="platform"
           labelId="platform"
           handleChange={platformHandleChange}
@@ -40,7 +41,7 @@ const ReviewFilterBar = ({ locationOptions, platformOptions, sortByOptions, loca
 };
 
 ReviewFilterBar.propTypes = {
-  locationOptions: PropTypes.array,
+  ratingOptions: PropTypes.array,
   platformOptions: PropTypes.array,
   sortByOptions: PropTypes.array,
 };

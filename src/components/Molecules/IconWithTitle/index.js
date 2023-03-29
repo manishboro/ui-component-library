@@ -13,10 +13,11 @@ const IconWithTitle = ({
   titleVariant = 'body1',
   titleColor = 'textPrimary',
   spaceBetween = 1,
+  bottomSpace = "",
 }) => {
   return (
     <Box display="flex" alignItems="center">
-      <Box flexShrink={0} mr={spaceBetween} display="flex" alignItems="center">
+      <Box flexShrink={0} mr={spaceBetween} mb={bottomSpace} display="flex" alignItems="center">
         <img className={iconClass} src={iconSrc} width={iconWidth} height={iconHeight} alt={iconAlt} />
       </Box>
       <EmTypography variant={titleVariant} color={titleColor} children={title} />

@@ -15,6 +15,7 @@ const EmInputField = ({
   disabled = false,
   error = false,
   multiline = false,
+  minRows,
   maxRows,
   value,
   onChange = () => { },
@@ -37,6 +38,7 @@ const EmInputField = ({
         disabled={disabled}
         error={error}
         multiline={multiline}
+        minRows={minRows}
         maxRows={maxRows}
         value={value}
         onChange={onChange}
@@ -59,6 +61,7 @@ EmInputField.propTypes = {
   disabled: PropTypes.bool,
   error: PropTypes.bool,
   multiline: PropTypes.bool,
+  minRows: PropTypes.number,
   maxRows: PropTypes.number,
   value: PropTypes.string,
   handleChange: PropTypes.func,

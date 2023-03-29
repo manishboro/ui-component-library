@@ -17,7 +17,7 @@ const useStyles = makeStyles(() => ({
     border: "1px solid #e5e5eb",
     borderRadius: 4,
     marginTop: 4,
-    boxShadow: 'none'
+    boxShadow: 'none',
   },
 
   list: {
@@ -63,7 +63,8 @@ const EmMultiSelect = ({
   options,
   disabled = false,
   error = false,
-  errorText
+  errorText,
+
 }) => {
   const classes = useStyles();
   const ITEM_HEIGHT = 48;
@@ -76,17 +77,17 @@ const EmMultiSelect = ({
     PaperProps: {
       style: {
         maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-        width: 250
+        minWidth: 165
       }
     },
     getContentAnchorEl: null,
     anchorOrigin: {
       vertical: "bottom",
-      horizontal: "center"
+      horizontal: "left"
     },
     transformOrigin: {
       vertical: "top",
-      horizontal: "center"
+      horizontal: "left"
     },
     variant: "menu"
   };

@@ -13,28 +13,26 @@ const Template = (args) => <ReviewFilter {...args} />;
 
 export const ReviewFilters = Template.bind({});
 ReviewFilters.args = {
-    locationOptions: [
-        { value: 'value1', label: 'label1' },
-        { value: 'value2', label: 'label2' },
-        { value: 'value3', label: 'label3' }
+    ratingOptions: [
+        '5 Star',
+        '4 Star',
+        '3 Star',
+        '2 Star',
+        '1 Star',
     ],
-
-    locationHandleChange: () => { },
-
     platformOptions: [
-        { value: 'value1', label: 'label1' },
-        { value: 'value2', label: 'label2' },
-        { value: 'value3', label: 'label3' }
+        "Google",
+        "Yahoo",
+        "Facebook",
+        "Glassdoor",
     ],
-
-    platformHandleChange: () => { },
-
     sortByOptions: [
-        { value: 'value1', label: 'label1' },
-        { value: 'value2', label: 'label2' },
-        { value: 'value3', label: 'label3' }
+        'label1',
+        'label2',
+        'label3',
     ],
-
+    ratingHandleChange: () => { },
+    platformHandleChange: () => { },
     sortByHandleChange: () => { },
     metricsBtnClick: () => { },
 
@@ -123,8 +121,10 @@ ReviewFilters.args = {
             rating: 1,
             review: "When I generate one dummy text it returns only one line. I wish .",
         }
-
     ],
 
-    replyBtnClick: () => { }
+    postedBy: "Admin Name",
+    postedOn: "Posted on 22 dec 2022",
+    postComment: "Hi Vipra, Thanks for reaching out & sharing your thoughts with us. The duration of the game can vary. If you'll notice, you'll see that some games even end sooner! This wholly depends upon the outcomes that you come across when playing. We can assure you that this is completely random",
+    onPost: () => { }
 };
