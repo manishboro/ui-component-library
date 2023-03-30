@@ -4,6 +4,7 @@ import { Box } from '@material-ui/core';
 import EmTypography from '../../../Atoms/EmTypography';
 import EmDropDown from '../../../Molecules/EmDropDown';
 import EmMultiSelect from 'components/Molecules/EmMultiSelect';
+import EmTags from 'components/Atoms/EmTags';
 
 const ReviewFilterBar = ({ ratingOptions, platformOptions, sortByOptions, ratingHandleChange, platformHandleChange, sortByHandleChange }) => {
   return (
@@ -33,9 +34,21 @@ const ReviewFilterBar = ({ ratingOptions, platformOptions, sortByOptions, rating
           options={platformOptions}
         />
       </Box>
-      <Box ml={{ xs: 'auto', md: 2 }}>
+
+      <EmTags
+        variant="soft"
+        size="medium"
+        label='Clear all'
+        isDeleteIcon={false}
+        bgColor="#F3F3F6"
+        textColor='#373751'
+        iconColor="#0C0C1E"
+        iconPosition='left'
+      />
+
+      {/* <Box ml={{ xs: 'auto', md: 2 }}>
         <EmDropDown variant="outlined" size="small" placeholder="Sort by" id="sortBy" labelId="sortBy" handleChange={sortByHandleChange} options={sortByOptions} />
-      </Box>
+      </Box> */}
     </Box>
   );
 };

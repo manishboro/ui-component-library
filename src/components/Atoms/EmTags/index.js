@@ -10,17 +10,19 @@ const EmTags = ({
   label,
   bgColor = "#FFC107",
   textColor = '#FFF',
+  iconColor = '#FFF',
   isDeleteIcon = true,
-  handleDelete = () => { }
+  handleDelete = () => { },
+  iconPosition = "right"
 }) => {
 
   return (
     <Chip
-      className={`em-chip ${variant} ${size} ${isDeleteIcon && 'hideDeleteIcon'}`}
+      className={`em-chip ${variant} ${size} ${isDeleteIcon && 'hideDeleteIcon'} ${iconPosition}`}
       style={{ 'background': bgColor, 'color': textColor }}
       label={label}
       onDelete={handleDelete}
-      deleteIcon={<CloseIcon style={{ width: '16px', 'color': textColor }} />}
+      deleteIcon={<CloseIcon style={{ width: '16px', 'color': iconColor }} />}
     />
   );
 };

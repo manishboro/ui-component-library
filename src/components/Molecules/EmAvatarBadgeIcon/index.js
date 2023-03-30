@@ -25,9 +25,10 @@ const EmAvatarBadgeIcon = ({
           horizontal: 'right',
         }}
         badgeContent={
-          <Box borderRadius="100%" bgcolor="#FFFFFF" padding="2px">
+          iconSrc && <Box borderRadius="100%" bgcolor="#FFFFFF" padding="2px">
             <img src={iconSrc} width={iconWidth} height={iconHeight} alt={iconAlt} />
           </Box>
+
         }
       >
         <EmAvatar

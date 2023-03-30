@@ -138,7 +138,7 @@ EmMultiSelect.propTypes = {
   variant: PropTypes.string,
   id: PropTypes.string,
   value: PropTypes.string,
-  handleChange: PropTypes.string,
+  handleChange: PropTypes.func,
   labelId: PropTypes.string,
   label: PropTypes.string,
   size: PropTypes.string,

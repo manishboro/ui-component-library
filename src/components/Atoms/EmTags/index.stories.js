@@ -15,6 +15,10 @@ export default {
       control: "select",
       options: ["small ", "medium", "large"],
     },
+    iconPosition: {
+      control: "select",
+      options: ["left ", "right"],
+    },
   },
 };
 

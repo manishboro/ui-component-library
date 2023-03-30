@@ -2,13 +2,12 @@
   position: relative;
   display: inline-flex;
 
-  .MuiChip-deleteIcon {}
   &.MuiChip-root {
     height: auto;
     width: auto;
   }
+
   .MuiChip-label {
-    font-weight: 500;
     padding: 0;
   }
 
@@ -23,15 +22,26 @@
   &.sharp {
     border-radius: 0;
   }
-  
+
+  &.left {
+    flex-direction: row-reverse;
+  }
+
   &.small {
-     .MuiChip-label {
+    .MuiChip-label {
       font-size: 12px;
       line-height: 16px;
       padding: 4px 8px;
     }
+
     .MuiChip-deleteIcon {
       margin: 0 8px 0 -4px;
+    }
+
+    &.left {
+      .MuiChip-deleteIcon {
+        margin: 0 -4px 0 8px;
+      }
     }
   }
 
@@ -41,8 +51,15 @@
       line-height: 20px;
       padding: 6px 16px;
     }
+
     .MuiChip-deleteIcon {
       margin: 0 16px 0 -8px;
+    }
+
+    &.left {
+      .MuiChip-deleteIcon {
+        margin: 0 -8px 0 16px;
+      }
     }
   }
 
@@ -52,14 +69,23 @@
       line-height: 24px;
       padding: 8px 24px;
     }
+
     .MuiChip-deleteIcon {
       margin: 0 16px 0 -16px;
     }
+
+    &.left {
+      .MuiChip-deleteIcon {
+        margin: 0 -16px 0 16px;
+      }
+    }
   }
-  
+
   &.hideDeleteIcon {
     .MuiChip-deleteIcon {
       display: none;
     }
   }
+
+
 }
