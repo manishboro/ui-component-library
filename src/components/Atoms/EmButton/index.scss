@@ -29,7 +29,10 @@
     border: 1px solid var(--neutral-300);
     border-radius: 0.25rem;
 
-    &:hover {
+    &:hover,
+    &:visited,
+    &:active,
+    &:focus {
       border: 1px solid var(--neutral-300);
     }
   }
@@ -48,7 +51,10 @@
     background-color: var(--primary-900);
     color: var(--white);
 
-    &:hover {
+    &:hover,
+    &:visited,
+    &:active,
+    &:focus {
       background-color: var(--primary-800);
       color: var(--white);
     }
@@ -63,7 +69,10 @@
     background-color: var(--neutral-100);
     color: var(--neutral-900);
 
-    &:hover {
+    &:hover,
+    &:visited,
+    &:active,
+    &:focus {
       background-color: var(--gray-100);
     }
 
@@ -75,7 +84,11 @@
 
   &.MuiButton-text,
   &.MuiButton-outlined {
-    &:hover {
+
+    &:hover,
+    &:visited,
+    &:active,
+    &:focus {
       background-color: var(--primary-50);
       border-color: var(--primary-800);
       color: var(--primary-800);
