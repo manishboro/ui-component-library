@@ -33,7 +33,7 @@ ReviewFilters.args = {
     ],
     ratingHandleChange: () => { },
     platformHandleChange: () => { },
-    sortByHandleChange: () => { },
+    searchOnChange: () => { },
     metricsBtnClick: () => { },
 
     reviews: [

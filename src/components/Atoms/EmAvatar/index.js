@@ -4,11 +4,11 @@ import Avatar from '@material-ui/core/es/Avatar/Avatar';
 import "./index.scss";
 
 const EmAvatar = ({
-  variant = "circular",
   avatarSrc,
   avatarAlt,
   avatarSize,
   onClick,
+  variant = "circular",
   bgColor = "#FFD451",
   textColor = "#FFC720"
 

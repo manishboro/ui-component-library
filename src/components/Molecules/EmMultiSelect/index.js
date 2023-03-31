@@ -55,12 +55,12 @@ const useStyles = makeStyles(() => ({
 }));
 
 const EmMultiSelect = ({
-  variant = "outlined",
   id,
   label,
   labelId,
   size,
   options,
+  variant = "outlined",
   disabled = false,
   error = false,
   errorText,

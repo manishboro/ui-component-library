@@ -5,8 +5,16 @@ import EmTypography from '../../../Atoms/EmTypography';
 import EmDropDown from '../../../Molecules/EmDropDown';
 import EmMultiSelect from 'components/Molecules/EmMultiSelect';
 import EmTags from 'components/Atoms/EmTags';
+import EmInputField from 'components/Atoms/EmInputField';
+import "./index.scss"
 
-const ReviewFilterBar = ({ ratingOptions, platformOptions, sortByOptions, ratingHandleChange, platformHandleChange, sortByHandleChange }) => {
+const ReviewFilterBar = ({
+  ratingOptions,
+  platformOptions,
+  ratingHandleChange,
+  platformHandleChange,
+  searchOnChange
+}) => {
   return (
     <Box display="flex" alignItems="center">
       <Box mr={1} fontWeight={500} display={{ xs: 'none', md: 'block' }}>
@@ -34,6 +42,18 @@ const ReviewFilterBar = ({ ratingOptions, platformOptions, sortByOptions, rating
           options={platformOptions}
         />
       </Box>
+      {/* <Box className='search-box' position="relative" mr={1} maxWidth="320px" width="100%" display="flex">
+        <Box position="absolute" top="5px" left="10px">
+          <img src='/images/icons/search.svg' alt='search' />
+        </Box>
+        <EmInputField
+          id="search-review"
+          placeholder="Search..."
+          size="medium"
+          fullWidth={true}
+          onChange={searchOnChange}
+        />
+      </Box> */}
 
       <EmTags
         variant="soft"
@@ -45,6 +65,7 @@ const ReviewFilterBar = ({ ratingOptions, platformOptions, sortByOptions, rating
         iconColor="#0C0C1E"
         iconPosition='left'
       />
+
 
       {/* <Box ml={{ xs: 'auto', md: 2 }}>
         <EmDropDown variant="outlined" size="small" placeholder="Sort by" id="sortBy" labelId="sortBy" handleChange={sortByHandleChange} options={sortByOptions} />

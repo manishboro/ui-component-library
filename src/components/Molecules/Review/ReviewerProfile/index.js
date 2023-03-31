@@ -7,12 +7,12 @@ import EmAvatarBadgeIcon from '../../../Molecules/EmAvatarBadgeIcon';
 const ReviewerProfile = ({
   reviewerImg,
   reviewerName,
-  textLabel = "Posted on",
   companyIcon,
   companyIconAlt,
+  time,
   companyIconWidth = 18,
   companyIconHeight = 18,
-  time,
+  textLabel = "Posted on",
 }) => {
   return (
     <Box display="flex" alignItems="center">

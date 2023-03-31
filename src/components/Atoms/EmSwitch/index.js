@@ -7,10 +7,10 @@ import { FormControlLabel } from '@material-ui/core';
 const EmSwitch = ({
   name,
   checked,
-  handleChange = () => { },
   disabled,
   label,
-  labelPlacement
+  labelPlacement,
+  handleChange = () => { },
 }) => {
 
   return (

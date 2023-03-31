@@ -5,7 +5,13 @@ import './index.scss';
 import { Box } from '@material-ui/core';
 import EmTypography from '../../Atoms/EmTypography';
 
-const EmPagination = ({ className, count, page, onChange, paginationHeading }) => {
+const EmPagination = ({
+  className,
+  count,
+  page,
+  onChange,
+  paginationHeading
+}) => {
   return (
     <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} justifyContent="space-between" alignItems="center">
       {paginationHeading && (

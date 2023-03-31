@@ -1,0 +1,12 @@
+.search-box {
+    .em-input.medium {
+        .MuiOutlinedInput-input {
+            padding: 8px 16px 8px 30px;
+        }
+
+        input::-webkit-input-placeholder {
+            color: var(--neutral-400);
+            opacity: 1;
+        }
+    }
+}

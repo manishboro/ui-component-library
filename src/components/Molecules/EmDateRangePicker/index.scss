@@ -19,9 +19,9 @@
         line-height: 24px;
     }
 
-    .DateInput_input::placeholder {
+    .DateInput_input::-webkit-input-placeholder {
         font-size: 16px;
-        color: var(--neutral-700);
+        color: red;
     }
 
     .DateInput_input__focused {

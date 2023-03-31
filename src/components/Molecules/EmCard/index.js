@@ -6,17 +6,17 @@ import { Box, Card, CardActions, CardContent } from '@material-ui/core';
 import './index.scss';
 const EmCard = ({
   variant,
+  iconWidth,
+  iconHeight,
+  cardBtnClick,
   HeadingText = '',
   SecondaryText = '',
   imgSrc = '',
   imgAlt = 'Image Description',
   buttonLabel = '',
   iconSrc = '',
-  iconWidth,
-  iconHeight,
   iconAlt = '',
   rounded = true,
-  cardBtnClick,
 }) => {
   return (
     <Card className={`em-card ${variant}`} variant="outlined">

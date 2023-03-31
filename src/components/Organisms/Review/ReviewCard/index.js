@@ -9,7 +9,14 @@ const reviewCardStyle = {
   backgroundColor: '#fff',
 };
 
-const ReviewCard = ({ iconSrc, iconAlt, iconWidth = 28, iconHeight = 28, heading, value }) => {
+const ReviewCard = ({
+  iconSrc,
+  iconAlt,
+  heading,
+  value,
+  iconWidth = 28,
+  iconHeight = 28,
+}) => {
   return (
     <Box sx={reviewCardStyle} p={2}>
       <Box mb={5}>

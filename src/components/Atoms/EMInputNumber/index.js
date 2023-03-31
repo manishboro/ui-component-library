@@ -10,17 +10,17 @@ const EMInputNumber = ({
   className,
   label,
   type,
-  variant = "outlined",
-  size = "medium",
   placeholder,
   defaultValue,
+  onCountChange,
+  valueAsNumber,
+  variant = "outlined",
+  size = "medium",
   disabled = false,
   fullWidth = true,
   min = 1,
   increment = 1,
   decrement = 1,
-  onCountChange,
-  valueAsNumber
 }) => {
   const [count, setCount] = useState(min)
   const handleClickAdd = () => {

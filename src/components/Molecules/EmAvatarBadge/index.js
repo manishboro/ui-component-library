@@ -5,7 +5,6 @@ import EmAvatar from '../../Atoms/EmAvatar';
 import "./index.scss";
 
 const EmAvatarBadge = ({
-  variant = "circular",
   avatarSrc,
   avatarAlt,
   avatarSize,
@@ -14,6 +13,7 @@ const EmAvatarBadge = ({
   avatarTextColor,
   badgeCount,
   badgeVariant,
+  variant = "circular"
 }) => {
   return (
     <div className={`em-avatar-badge ${variant} ${avatarSize}`}>

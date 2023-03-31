@@ -81,7 +81,7 @@ ReviewTemplates.args = {
     'label2',
     'label3',
   ],
-  sortByHandleChange: () => { },
+  searchOnChange: () => { },
   reviews: [
     {
       reviewerName: 'Thomas Edison',

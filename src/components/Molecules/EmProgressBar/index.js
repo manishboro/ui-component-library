@@ -5,11 +5,11 @@ import { Box } from '@material-ui/core';
 import "./index.scss";
 
 const EmProgressBar = ({
+  label,
+  value,
   type = "rounded",
   size = "small",
   isLabel = true,
-  label,
-  value,
 }) => {
 
   return (

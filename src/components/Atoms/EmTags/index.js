@@ -5,9 +5,9 @@ import CloseIcon from '@material-ui/icons/Close';
 import "./index.scss";
 
 const EmTags = ({
+  label,
   variant = "round",
   size = "small",
-  label,
   bgColor = "#FFC107",
   textColor = '#FFF',
   iconColor = '#FFF',

@@ -6,10 +6,10 @@ import EmTypography from '../../Atoms/EmTypography';
 const IconWithTitle = ({
   iconSrc,
   iconAlt,
+  title,
   iconWidth = 20,
   iconHeight = 20,
   iconClass = '',
-  title,
   titleVariant = 'body1',
   titleColor = 'textPrimary',
   spaceBetween = 1,

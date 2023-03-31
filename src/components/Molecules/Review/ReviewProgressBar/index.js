@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import { Box } from '@material-ui/core';
 import EmProgressBar from '../../../Molecules/EmProgressBar';
 
-const ReviewProgressBar = ({ numberOfStar, value }) => {
+const ReviewProgressBar = ({
+  numberOfStar,
+  value
+}) => {
   return (
     <Box display="flex" alignItems="center">
       <Box display="flex" alignItems="center" fontSize={12} lineHeight={1} fontWeight={500} color="#14142B">

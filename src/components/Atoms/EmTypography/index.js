@@ -4,14 +4,14 @@ import { Box, Typography } from '@material-ui/core';
 import "./index.scss";
 
 const EmTypography = ({
+  children,
+  style,
+  fontWeight,
   variant = "body1",
   align = "left",
-  children,
   color = "textPrimary",
   display = "block",
   noWrap = false,
-  style,
-  fontWeight
 }) => {
 
   return (

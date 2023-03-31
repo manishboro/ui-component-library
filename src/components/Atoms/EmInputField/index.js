@@ -8,20 +8,20 @@ const EmInputField = ({
   className,
   label,
   type,
-  variant = "outlined",
-  size = "medium",
   placeholder,
   defaultValue,
-  disabled = false,
-  error = false,
-  multiline = false,
   minRows,
   maxRows,
   value,
   onChange = () => { },
   errorText,
   isAnimated,
-  fullWidth = true
+  fullWidth = true,
+  variant = "outlined",
+  size = "medium",
+  disabled = false,
+  error = false,
+  multiline = false,
 }) => {
 
   return (

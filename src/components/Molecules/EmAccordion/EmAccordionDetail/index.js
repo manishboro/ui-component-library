@@ -4,8 +4,8 @@ import { AccordionSummary } from '@material-ui/core';
 import "./index.scss";
 
 const EmAccordionDetail = ({
+  accordionDetail,
   accordionDetailClass = "",
-  accordionDetail
 }) => {
   return (
     <AccordionSummary

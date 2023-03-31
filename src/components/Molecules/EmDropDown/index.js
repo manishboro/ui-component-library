@@ -41,17 +41,17 @@ const useStyles = makeStyles(() => ({
 const EmDropDown = ({
   id,
   value,
-  isLabel = false,
   label,
   placeholder,
-  variant = "outlined",
   handleChange,
   labelId,
-  size = "small",
   options,
+  errorText,
+  variant = "outlined",
+  size = "small",
+  isLabel = false,
   disabled = false,
   error = false,
-  errorText
 }) => {
   const classes = useStyles();
   const menuProps = {

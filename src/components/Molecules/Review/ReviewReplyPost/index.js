@@ -6,18 +6,18 @@ import { Box } from '@material-ui/core';
 import "./index.scss"
 
 const ReviewReplyPost = ({
-  id = "reviewReplyPost",
   error,
   value,
+  close,
+  onPost,
+  margin,
+  id = "reviewReplyPost",
   placeholder = "Write a Reply",
   minRows = 3,
   maxRows = 3,
   size = "large",
   errorText = "Error message",
   show = false,
-  close,
-  onPost,
-  margin
 }) => {
   if (!show) return null
   return (

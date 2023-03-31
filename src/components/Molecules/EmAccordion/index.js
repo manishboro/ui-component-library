@@ -6,10 +6,10 @@ import EmAccordionDetail from './EmAccordionDetail';
 import "./index.scss";
 
 const EmAccordion = ({
-  variant = "outline",
   accordionTitleClass,
   accordionData,
   accordionDetailClass,
+  variant = "outline",
   defaultExpanded = false,
 }) => {
   return (

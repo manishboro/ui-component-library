@@ -18,7 +18,7 @@ const ReviewTemplate = ({
   ratingHandleChange,
   platformOptions,
   platformHandleChange,
-  sortByOptions,
+  searchOnChange,
   sortByHandleChange,
   metricsBtnClick,
   reviews,
@@ -50,7 +50,7 @@ const ReviewTemplate = ({
       <ReviewFilter
         ratingOptions={ratingOptions}
         platformOptions={platformOptions}
-        sortByOptions={sortByOptions}
+        searchOnChange={searchOnChange}
         reviews={reviews}
         metricsBtnClick={metricsBtnClick}
         ratingHandleChange={ratingHandleChange}

@@ -7,9 +7,9 @@ const ReviewReply = ({
   postedBy,
   postedOn,
   postComment,
-  show = false,
   close,
-  margin
+  margin,
+  show = false,
 }) => {
   if (!show) return null
   return (

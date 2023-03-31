@@ -9,10 +9,10 @@ const EmCheckbox = ({
   label,
   labelPlacement,
   disabled,
+  errorText,
+  onChange,
   checked = false,
   isError = false,
-  errorText,
-  onChange
 }) => {
 
   return (

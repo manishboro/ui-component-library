@@ -8,11 +8,11 @@ import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import "./index.scss";
 
 const EmAlert = ({
-  variant = "filled",
-  severity = "error",
   icon,
   color,
-  children
+  children,
+  variant = "filled",
+  severity = "error",
 }) => {
   return (
     <Alert className='em-alert' icon={icon}

@@ -8,10 +8,10 @@ const EmRadio = ({
   label,
   value,
   disabled,
-  labelPlacement = "end",
   errorText,
   isError,
-  onChange
+  onChange,
+  labelPlacement = "end",
 }) => {
   return (
     <Box className={`em-radio ${isError && "error-radio"}`}>

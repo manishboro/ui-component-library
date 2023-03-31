@@ -19,8 +19,7 @@ const ReviewFilter = ({
   ratingHandleChange,
   platformOptions,
   platformHandleChange,
-  sortByOptions,
-  sortByHandleChange,
+  searchOnChange,
   metricsBtnClick,
   reviews,
   postedBy,
@@ -44,15 +43,14 @@ const ReviewFilter = ({
 
   return (
     <>
-      <Box display="flex" alignContent="center" flexWrap="wrap" mt={{ xs: 2.5, md: 3 }}>
+      <Box display="flex" alignItems="center" flexWrap="wrap" mt={{ xs: 2.5, md: 1.5 }}>
         <Box width={{ xs: '100%', md: '70%' }} order={{ xs: 2, md: 1 }} m={{ xs: '24px 0 8px 0', md: '0' }}>
           <ReviewFilterBar
             ratingOptions={ratingOptions}
             platformOptions={platformOptions}
-            sortByOptions={sortByOptions}
             ratingHandleChange={ratingHandleChange}
             platformHandleChange={platformHandleChange}
-            sortByHandleChange={sortByHandleChange}
+            searchOnChange={searchOnChange}
           />
         </Box>
         <Box

@@ -33,6 +33,6 @@ ReviewFilterBars.args = {
   ],
   ratingHandleChange: () => { },
   platformHandleChange: () => { },
-  sortByHandleChange: () => { }
-
+  sortByHandleChange: () => { },
+  searchOnChange: () => { }
 };

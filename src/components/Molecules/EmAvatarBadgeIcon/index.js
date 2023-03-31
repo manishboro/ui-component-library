@@ -4,15 +4,15 @@ import { Badge, Box } from '@material-ui/core';
 import EmAvatar from '../../Atoms/EmAvatar';
 
 const EmAvatarBadgeIcon = ({
-  variant = 'circular',
   avatarSrc,
   avatarAlt,
   avatarSize,
-  avatarBgColor = '#FFD451',
-  avatarTextColor = '#FFC720',
   avatarClick,
   iconSrc,
   iconAlt,
+  variant = 'circular',
+  avatarBgColor = '#FFD451',
+  avatarTextColor = '#FFC720',
   iconWidth = 20,
   iconHeight = 20,
 }) => {
