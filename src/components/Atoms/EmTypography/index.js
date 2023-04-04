@@ -7,6 +7,7 @@ const EmTypography = ({
   children,
   style,
   fontWeight,
+  textColor,
   variant = "body1",
   align = "left",
   color = "textPrimary",
@@ -15,7 +16,7 @@ const EmTypography = ({
 }) => {
 
   return (
-    <Box fontWeight={fontWeight}>
+    <Box fontWeight={fontWeight} color={textColor}>
       <Typography
         variant={variant}
         align={align}

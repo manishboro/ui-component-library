@@ -42,7 +42,7 @@ const ReviewFilterBar = ({
           options={platformOptions}
         />
       </Box>
-      {/* <Box className='search-box' position="relative" mr={1} maxWidth="320px" width="100%" display="flex">
+      <Box className='search-box' position="relative" mr={1} maxWidth="320px" width="100%" display="flex">
         <Box position="absolute" top="5px" left="10px">
           <img src='/images/icons/search.svg' alt='search' />
         </Box>
@@ -53,7 +53,7 @@ const ReviewFilterBar = ({
           fullWidth={true}
           onChange={searchOnChange}
         />
-      </Box> */}
+      </Box>
 
       <EmTags
         variant="soft"

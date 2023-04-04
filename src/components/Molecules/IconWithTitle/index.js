@@ -7,20 +7,22 @@ const IconWithTitle = ({
   iconSrc,
   iconAlt,
   title,
+  titleColor,
   iconWidth = 20,
   iconHeight = 20,
   iconClass = '',
   titleVariant = 'body1',
-  titleColor = 'textPrimary',
+  titleColorType = 'textPrimary',
   spaceBetween = 1,
   bottomSpace = "",
+  fontWeight = "400"
 }) => {
   return (
     <Box display="flex" alignItems="center">
       <Box flexShrink={0} mr={spaceBetween} mb={bottomSpace} display="flex" alignItems="center">
         <img className={iconClass} src={iconSrc} width={iconWidth} height={iconHeight} alt={iconAlt} />
       </Box>
-      <EmTypography variant={titleVariant} color={titleColor} children={title} />
+      <EmTypography fontWeight={fontWeight} variant={titleVariant} color={titleColorType} textColor={titleColor} children={title} />
     </Box>
   );
 };
@@ -33,6 +35,7 @@ IconWithTitle.propTypes = {
   iconClass: PropTypes.string,
   title: PropTypes.string,
   titleVariant: PropTypes.string,
+  titleColorType: PropTypes.string,
   titleColor: PropTypes.string,
   spaceBetween: PropTypes.string,
 };

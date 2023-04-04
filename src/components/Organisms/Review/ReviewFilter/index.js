@@ -86,7 +86,7 @@ const ReviewFilter = ({
             </Box>
 
             <Box mt={{ md: "12px", xs: "10px" }} mb="8px" color="#373751">
-              <EmTypography color="">
+              <EmTypography >
                 {data.review} <Box display="inline" fontSize={14} color="#FFC107" style={{ cursor: 'pointer' }}>
                   View More
                 </Box>

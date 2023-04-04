@@ -21,8 +21,8 @@ Modal.args = {
         <EmTypography variant='body2' children="Basic Modal" fontWeight='500'></EmTypography>
         <CloseIcon style={{ 'cursor': 'pointer' }} />
       </Box>
-      <Box padding="24px" color='#FFC107' textAlign='center'>
-        <EmTypography variant='body2' children="Swap" color='#FFC107' align='center'></EmTypography>
+      <Box padding="24px" textAlign='center'>
+        <EmTypography variant='body2' children="Swap" color='custom' textColor="#FFC107" align='center'></EmTypography>
       </Box>
     </Box>,
   modalClose: () => { }

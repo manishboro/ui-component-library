@@ -15,8 +15,8 @@ const ReviewReply = ({
   return (
     <Box bgcolor="#F3F3F6" padding="12px 16px 24px" m={margin}>
       <Box display='flex' alignItems='center' justifyContent="space-between" mb="8px">
-        <Box color="#4B4B63">
-          <EmTypography classes="postedBy" variant='body1' color='' children={postedBy} />
+        <Box>
+          <EmTypography classes="postedBy" variant='body1' color='custom' textColor="#4B4B63" children={postedBy} />
         </Box>
 
         <EmTypography variant="caption" color="textSecondary">

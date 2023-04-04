@@ -49,8 +49,8 @@
         &.CalendarDay__selected_span,
         &.CalendarDay__hovered_span,
         &.CalendarDay__hovered_span:hover {
-            background: var(--primary-100);
-            color: var(--white);
+            background: var(--primary-10);
+            color: var(--neutral-900);
         }
     }
 
@@ -58,5 +58,20 @@
         display: none;
     }
 
+    .DayPickerNavigation_leftButton__horizontalDefault,
+    .DayPickerNavigation_rightButton__horizontalDefault {
+        width: 20px;
 
+        svg {
+            display: none;
+        }
+    }
+
+    .DayPickerNavigation_leftButton__horizontalDefault {
+        background: url("/images/icons/left-arrow-black.svg") no-repeat;
+    }
+
+    .DayPickerNavigation_rightButton__horizontalDefault {
+        background: url("/images/icons/right-arrow-black.svg") no-repeat;
+    }
 }
