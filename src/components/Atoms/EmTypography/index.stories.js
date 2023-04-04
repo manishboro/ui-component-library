@@ -32,4 +32,5 @@ export const Typography = Template.bind({});
 Typography.args = {
   color: "textPrimary",
   children: "Paragraph",
+  textColor: ""
 };

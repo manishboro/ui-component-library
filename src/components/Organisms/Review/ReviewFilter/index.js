@@ -2,17 +2,16 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import IconWithTitle from '../../../Molecules/IconWithTitle';
 import { Box } from '@material-ui/core';
-import EmPagination from '../../../Molecules/EmPagination';
 import EmTypography from '../../../Atoms/EmTypography';
 import EmButton from '../../../Atoms/EmButton';
 import ReviewRating from '../../../Molecules/Review/ReviewRating';
 import ReviewerProfile from '../../../Molecules/Review/ReviewerProfile';
 import ReviewFilterBar from '../../../Molecules/Review/ReviewFilterBar';
 import InsertChartOutlinedRoundedIcon from '@material-ui/icons/InsertChartOutlinedRounded';
-import usePagination from '../../../Molecules/EmPagination/pagination';
 import ReviewReplyPost from 'components/Molecules/Review/ReviewReplyPost';
 import ReviewReply from 'components/Molecules/Review/ReviewReply';
 import './index.scss';
+import EmCircularProgress from 'components/Atoms/EmCircularProgress';
 
 const ReviewFilter = ({
   ratingOptions,
@@ -25,18 +24,11 @@ const ReviewFilter = ({
   postedBy,
   postedOn,
   postComment,
-  onPost
+  onPost,
+  shareHandler,
+  deleteHandler,
+
 }) => {
-  const [page, setPage] = useState(1);
-  const PER_PAGE = 5;
-
-  const count = Math.ceil(reviews.length / PER_PAGE);
-  const _DATA = usePagination(reviews, PER_PAGE);
-
-  const handleChange = (e, p) => {
-    setPage(p);
-    _DATA.jump(p);
-  };
 
   const [showReplyPost, setShowReplyPost] = useState(false);
   const [showReply, setShowReply] = useState(false);
@@ -71,9 +63,9 @@ const ReviewFilter = ({
         </Box>
       </Box>
 
-      {_DATA.currentData().map(data => {
+      {reviews.map(data => {
         return (
-          <Box className='reviewfilter' borderBottom="1px solid #E5E5EB;" p={{ xs: '16px 0', md: '24px 0' }}>
+          <Box borderBottom="1px solid #E5E5EB;" p={{ xs: '16px 0', md: '28px 0' }}>
             <Box className="reviewer-profile" display='flex' alignItems='center' justifyContent='space-between'>
               <ReviewerProfile
                 reviewerImg={data.reviewerImg}
@@ -82,19 +74,29 @@ const ReviewFilter = ({
                 companyIconAlt={data.companyName}
                 time={data.postedAt}
               />
-              <ReviewRating num={data.rating} />
+              {!data.isFacebook && <ReviewRating num={data.rating} />}
+              {data.isFacebook && <Box ml="20px">
+                {data.isFacebookType === "recommended" ? <IconWithTitle iconSrc="/images/icons/ticketStar-pink.svg" iconAlt="ticketStar" iconWidth={20} iconHeight={18} title="Recommended" titleVariant="body2" titleColor='#FC2170' spaceBetween="8px" /> : <EmTypography variant='body2' color='custom' textColor="#868E96" children="Not Recommended" />}
+              </Box>}
+
             </Box>
 
-            <Box mt={{ md: "12px", xs: "10px" }} mb="8px" color="#373751">
-              <EmTypography >
+            <Box mt={{ xs: "10px", md: "12px" }} mb="8px" color="#373751">
+              <EmTypography color='custom' textColor="#373751">
                 {data.review} <Box display="inline" fontSize={14} color="#FFC107" style={{ cursor: 'pointer' }}>
                   View More
                 </Box>
               </EmTypography>
             </Box>
-            <Box display='flex' justifyContent="space-between" alignItems='center'>
-              <Box>
-                <IconWithTitle iconSrc="/images/icons/location.svg" iconAlt="location" iconWidth={15} iconHeight={17} title={data.location} spaceBetween="6px" bottomSpace="2px" />
+
+            <Box display='flex' justifyContent="space-between" alignItems='center' flexWrap='wrap'>
+              <Box display="flex">
+                <IconWithTitle iconSrc="/images/icons/location.svg" iconAlt="location" iconWidth={15} iconHeight={17} title={data.location} titleColor='#9299A1' spaceBetween="4px" bottomSpace="2px" />
+
+                <Box ml="20px" onClick={shareHandler} style={{ "cursor": "pointer" }}><IconWithTitle iconSrc="/images/icons/share.svg" iconAlt="share" iconWidth={15} iconHeight={17} title="Share" titleColor='#373751' spaceBetween="6px" bottomSpace="2px" /></Box>
+
+                {!data.isFacebook && <Box ml="20px" onClick={deleteHandler} style={{ "cursor": "pointer" }}><IconWithTitle iconSrc="/images/icons/delete.svg" iconAlt="delete" iconWidth={15} iconHeight={17} title="Delete" titleColor='#373751' spaceBetween="6px" bottomSpace="2px" /></Box>}
+
               </Box>
               {!showReplyPost && <Box
                 className="replay-btn"
@@ -103,12 +105,11 @@ const ReviewFilter = ({
               >
                 {data.numOfReply && (
                   <Box display='flex' m='0 16px 0 0' onClick={() => { setShowReply(!showReply) }} style={{ "cursor": "pointer" }}>
-                    <EmTypography display="inline" variant="body2"> {showReply ? "hide" : data.numOfReply} Reply</EmTypography>
+                    <EmTypography display="inline" variant="body2"> {showReply ? "Hide" : "View"} Reply</EmTypography>
                   </Box>
                 )}
                 <EmButton size="medium" variant="outlined" children={data.numOfReply ? "Edit Reply" : "Reply"} color="secondary" onClick={() => { setShowReplyPost(true) }} />
               </Box>}
-
             </Box>
 
             <ReviewReplyPost
@@ -125,15 +126,15 @@ const ReviewFilter = ({
               postComment={postComment}
               show={showReply}
               close={() => { setShowReply(false) }}
-              margin="16px 0 0 0"
+              margin="16px 0 -16px 0"
             />
           </Box>
         );
       })}
-
-      <Box mt={3} display="flex" justifyContent="flex-end">
-        <EmPagination page={page} count={count} onChange={handleChange} />
+      <Box textAlign="center" mt="40px">
+        <EmCircularProgress size={40} />
       </Box>
+
     </>
   );
 };
@@ -150,7 +151,10 @@ ReviewFilter.propTypes = {
   postedBy: PropTypes.string,
   postedOn: PropTypes.string,
   postComment: PropTypes.string,
-  onPost: PropTypes.func
+  onPost: PropTypes.func,
+  isDelete: PropTypes.bool,
+  shareHandler: PropTypes.func,
+  deleteHandler: PropTypes.func
 };
 
 export default ReviewFilter;

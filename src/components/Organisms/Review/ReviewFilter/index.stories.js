@@ -43,21 +43,33 @@ ReviewFilters.args = {
             companyIcon: "/images/icons/google.svg",
             companyName: "google",
             postedAt: "Dec 22 , 2022",
-            location: "Toronto ,Canada",
+            location: "Toronto, Canada",
             rating: 4,
             review: "I used to spend hours writing creative copy, but now all I do is tell Rytr what I need and it writes everything for me. It's the ultimate AI content writer, and a must-have tool for bloggers, marketers, & entrepreneurs",
-            numOfReply: 2
+            numOfReply: true,
         },
         {
             reviewerName: "Ruben Baptista",
-            reviewerImg: "/images/profile-1.jpg",
-            companyIcon: "/images/icons/google.svg",
-            companyName: "google",
+            reviewerImg: "/images/icons/facebook.svg",
+            companyName: "facebook",
             postedAt: "Dec 22 , 2022",
             location: "Gulu, Uganda",
             rating: 3,
             review: "When I generate one dummy text it returns only one line. I wish that I can choose many text instead of one line.",
-            numOfReply: 2
+            numOfReply: true,
+            isFacebook: true,
+            isFacebookType: "recommended"
+        },
+        {
+            reviewerName: "Ruben Baptista",
+            reviewerImg: "/images/icons/facebook.svg",
+            companyName: "facebook",
+            postedAt: "Dec 22 , 2022",
+            location: "Gulu, Uganda",
+            rating: 3,
+            review: "When I generate one dummy text it returns only one line. I wish that I can choose many text instead of one line.",
+            numOfReply: true,
+            isFacebook: true,
         },
         {
             reviewerName: "Carter Schleifer",
@@ -85,10 +97,10 @@ ReviewFilters.args = {
             companyIcon: "/images/icons/google.svg",
             companyName: "google",
             postedAt: "Dec 22 , 2022",
-            location: "Toronto ,Canada",
+            location: "Toronto, Canada",
             rating: 4,
             review: "I used to spend hours writing creative copy, but now all I do is tell Rytr what I need and it writes everything for me. It's the ultimate AI content writer, and a must-have tool for bloggers, marketers, & entrepreneurs",
-            numOfReply: 2
+            numOfReply: true
         },
         {
             reviewerName: "Ruben Baptista",
@@ -99,7 +111,7 @@ ReviewFilters.args = {
             location: "Gulu, Uganda",
             rating: 3,
             review: "When I generate one dummy text it returns only one line. I wish that I can choose many text instead of one line.",
-            numOfReply: 2
+            numOfReply: true
         },
         {
             reviewerName: "Carter Schleifer",

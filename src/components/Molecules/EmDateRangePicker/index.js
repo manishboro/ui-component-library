@@ -5,13 +5,13 @@ import 'react-dates/lib/css/_datepicker.css';
 import { Box } from '@material-ui/core';
 import "./index.scss";
 
-const EmDateRangePicker = () => {
+const EmDateRangePicker = ({ alignment }) => {
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
   const [focusedInput, setFocusedInput] = useState(null);
 
   return (
-    <Box className='em-dateRangePicker'>
+    <Box className={`em-dateRangePicker ${alignment}`}>
       <DateRangePicker
         startDate={startDate}
         startDateId="s_id"

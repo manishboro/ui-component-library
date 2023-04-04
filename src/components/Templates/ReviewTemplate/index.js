@@ -2,18 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Box } from '@material-ui/core';
 import EmBreadcrumb from '../../Atoms/EmBreadcrumb/index';
-import EmDropDown from '../../Molecules/EmDropDown/index';
 import ReviewCardGroup from '../../../components/Organisms/Review/ReviewCardGroup';
 import ReviewFilter from '../../../components/Organisms/Review/ReviewFilter';
+import EmDateRangePicker from 'components/Molecules/EmDateRangePicker';
 
 const ReviewTemplate = ({
   breadcrumbs,
-  yearHandleChange,
   totalReview,
   averageRating,
   reviewRatings,
   fbRecommendation,
-  yearDropdownOptions,
   ratingOptions,
   ratingHandleChange,
   platformOptions,
@@ -25,23 +23,18 @@ const ReviewTemplate = ({
   postedBy,
   postedOn,
   postComment,
-  onPost
+  onPost,
+  shareHandler,
+  deleteHandler
 }) => {
   return (
     <Box>
-      <Box display="flex" alignItems="center" mb={{ xs: 1.5, md: 2.5 }}>
-        <Box width="55%">
+      <Box display="flex" alignItems="center" mb={{ xs: 1.5, md: 1.5 }} flexWrap="wrap">
+        <Box width={{ xs: "100%", sm: "55%" }}>
           <EmBreadcrumb breadcrumbs={breadcrumbs} />
         </Box>
-        <Box width="45%" ml="auto" maxWidth="245px">
-          <EmDropDown
-            placeholder="Select Year"
-            size="large"
-            id="reviewDropdown"
-            labelId="reviewDropdown"
-            options={yearDropdownOptions}
-            handleChange={yearHandleChange}
-          />
+        <Box textAlign="right" m={{ xs: "10px 0 0", sm: "0 0 0 auto" }} maxWidth={{ xs: "100%", sm: "245px" }} width={{ xs: "100%", sm: "45%" }} >
+          <EmDateRangePicker alignment="right" />
         </Box>
       </Box>
 
@@ -60,6 +53,8 @@ const ReviewTemplate = ({
         postedOn={postedOn}
         postComment={postComment}
         onPost={onPost}
+        shareHandler={shareHandler}
+        deleteHandler={deleteHandler}
       />
     </Box>
   );

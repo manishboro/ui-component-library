@@ -16,7 +16,7 @@ const ReviewFilterBar = ({
   searchOnChange
 }) => {
   return (
-    <Box display="flex" alignItems="center">
+    <Box display="flex" alignItems="center" flexWrap="wrap">
       <Box mr={1} fontWeight={500} display={{ xs: 'none', md: 'block' }}>
         <EmTypography variant="body2" children="Filter by" />
       </Box>
@@ -42,7 +42,7 @@ const ReviewFilterBar = ({
           options={platformOptions}
         />
       </Box>
-      <Box className='search-box' position="relative" mr={1} maxWidth="320px" width="100%" display="flex">
+      <Box className='search-box' position="relative" mr={1} maxWidth="193px" width="100%" display="flex">
         <Box position="absolute" top="5px" left="10px">
           <img src='/images/icons/search.svg' alt='search' />
         </Box>
@@ -60,7 +60,7 @@ const ReviewFilterBar = ({
         size="medium"
         label='Clear all'
         isDeleteIcon={false}
-        bgColor="#F3F3F6"
+        bgColor="#FFF"
         textColor='#373751'
         iconColor="#0C0C1E"
         iconPosition='left'
