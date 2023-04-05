@@ -65,7 +65,7 @@ const ReviewFilter = ({
 
       {reviews.map(data => {
         return (
-          <Box borderBottom="1px solid #E5E5EB;" p={{ xs: '16px 0', md: '28px 0' }}>
+          <Box className='reviewFilter' borderBottom="1px solid #E5E5EB;" p={{ xs: '16px 0', md: '28px 0' }}>
             <Box className="reviewer-profile" display='flex' alignItems='center' justifyContent='space-between'>
               <ReviewerProfile
                 reviewerImg={data.reviewerImg}
@@ -74,9 +74,10 @@ const ReviewFilter = ({
                 companyIconAlt={data.companyName}
                 time={data.postedAt}
               />
+
               {!data.isFacebook && <ReviewRating num={data.rating} />}
-              {data.isFacebook && <Box ml="20px">
-                {data.isFacebookType === "recommended" ? <IconWithTitle iconSrc="/images/icons/ticketStar-pink.svg" iconAlt="ticketStar" iconWidth={20} iconHeight={18} title="Recommended" titleVariant="body2" titleColor='#FC2170' spaceBetween="8px" /> : <EmTypography variant='body2' color='custom' textColor="#868E96" children="Not Recommended" />}
+              {data.isFacebook && <Box className='fb-recommended' ml="20px">
+                {data.isFacebookType === "recommended" ? <IconWithTitle iconSrc="/images/icons/ticketStar-pink.svg" iconAlt="ticketStar" iconWidth={20} iconHeight={18} title="Recommended" titleVariant="body2" titleColor='#FC2170' spaceBetween="8px" /> : <IconWithTitle iconSrc="/images/icons/ticketStar-gray.svg" iconAlt="ticketStar" iconWidth={20} iconHeight={18} title="Not Recommended" titleVariant="body2" titleColor='#868E96' spaceBetween="8px" />}
               </Box>}
 
             </Box>
@@ -89,19 +90,22 @@ const ReviewFilter = ({
               </EmTypography>
             </Box>
 
-            <Box display='flex' justifyContent="space-between" alignItems='center' flexWrap='wrap'>
-              <Box display="flex">
+            <Box display='flex' alignItems='center' flexWrap='wrap'>
+              <Box width={{ xs: "100%", sm: "auto" }}>
                 <IconWithTitle iconSrc="/images/icons/location.svg" iconAlt="location" iconWidth={15} iconHeight={17} title={data.location} titleColor='#9299A1' spaceBetween="4px" bottomSpace="2px" />
-
-                <Box ml="20px" onClick={shareHandler} style={{ "cursor": "pointer" }}><IconWithTitle iconSrc="/images/icons/share.svg" iconAlt="share" iconWidth={15} iconHeight={17} title="Share" titleColor='#373751' spaceBetween="6px" bottomSpace="2px" /></Box>
-
-                {!data.isFacebook && <Box ml="20px" onClick={deleteHandler} style={{ "cursor": "pointer" }}><IconWithTitle iconSrc="/images/icons/delete.svg" iconAlt="delete" iconWidth={15} iconHeight={17} title="Delete" titleColor='#373751' spaceBetween="6px" bottomSpace="2px" /></Box>}
-
               </Box>
+
+              <Box className='actionBtn' display='flex' width={{ xs: "40%", sm: "auto" }} mt={{ xs: "10px", md: 0 }}>
+                <Box ml={{ xs: "0", md: "20px" }} onClick={shareHandler} style={{ "cursor": "pointer" }}><IconWithTitle iconSrc="/images/icons/share.svg" iconAlt="share" iconWidth={15} iconHeight={17} title="Share" titleColor='#373751' spaceBetween="6px" bottomSpace="2px" /></Box>
+                {!data.isFacebook && <Box ml={{ xs: "10px", md: "20px" }} onClick={deleteHandler} style={{ "cursor": "pointer" }}><IconWithTitle iconSrc="/images/icons/delete.svg" iconAlt="delete" iconWidth={15} iconHeight={17} title="Delete" titleColor='#373751' spaceBetween="6px" bottomSpace="2px" /></Box>}
+              </Box>
+
               {!showReplyPost && <Box
                 className="replay-btn"
                 display="flex"
                 alignItems="center"
+                ml="auto"
+                mt={{ xs: "10px", md: 0 }}
               >
                 {data.numOfReply && (
                   <Box display='flex' m='0 16px 0 0' onClick={() => { setShowReply(!showReply) }} style={{ "cursor": "pointer" }}>

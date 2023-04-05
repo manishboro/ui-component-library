@@ -19,7 +19,7 @@
 
 }
 
-.reviewfilter {
+.reviewFilter {
     @media screen and (max-width: 767px) {
         .em-typography {
             &.MuiTypography-body1 {
@@ -38,6 +38,18 @@
                     font-size: 16px;
                     line-height: 24px;
                 }
+            }
+        }
+
+        .actionBtn {
+            .em-typography.MuiTypography-body1 {
+                display: none;
+            }
+        }
+
+        .fb-recommended {
+            .em-typography.MuiTypography-body2 {
+                display: none;
             }
         }
     }

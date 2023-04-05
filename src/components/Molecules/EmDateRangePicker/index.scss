@@ -1,4 +1,8 @@
 .em-dateRangePicker {
+    .DateRangePicker {
+        width: 100%;
+    }
+
     .DateRangePicker_picker {
         border: 1px solid var(--neutral-300);
         box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
@@ -7,12 +11,12 @@
     }
 
     .DateRangePickerInput__withBorder {
+        display: flex;
         border: 1px solid var(--neutral-300);
         border-radius: 5px;
         overflow: hidden;
+        width: 100%;
     }
-
-
 
     .CalendarDay__default {
         font-weight: 400;
@@ -76,9 +80,8 @@
             display: inline-block;
             background: url("/images/icons/dropdown.svg") no-repeat;
             position: absolute;
-            top: 50%;
+            top: 18px;
             right: 16px;
-            transform: translateY(-50%);
         }
 
         &_arrow {
@@ -109,7 +112,7 @@
                 font-size: 14px;
                 color: var(--neutral-900);
                 font-weight: 400;
-                padding: 12px 0 6px;
+                padding: 11px 0 6px;
                 line-height: 20px;
                 text-align: center;
 
@@ -171,9 +174,11 @@
     }
 
     &.right {
-        .DateRangePicker_picker {
-            left: auto !important;
-            right: 0;
+        @media screen and (min-width: 600px) {
+            .DateRangePicker_picker {
+                left: auto !important;
+                right: 0;
+            }
         }
     }
 }

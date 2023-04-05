@@ -2,11 +2,21 @@
     .em-input.medium {
         .MuiOutlinedInput-input {
             padding: 8px 16px 8px 30px;
+
+            @media screen and (max-width: 767px) {
+                padding: 16px 16px 12px 30px;
+            }
         }
 
         input::-webkit-input-placeholder {
             color: var(--neutral-700);
             opacity: 1;
         }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .em-chip.medium .MuiChip-label {
+        padding-right: 0;
     }
 }

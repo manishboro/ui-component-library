@@ -15,6 +15,14 @@
     &.medium {
       padding: 8px 30px;
       line-height: 20px;
+
+      @media screen and (max-width: 767px) {
+        font-size: 12px;
+
+        &.MuiButton-outlined {
+          padding: 5px 20px;
+        }
+      }
     }
   }
 }

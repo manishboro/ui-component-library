@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Box } from '@material-ui/core';
-import EmBreadcrumb from '../../Atoms/EmBreadcrumb/index';
 import ReviewCardGroup from '../../../components/Organisms/Review/ReviewCardGroup';
 import ReviewFilter from '../../../components/Organisms/Review/ReviewFilter';
 import EmDateRangePicker from 'components/Molecules/EmDateRangePicker';
+import EmTypography from 'components/Atoms/EmTypography';
 
 const ReviewTemplate = ({
-  breadcrumbs,
   totalReview,
   averageRating,
   reviewRatings,
@@ -31,7 +30,7 @@ const ReviewTemplate = ({
     <Box>
       <Box display="flex" alignItems="center" mb={{ xs: 1.5, md: 1.5 }} flexWrap="wrap">
         <Box width={{ xs: "100%", sm: "55%" }}>
-          <EmBreadcrumb breadcrumbs={breadcrumbs} />
+          <EmTypography variant='body1' fontWeight="600">Review</EmTypography>
         </Box>
         <Box textAlign="right" m={{ xs: "10px 0 0", sm: "0 0 0 auto" }} maxWidth={{ xs: "100%", sm: "245px" }} width={{ xs: "100%", sm: "45%" }} >
           <EmDateRangePicker alignment="right" />
@@ -61,7 +60,6 @@ const ReviewTemplate = ({
 };
 
 ReviewTemplate.propTypes = {
-  breadcrumbs: PropTypes.array,
   totalReview: PropTypes.object,
   averageRating: PropTypes.object,
   reviewRatings: PropTypes.array,
