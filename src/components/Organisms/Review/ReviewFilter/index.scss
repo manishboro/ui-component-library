@@ -40,7 +40,9 @@
                 }
             }
         }
+    }
 
+    @media screen and (max-width: 600px) {
         .actionBtn {
             .em-typography.MuiTypography-body1 {
                 display: none;

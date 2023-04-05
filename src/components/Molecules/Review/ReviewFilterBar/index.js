@@ -17,7 +17,7 @@ const ReviewFilterBar = ({
 }) => {
   return (
     <Box display="flex" alignItems="center" flexWrap="wrap">
-      <Box mr={1} fontWeight={500} width={{ xs: '100%', sm: 'auto' }} order={{ xs: 2, md: 1 }} m={{ xs: "15px 0 8px", md: 0 }}>
+      <Box mr={1} fontWeight={500} width={{ xs: '100%', sm: 'auto' }} order={{ xs: 2, md: 1 }} m={{ xs: "15px 0 8px", sm: "0 8px 0 0" }}>
         <EmTypography variant="body2" children="Filter by" />
       </Box>
 

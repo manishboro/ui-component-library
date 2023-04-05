@@ -96,8 +96,8 @@ const ReviewFilter = ({
               </Box>
 
               <Box className='actionBtn' display='flex' width={{ xs: "40%", sm: "auto" }} mt={{ xs: "10px", md: 0 }}>
-                <Box ml={{ xs: "0", md: "20px" }} onClick={shareHandler} style={{ "cursor": "pointer" }}><IconWithTitle iconSrc="/images/icons/share.svg" iconAlt="share" iconWidth={15} iconHeight={17} title="Share" titleColor='#373751' spaceBetween="6px" bottomSpace="2px" /></Box>
-                {!data.isFacebook && <Box ml={{ xs: "10px", md: "20px" }} onClick={deleteHandler} style={{ "cursor": "pointer" }}><IconWithTitle iconSrc="/images/icons/delete.svg" iconAlt="delete" iconWidth={15} iconHeight={17} title="Delete" titleColor='#373751' spaceBetween="6px" bottomSpace="2px" /></Box>}
+                <Box ml={{ xs: "0", sm: "20px" }} onClick={shareHandler} style={{ "cursor": "pointer" }}><IconWithTitle iconSrc="/images/icons/share.svg" iconAlt="share" iconWidth={15} iconHeight={17} title="Share" titleColor='#373751' spaceBetween="6px" bottomSpace="2px" /></Box>
+                {!data.isFacebook && <Box ml={{ xs: "10px", sm: "20px" }} onClick={deleteHandler} style={{ "cursor": "pointer" }}><IconWithTitle iconSrc="/images/icons/delete.svg" iconAlt="delete" iconWidth={15} iconHeight={17} title="Delete" titleColor='#373751' spaceBetween="6px" bottomSpace="2px" /></Box>}
               </Box>
 
               {!showReplyPost && <Box
