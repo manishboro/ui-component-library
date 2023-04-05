@@ -14,10 +14,10 @@ const EmAccordion = ({
 }) => {
   return (
     <Box className={`em-accordion ${variant}`}>
-      {accordionData.map((item) => {
+      {accordionData.map((item, index) => {
         return (
           <Accordion
-            defaultExpanded={defaultExpanded}>
+            defaultExpanded={defaultExpanded} key={index}>
             <EmAccordionTitle
               accordionTitleId={item.id}
               accordionTitleClass={accordionTitleClass}

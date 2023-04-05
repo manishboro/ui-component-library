@@ -57,15 +57,15 @@ const ReviewFilter = ({
             size="medium"
             children="View Detailed Metrics"
             endIcon={<InsertChartOutlinedRoundedIcon style={{ fontSize: '18px' }} />}
-            fullWidth={{ xs: true, md: false }}
+            fullWidth={true}
             onClick={metricsBtnClick}
           />
         </Box>
       </Box>
 
-      {reviews.map(data => {
+      {reviews.map((data, index) => {
         return (
-          <Box className='reviewFilter' borderBottom="1px solid #E5E5EB;" p={{ xs: '16px 0', md: '28px 0' }}>
+          <Box className='reviewFilter' borderBottom="1px solid #E5E5EB;" p={{ xs: '16px 0', md: '28px 0' }} key={index}>
             <Box className="reviewer-profile" display='flex' alignItems='center' justifyContent='space-between'>
               <ReviewerProfile
                 reviewerImg={data.reviewerImg}

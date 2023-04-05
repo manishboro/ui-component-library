@@ -18,9 +18,9 @@ const EmSteppers = ({
 }) => {
   return (
     <Timeline className='em-timeline' align={align}>
-      {timeLineLists.map((list) => {
+      {timeLineLists.map((list, index) => {
         return (
-          <TimelineItem>
+          <TimelineItem key={index}>
             <TimelineSeparator>
               <TimelineDot color='primary'>
                 {isIcon && <CheckIcon />}

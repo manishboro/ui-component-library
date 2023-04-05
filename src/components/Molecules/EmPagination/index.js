@@ -30,7 +30,7 @@ const EmPagination = ({
 EmPagination.propTypes = {
   className: PropTypes.string,
   count: PropTypes.number,
-  paginationHeading: PropTypes.bool,
+  paginationHeading: PropTypes.string,
 };
 
 export default EmPagination;

@@ -10,7 +10,11 @@ const EmBadges = ({
 }) => {
 
   return (
-    <Badge className={`em-badges ${badgeStyle}`} badgeContent={badgeContent} color={color}>
+    <Badge
+      className={`em-badges ${badgeStyle}`}
+      badgeContent={badgeContent}
+      color={color}
+      overlap="rectangular">
       <img src='/images/icons/notification.svg' width={24} height={24} alt="badge" />
     </Badge>
   );

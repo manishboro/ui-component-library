@@ -10,7 +10,7 @@ const EmAvatarGroup = ({
 }) => {
   return (
     <AvatarGroup className='em-avatar-group' max={maxAvatarDisplay} >
-      {avatarList.map((list) => {
+      {avatarList.map((list, index) => {
         return (
           <EmAvatar
             variant='circular'
@@ -19,6 +19,7 @@ const EmAvatarGroup = ({
             bgColor={list.avatarBgColor}
             textColor='#FFF'
             avatarSize={list.avatarSize}
+            key={index}
           />
         )
       })}

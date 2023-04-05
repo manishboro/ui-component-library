@@ -53,8 +53,8 @@ const ProfileDropDown = ({
         anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
         transformOrigin={{ vertical: 'top', horizontal: 'center' }}
       >
-        {profileDropdownOptions.map(item => {
-          return <MenuItem onClick={handleClose}>{item.label}</MenuItem>;
+        {profileDropdownOptions.map((item, index) => {
+          return <MenuItem onClick={handleClose} key={index}>{item.label}</MenuItem>;
         })}
       </Menu>
     </Box>

@@ -26,7 +26,7 @@ const EmBreadcrumb = ({
 EmBreadcrumb.propTypes = {
   variant: PropTypes.string,
   maxItems: PropTypes.number,
-  separator: PropTypes.string,
+  separator: PropTypes.object,
 };
 
 export default EmBreadcrumb;
