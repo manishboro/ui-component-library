@@ -91,11 +91,11 @@ const ReviewFilter = ({
             </Box>
 
             <Box display='flex' alignItems='center' flexWrap='wrap'>
-              <Box width={{ xs: "100%", sm: "auto" }}>
+              <Box width={{ xs: "100%", sm: "auto" }} mt={{ xs: "6px", sm: 0 }}>
                 <IconWithTitle iconSrc="/images/icons/location.svg" iconAlt="location" iconWidth={15} iconHeight={17} title={data.location} titleColor='#9299A1' spaceBetween="4px" bottomSpace="2px" />
               </Box>
 
-              <Box className='actionBtn' display='flex' width={{ xs: "40%", sm: "auto" }} mt={{ xs: "10px", md: 0 }}>
+              <Box className='actionBtn' display='flex' width={{ xs: "40%", sm: "auto" }} mt={{ xs: "6px", sm: 0 }}>
                 <Box ml={{ xs: "0", sm: "20px" }} onClick={shareHandler} style={{ "cursor": "pointer" }}><IconWithTitle iconSrc="/images/icons/share.svg" iconAlt="share" iconWidth={15} iconHeight={17} title="Share" titleColor='#373751' spaceBetween="6px" bottomSpace="2px" /></Box>
                 {!data.isFacebook && <Box ml={{ xs: "10px", sm: "20px" }} onClick={deleteHandler} style={{ "cursor": "pointer" }}><IconWithTitle iconSrc="/images/icons/delete.svg" iconAlt="delete" iconWidth={15} iconHeight={17} title="Delete" titleColor='#373751' spaceBetween="6px" bottomSpace="2px" /></Box>}
               </Box>
@@ -105,7 +105,7 @@ const ReviewFilter = ({
                 display="flex"
                 alignItems="center"
                 ml="auto"
-                mt={{ xs: "10px", md: 0 }}
+                mt={{ xs: "6px", sm: 0 }}
               >
                 {data.numOfReply && (
                   <Box display='flex' m='0 16px 0 0' onClick={() => { setShowReply(!showReply) }} style={{ "cursor": "pointer" }}>
