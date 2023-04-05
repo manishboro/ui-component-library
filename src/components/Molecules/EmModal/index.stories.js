@@ -22,7 +22,7 @@ Modal.args = {
         <CloseIcon style={{ 'cursor': 'pointer' }} />
       </Box>
       <Box padding="24px" textAlign='center'>
-        <EmTypography variant='body2' children="Swap" color='custom' textColor="#FFC107" align='center'></EmTypography>
+        <EmTypography variant='body2' children="Swap" color='initial' textColor="#FFC107" align='center'></EmTypography>
       </Box>
     </Box>,
   modalClose: () => { }

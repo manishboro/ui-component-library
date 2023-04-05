@@ -13,7 +13,7 @@ export default {
     },
     color: {
       control: "select",
-      options: ["primary", "secondary", "textPrimary", "textSecondary", "error", "custom"],
+      options: ["initial", "inherit", "primary", "secondary", "textPrimary", "textSecondary", "error"],
     },
     align: {
       control: "select",
