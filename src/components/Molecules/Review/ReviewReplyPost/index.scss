@@ -4,7 +4,12 @@
       color: var(--neutral-500);
 
       @media screen and (max-width: 767px) {
-        font-size: 12px;
+        font-size: 14px;
+        padding: 10px 16px;
+
+        &::placeholder {
+          font-size: 14px;
+        }
       }
     }
 
