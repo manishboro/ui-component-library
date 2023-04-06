@@ -46,7 +46,7 @@ const ReviewFilterBar = ({
       </Box>
 
       <Box className='search-box' position="relative" mr={{ xs: 0, sm: 1 }} maxWidth={{ xs: "100%", sm: "190px" }} width="100%" display="flex" order={{ xs: 1, sm: 4 }}>
-        <Box position="absolute" top={{ xs: "12px", sm: "5px" }} left="10px">
+        <Box position="absolute" top={{ xs: "12px", sm: "5px" }} left="10px" zIndex={1}>
           <img src='/images/icons/search.svg' alt='search' />
         </Box>
         <EmInputField
