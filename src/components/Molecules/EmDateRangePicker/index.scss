@@ -16,6 +16,12 @@
         border-radius: 5px;
         overflow: hidden;
         width: 100%;
+
+        &:focus {
+            &::after {
+                background: #000;
+            }
+        }
     }
 
     .CalendarDay__default {
@@ -25,6 +31,10 @@
         border: 8px solid var(--white);
         border-radius: 24px;
         color: var(--neutral-900);
+
+        @media screen and (max-width: 360px) {
+            max-width: 34px;
+        }
 
         &:hover {
             background: var(--neutral-300);
@@ -45,6 +55,14 @@
             background: var(--primary-10);
             color: var(--neutral-900);
         }
+    }
+
+    .DayPicker_weekHeader_li {
+
+        @media screen and (max-width: 360px) {
+            max-width: 34px;
+        }
+
     }
 
     .DayPickerKeyboardShortcuts_show {
@@ -115,6 +133,7 @@
                 padding: 11px 0 6px;
                 line-height: 20px;
                 text-align: center;
+                outline: none;
 
                 &::-webkit-input-placeholder {
                     font-size: 14px;
@@ -172,18 +191,28 @@
     .DayPicker__withBorder {
         padding-bottom: 30px;
 
-        @media screen and (max-width: 640px) {
-            width: 320px !important;
+        @media screen and (max-width: 600px) {
+            max-width: 330px;
             overflow: hidden;
+            padding-bottom: 0;
 
             >div>div {
-                max-width: 320px !important;
+                max-width: 330px;
+            }
+        }
+
+        @media screen and (max-width: 360px) {
+            max-width: 290px;
+
+            >div>div {
+                max-width: 290px;
             }
         }
     }
 
+
     &.right {
-        @media screen and (min-width: 640px) {
+        @media screen and (min-width: 600px) {
             .DateRangePicker_picker {
                 left: auto !important;
                 right: 0;
