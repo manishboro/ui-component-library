@@ -75,12 +75,12 @@
     .DateRangePickerInput {
         &::after {
             content: "";
-            width: 14px;
-            height: 7px;
+            width: 16px;
+            height: 10px;
             display: inline-block;
-            background: url("/images/icons/dropdown.svg") no-repeat;
+            background: url("/images/icons/downArrow.svg") no-repeat;
             position: absolute;
-            top: 18px;
+            top: 16px;
             right: 16px;
         }
 
@@ -171,10 +171,19 @@
 
     .DayPicker__withBorder {
         padding-bottom: 30px;
+
+        @media screen and (max-width: 640px) {
+            width: 320px !important;
+            overflow: hidden;
+
+            >div>div {
+                max-width: 320px !important;
+            }
+        }
     }
 
     &.right {
-        @media screen and (min-width: 600px) {
+        @media screen and (min-width: 640px) {
             .DateRangePicker_picker {
                 left: auto !important;
                 right: 0;
