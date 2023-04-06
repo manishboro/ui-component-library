@@ -33,9 +33,9 @@ const EmTabs = ({
             })}
           </Tabs>
           <Box>
-            {tabLists.map((item) => {
+            {tabLists.map((item, index) => {
               return (
-                <TabPanel value={item.value}>{item.content}</TabPanel>
+                <TabPanel value={item.value} key={index}>{item.content}</TabPanel>
               )
             })}
           </Box>

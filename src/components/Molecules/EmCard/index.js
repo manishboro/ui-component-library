@@ -12,11 +12,11 @@ const EmCard = ({
   HeadingText = '',
   SecondaryText = '',
   imgSrc = '',
-  imgAlt = 'Image Description',
   buttonLabel = '',
   iconSrc = '',
   iconAlt = '',
   rounded = true,
+  imgAlt = 'Image Description',
 }) => {
   return (
     <Card className={`em-card ${variant}`} variant="outlined">

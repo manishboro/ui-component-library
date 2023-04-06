@@ -9,7 +9,7 @@ export default {
   argTypes: {
     separator: {
       control: "select",
-      options: ["/", ">"],
+      options: ["/"],
     },
   }
 };
